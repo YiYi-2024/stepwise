@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>北极星 · Color Tokens</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../design-system/colors/tokens.css" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <p class="brand">北极星设计规范</p>
+      <h1>Color</h1>
+      <p class="lede">
+        独立存储的颜色规范：Color Primitives 为原始色阶，Semantic Colors 按 UI
+        角色引用它们。源稿 Figma ❖ Token。
+      </p>
+    </header>
+
+    <main>
+      <section class="panel" aria-labelledby="primitives-heading">
+        <div class="panel-intro">
+          <h2 id="primitives-heading">Color Primitives</h2>
+          <p>基础色阶。产品代码优先使用语义色；图表、插画等场景可直接用原语。</p>
+        </div>
+
+        <div class="group">
+          <div class="group-meta">
+            <h3>Base</h3>
+            <p>基础黑白色，提供纯白与纯黑两种颜色。</p>
+          </div>
+          <div class="swatches">
+            <article class="swatch">
+              <div class="chip" style="background: var(--color-base-white)"></div>
+              <div class="meta"><strong>White</strong><span>#FFFFFF</span></div>
+            </article>
+            <article class="swatch">
+              <div class="chip" style="background: var(--color-base-black)"></div>
+              <div class="meta"><strong>Black</strong><span>#000000</span></div>
+            </article>
+          </div>
+        </div>
+
+        <div class="group">
+          <div class="group-meta">
+            <h3>Neutral</h3>
+            <p>中性色阶，用于文字、背景与边框。</p>
+          </div>
+          <div class="swatches">
+            <article class="swatch">
+              <div class="chip" style="background: var(--color-neutral-100)"></div>
+              <div class="meta"><strong>100</strong><span>#F7F7F7</span></div>
+            </article>
+            <article class="swatch">
+              <div class="chip" style="background: var(--color-neutral-200)"></div>
+              <div class="meta"><strong>200</strong><span>#F3F3F3</span></div>
+            </article>
+            <article class="swatch">
+              <div class="chip" style="background: var(--color-neutral-300)"></div>
+              <div class="meta"><strong>300</strong><span>#F2F2F2</span></div>
+            </article>
+            <article class="swatch">
+              <div class="chip" style="background: var(--color-neutral-400)"></div>
+              <div class="meta"><strong>400</strong><span>#E7E7E7</span></div>
+            </article>
+            <article class="swatch">
+              <div class="chip" style="background: var(--color-neutral-500)"></div>
+              <div class="meta"><strong>500</strong><span>#C5C5C5</span></div>
+            </article>
+            <article class="swatch">
+              <div class="chip" style="background: var(--color-neutral-600)"></div>
+              <div class="meta"><strong>600</strong><span>#ADADAD</span></div>
+            </article>
+            <article class="swatch">
+              <div class="chip" style="background: var(--color-neutral-700)"></div>
+              <div class="meta"><strong>700</strong><span>#8A8A8A</span></div>
+            </article>
+            <article class="swatch">
+              <div class="chip" style="background: var(--color-neutral-800)"></div>
+              <div class="meta"><strong>800</strong><span>#383838</span></div>
+            </article>
+            <article class="swatch">
+              <div class="chip" style="background: var(--color-neutral-900)"></div>
+              <div class="meta"><strong>900</strong><span>#1D1D1D</span></div>
+            </article>
+          </div>
+        </div>
+
+        <div class="group">
+          <div class="group-meta">
+            <h3>Error</h3>
+            <p>错误状态色，用于异常提示与校验反馈。</p>
+          </div>
+          <div class="swatches">
+            <article class="swatch">
+              <div class="chip" style="background: var(--color-red-50)"></div>
+              <div class="meta"><strong>50</strong><span>#FFEFEF</span></div>
+            </article>
+            <article class="swatch">
+              <div class="chip" style="background: var(--color-red-100)"></div>
+              <div class="meta"><strong>100</strong><span>#FDDBDB</span></div>
+            </article>
+            <article class="swatch">
+              <div class="chip" style="background: var(--color-red-500)"></div>
+              <div class="meta"><strong>500</strong><span>#F64D4D</span></div>
+            </article>
+          </div>
+        </div>
+
+        <div class="group">
+          <div class="group-meta">
+            <h3>Brand</h3>
+            <p>品牌橙色，用于品牌表达与重点强调。</p>
+          </div>
+          <div class="swatches">
+            <article class="swatch">
+              <div class="chip" style="background: var(--color-brand-100)"></div>
+              <div class="meta"><strong>100</strong><span>#FFE0CF</span></div>
+            </article>
+            <article class="swatch">
+              <div class="chip" style="background: var(--color-brand-500)"></div>
+              <div class="meta"><strong>500</strong><span>#F36B24</span></div>
+            </article>
+          </div>
+        </div>
+
+        <div class="group">
+          <div class="group-meta">
+            <h3>Success</h3>
+            <p>成功状态色，用于操作成功与正向反馈。</p>
+          </div>
+          <div class="swatches">
+            <article class="swatch">
+              <div class="chip" style="background: var(--color-green-100)"></div>
+              <div class="meta"><strong>100</strong><span>#DDFCDD</span></div>
+            </article>
+            <article class="swatch">
+              <div class="chip" style="background: var(--color-green-500)"></div>
+              <div class="meta"><strong>500</strong><span>#39AD37</span></div>
+            </article>
+          </div>
+        </div>
+
+        <div class="group">
+          <div class="group-meta">
+            <h3>Alpha</h3>
+            <p>深灰色，20% 不透明度，用于遮罩与蒙层。</p>
+          </div>
+          <div class="swatches">
+            <article class="swatch">
+              <div class="chip chip--checker">
+                <div class="chip-fill" style="background: var(--color-alpha-500)"></div>
+              </div>
+              <div class="meta"><strong>500</strong><span>#38383833 (20%)</span></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="semantic-heading">
+        <div class="panel-intro">
+          <h2 id="semantic-heading">Semantic Colors</h2>
+          <p>
+            A comprehensive palette of semantic colors mapped to primitive
+            aliases for text, backgrounds, borders, and states.
+          </p>
+        </div>
+
+        <div class="group">
+          <div class="group-meta">
+            <h3>Text</h3>
+            <p>Text colors for typography and labels.</p>
+          </div>
+          <div class="swatches">
+            <article class="swatch">
+              <div class="chip" style="background: var(--color-text-primary)"></div>
+              <div class="meta"><strong>Primary</strong><span>#383838</span></div>
+            </article>
+            <article class="swatch">
+              <div class="chip" style="background: var(--color-text-secondary)"></div>
+              <div class="meta"><strong>Secondary</strong><span>#8A8A8A</span></div>
+            </article>
+            <article class="swatch">
+              <div class="chip" style="background: var(--color-text-tertiary)"></div>
+              <div class="meta"><strong>Tertiary</strong><span>#ADADAD</span></div>
+            </article>
+            <article class="swatch">
+              <div class="chip" style="background: var(--color-text-subtle)"></div>
+              <div class="meta"><strong>Subtle</strong><span>#C5C5C5</span></div>
+            </article>
+            <article class="swatch">
+              <div class="chip" style="background: var(--color-text-brand)"></div>
+              <div class="meta"><strong>Brand</strong><span>#F36B24</span></div>
+            </article>
+            <article class="swatch">
+              <div class="chip" style="background: var(--color-text-accent)"></div>
+              <div class="meta"><strong>Accent</strong><span>#1D1D1D</span></div>
+            </article>
+          </div>
+        </div>
+
+        <div class="group">
+          <div class="group-meta">
+            <h3>Hover</h3>
+            <p>Hover states for interactive elements.</p>
+          </div>
+          <div class="swatches">
+            <article class="swatch">
+              <div class="chip" style="background: var(--color-hover-subtle)"></div>
+              <div class="meta"><strong>Subtle</strong><span>#F7F7F7</span></div>
+            </article>
+            <article class="swatch">
+              <div class="chip" style="background: var(--color-hover-default)"></div>
+              <div class="meta"><strong>Default</strong><span>#F2F2F2</span></div>
+            </article>
+            <article class="swatch">
+              <div class="chip" style="background: var(--color-hover-strong-on-bg)"></div>
+              <div class="meta"><strong>Strong_On-Bg</strong><span>#E7E7E7</span></div>
+            </article>
+          </div>
+        </div>
+
+        <div class="group">
+          <div class="group-meta">
+            <h3>Background</h3>
+            <p>Background colors for surfaces.</p>
+          </div>
+          <div class="swatches">
+            <article class="swatch">
+              <div class="chip" style="background: var(--color-bg-main)"></div>
+              <div class="meta"><strong>Main</strong><span>#F7F7F7</span></div>
+            </article>
+            <article class="swatch">
+              <div class="chip" style="background: var(--color-bg-white)"></div>
+              <div class="meta"><strong>White</strong><span>#FFFFFF</span></div>
+            </article>
+          </div>
+        </div>
+
+        <div class="group">
+          <div class="group-meta">
+            <h3>Border</h3>
+            <p>Border colors for dividers and outlines.</p>
+          </div>
+          <div class="swatches">
+            <article class="swatch">
+              <div class="chip" style="background: var(--color-border-primary)"></div>
+              <div class="meta"><strong>Primary</strong><span>#E7E7E7</span></div>
+            </article>
+            <article class="swatch">
+              <div class="chip" style="background: var(--color-border-secondary)"></div>
+              <div class="meta"><strong>Secondary</strong><span>#F3F3F3</span></div>
+            </article>
+            <article class="swatch">
+              <div class="chip" style="background: var(--color-border-brand)"></div>
+              <div class="meta"><strong>Brand</strong><span>#FFE0CF</span></div>
+            </article>
+          </div>
+        </div>
+
+        <div class="group">
+          <div class="group-meta">
+            <h3>Error</h3>
+            <p>Error states for validation and alerts.</p>
+          </div>
+          <div class="swatches">
+            <article class="swatch">
+              <div class="chip" style="background: var(--color-error-primary)"></div>
+              <div class="meta"><strong>Primary</strong><span>#F64D4D</span></div>
+            </article>
+            <article class="swatch">
+              <div class="chip" style="background: var(--color-error-secondary)"></div>
+              <div class="meta"><strong>Secondary</strong><span>#FDDBDB</span></div>
+            </article>
+            <article class="swatch">
+              <div class="chip" style="background: var(--color-error-tertiary)"></div>
+              <div class="meta"><strong>Tertiary</strong><span>#FFEFEF</span></div>
+            </article>
+          </div>
+        </div>
+
+        <div class="group">
+          <div class="group-meta">
+            <h3>Mask</h3>
+            <p>Overlay masks for modal backgrounds.</p>
+          </div>
+          <div class="swatches">
+            <article class="swatch">
+              <div class="chip chip--checker">
+                <div class="chip-fill" style="background: var(--color-mask-primary)"></div>
+              </div>
+              <div class="meta"><strong>Primary</strong><span>#383838 20%</span></div>
+            </article>
+          </div>
+        </div>
+
+        <div class="group">
+          <div class="group-meta">
+            <h3>Success</h3>
+            <p>Success states for positive feedback.</p>
+          </div>
+          <div class="swatches">
+            <article class="swatch">
+              <div class="chip" style="background: var(--color-success-primary)"></div>
+              <div class="meta"><strong>Primary</strong><span>#39AD37</span></div>
+            </article>
+            <article class="swatch">
+              <div class="chip" style="background: var(--color-success-secondary)"></div>
+              <div class="meta"><strong>Secondary</strong><span>#DDFCDD</span></div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Figma source · node <code>15:505</code> · Polaris / 北极星</p>
+    </footer>
+  </body>
+</html>
