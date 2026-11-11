@@ -1,0 +1,121 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "meta": {
+    "name": "北极星 / Polaris Color Primitives",
+    "source": "https://www.figma.com/design/lHZQFXZ9mCxnwUxC50IgxL/?node-id=30-906",
+    "layer": "primitive"
+  },
+  "color": {
+    "base": {
+      "white": {
+        "$type": "color",
+        "$value": "#FFFFFF",
+        "$description": "基础纯白"
+      },
+      "black": {
+        "$type": "color",
+        "$value": "#000000",
+        "$description": "基础纯黑"
+      }
+    },
+    "neutral": {
+      "100": {
+        "$type": "color",
+        "$value": "#F7F7F7",
+        "$description": "中性色阶 100，用于浅背景"
+      },
+      "200": {
+        "$type": "color",
+        "$value": "#F3F3F3",
+        "$description": "中性色阶 200"
+      },
+      "300": {
+        "$type": "color",
+        "$value": "#F2F2F2",
+        "$description": "中性色阶 300"
+      },
+      "400": {
+        "$type": "color",
+        "$value": "#E7E7E7",
+        "$description": "中性色阶 400，常用于边框"
+      },
+      "500": {
+        "$type": "color",
+        "$value": "#C5C5C5",
+        "$description": "中性色阶 500"
+      },
+      "600": {
+        "$type": "color",
+        "$value": "#ADADAD",
+        "$description": "中性色阶 600"
+      },
+      "700": {
+        "$type": "color",
+        "$value": "#8A8A8A",
+        "$description": "中性色阶 700"
+      },
+      "800": {
+        "$type": "color",
+        "$value": "#383838",
+        "$description": "中性色阶 800，主文字色"
+      },
+      "900": {
+        "$type": "color",
+        "$value": "#1D1D1D",
+        "$description": "中性色阶 900，强调文字色"
+      }
+    },
+    "error": {
+      "50": {
+        "$type": "color",
+        "$value": "#FFEFEF",
+        "$description": "错误浅底色"
+      },
+      "100": {
+        "$type": "color",
+        "$value": "#FDDBDB",
+        "$description": "错误次级色"
+      },
+      "500": {
+        "$type": "color",
+        "$value": "#F64D4D",
+        "$description": "错误主色"
+      }
+    },
+    "brand": {
+      "100": {
+        "$type": "color",
+        "$value": "#FFE0CF",
+        "$description": "品牌浅色，用于品牌边框等"
+      },
+      "500": {
+        "$type": "color",
+        "$value": "#F36B24",
+        "$description": "品牌主色（橙色）"
+      }
+    },
+    "success": {
+      "100": {
+        "$type": "color",
+        "$value": "#DDFCDD",
+        "$description": "成功浅色"
+      },
+      "500": {
+        "$type": "color",
+        "$value": "#39AD37",
+        "$description": "成功主色"
+      }
+    },
+    "alpha": {
+      "500": {
+        "$type": "color",
+        "$value": "#38383833",
+        "$description": "深灰 20% 不透明度，用于遮罩与蒙层",
+        "$extensions": {
+          "polaris.rgba": "rgba(56, 56, 56, 0.2)",
+          "polaris.opacity": 0.2
+        }
+      }
+    }
+  }
+}
