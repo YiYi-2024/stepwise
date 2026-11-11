@@ -1,0 +1,73 @@
+/**
+ * 北极星设计规范 — Color CSS Custom Properties
+ * Prefer --color-* semantic vars in product UI.
+ * Primitive vars are available for charts, illustrations, and one-offs.
+ */
+
+:root {
+  /* ——— Primitives: Base ——— */
+  --color-base-white: #ffffff;
+  --color-base-black: #000000;
+
+  /* ——— Primitives: Neutral ——— */
+  --color-neutral-100: #f7f7f7;
+  --color-neutral-200: #f3f3f3;
+  --color-neutral-300: #f2f2f2;
+  --color-neutral-400: #e7e7e7;
+  --color-neutral-500: #c5c5c5;
+  --color-neutral-600: #adadad;
+  --color-neutral-700: #8a8a8a;
+  --color-neutral-800: #383838;
+  --color-neutral-900: #1d1d1d;
+
+  /* ——— Primitives: Red / Error ramp ——— */
+  --color-red-50: #ffefef;
+  --color-red-100: #fddbdb;
+  --color-red-500: #f64d4d;
+
+  /* ——— Primitives: Brand ——— */
+  --color-brand-100: #ffe0cf;
+  --color-brand-500: #f36b24;
+
+  /* ——— Primitives: Green / Success ramp ——— */
+  --color-green-100: #ddfcdd;
+  --color-green-500: #39ad37;
+
+  /* ——— Primitives: Alpha ——— */
+  --color-alpha-500: rgba(56, 56, 56, 0.2);
+
+  /* ——— Semantic: Text ——— */
+  --color-text-primary: var(--color-neutral-800);
+  --color-text-secondary: var(--color-neutral-700);
+  --color-text-tertiary: var(--color-neutral-600);
+  --color-text-subtle: var(--color-neutral-500);
+  --color-text-brand: var(--color-brand-500);
+  --color-text-accent: var(--color-neutral-900);
+
+  /* ——— Semantic: Hover ——— */
+  --color-hover-subtle: var(--color-neutral-100);
+  --color-hover-default: var(--color-neutral-300);
+  --color-hover-strong-on-bg: var(--color-neutral-400);
+
+  /* ——— Semantic: Background ——— */
+  --color-bg-main: var(--color-neutral-100);
+  --color-bg-grey: var(--color-neutral-100);
+  --color-bg-white: var(--color-base-white);
+
+  /* ——— Semantic: Border ——— */
+  --color-border-primary: var(--color-neutral-400);
+  --color-border-secondary: var(--color-neutral-200);
+  --color-border-brand: var(--color-brand-100);
+
+  /* ——— Semantic: Error ——— */
+  --color-error-primary: var(--color-red-500);
+  --color-error-secondary: var(--color-red-100);
+  --color-error-tertiary: var(--color-red-50);
+
+  /* ——— Semantic: Mask ——— */
+  --color-mask-primary: var(--color-alpha-500);
+
+  /* ——— Semantic: Success ——— */
+  --color-success-primary: var(--color-green-500);
+  --color-success-secondary: var(--color-green-100);
+}
