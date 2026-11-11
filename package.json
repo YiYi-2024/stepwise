@@ -1,0 +1,41 @@
+{
+  "name": "@stepwise/design-system",
+  "version": "0.1.0",
+  "description": "北极星设计规范 — standalone design tokens and foundations",
+  "type": "module",
+  "main": "./src/index.js",
+  "module": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "import": "./src/index.js",
+      "default": "./src/index.js"
+    },
+    "./colors": {
+      "types": "./src/colors/index.d.ts",
+      "import": "./src/colors/index.js",
+      "default": "./src/colors/index.js"
+    },
+    "./colors.css": "./src/css/colors.css",
+    "./tokens/colors.json": "./tokens/colors.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "tokens",
+    "docs",
+    "showcase"
+  ],
+  "keywords": [
+    "design-system",
+    "design-tokens",
+    "polar-star",
+    "北极星",
+    "colors"
+  ],
+  "license": "UNLICENSED",
+  "scripts": {
+    "validate:colors": "node ./scripts/validate-colors.mjs"
+  }
+}

@@ -1,0 +1,254 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "$description": "北极星设计规范 · Color tokens extracted from Figma (node Token / 15:505)",
+  "$extensions": {
+    "com.stepwise.figma": {
+      "fileKey": "lHZQFXZ9mCxnwUxC50IgxL",
+      "fileName": "北极星设计规范",
+      "nodeId": "15:505",
+      "nodeName": "❖ Token",
+      "sourceUrl": "https://www.figma.com/design/lHZQFXZ9mCxnwUxC50IgxL/?node-id=15-505",
+      "collections": {
+        "_primitives": "VariableCollectionId:19:2",
+        "color": "VariableCollectionId:17:737"
+      }
+    }
+  },
+  "color": {
+    "primitive": {
+      "base": {
+        "white": {
+          "$type": "color",
+          "$value": "#FFFFFF",
+          "$description": "基础纯白"
+        },
+        "black": {
+          "$type": "color",
+          "$value": "#000000",
+          "$description": "基础纯黑"
+        }
+      },
+      "neutral": {
+        "100": {
+          "$type": "color",
+          "$value": "#F7F7F7",
+          "$description": "中性色阶 100"
+        },
+        "200": {
+          "$type": "color",
+          "$value": "#F3F3F3",
+          "$description": "中性色阶 200"
+        },
+        "300": {
+          "$type": "color",
+          "$value": "#F2F2F2",
+          "$description": "中性色阶 300"
+        },
+        "400": {
+          "$type": "color",
+          "$value": "#E7E7E7",
+          "$description": "中性色阶 400"
+        },
+        "500": {
+          "$type": "color",
+          "$value": "#C5C5C5",
+          "$description": "中性色阶 500"
+        },
+        "600": {
+          "$type": "color",
+          "$value": "#ADADAD",
+          "$description": "中性色阶 600"
+        },
+        "700": {
+          "$type": "color",
+          "$value": "#8A8A8A",
+          "$description": "中性色阶 700"
+        },
+        "800": {
+          "$type": "color",
+          "$value": "#383838",
+          "$description": "中性色阶 800"
+        },
+        "900": {
+          "$type": "color",
+          "$value": "#1D1D1D",
+          "$description": "中性色阶 900"
+        }
+      },
+      "red": {
+        "50": {
+          "$type": "color",
+          "$value": "#FFEFEF",
+          "$description": "错误原始色 50"
+        },
+        "100": {
+          "$type": "color",
+          "$value": "#FDDBDB",
+          "$description": "错误原始色 100"
+        },
+        "500": {
+          "$type": "color",
+          "$value": "#F64D4D",
+          "$description": "错误原始色 500"
+        }
+      },
+      "brand": {
+        "100": {
+          "$type": "color",
+          "$value": "#FFE0CF",
+          "$description": "品牌橙色 100"
+        },
+        "500": {
+          "$type": "color",
+          "$value": "#F36B24",
+          "$description": "品牌橙色 500"
+        }
+      },
+      "green": {
+        "100": {
+          "$type": "color",
+          "$value": "#DDFCDD",
+          "$description": "成功原始色 100"
+        },
+        "500": {
+          "$type": "color",
+          "$value": "#39AD37",
+          "$description": "成功原始色 500"
+        }
+      },
+      "alpha": {
+        "500": {
+          "$type": "color",
+          "$value": "#38383833",
+          "$description": "深灰 20% 不透明度，用于遮罩与蒙层"
+        }
+      }
+    },
+    "semantic": {
+      "text": {
+        "primary": {
+          "$type": "color",
+          "$value": "{color.primitive.neutral.800}",
+          "$description": "主要文字"
+        },
+        "secondary": {
+          "$type": "color",
+          "$value": "{color.primitive.neutral.700}",
+          "$description": "次要文字"
+        },
+        "tertiary": {
+          "$type": "color",
+          "$value": "{color.primitive.neutral.600}",
+          "$description": "三级文字"
+        },
+        "subtle": {
+          "$type": "color",
+          "$value": "{color.primitive.neutral.500}",
+          "$description": "弱化文字"
+        },
+        "brand": {
+          "$type": "color",
+          "$value": "{color.primitive.brand.500}",
+          "$description": "品牌色文字"
+        },
+        "accent": {
+          "$type": "color",
+          "$value": "{color.primitive.neutral.900}",
+          "$description": "强调文字"
+        },
+        "white": {
+          "$type": "color",
+          "$value": "{color.primitive.base.white}",
+          "$description": "反白文字"
+        }
+      },
+      "hover": {
+        "subtle": {
+          "$type": "color",
+          "$value": "{color.primitive.neutral.100}",
+          "$description": "轻量悬停"
+        },
+        "default": {
+          "$type": "color",
+          "$value": "{color.primitive.neutral.300}",
+          "$description": "默认悬停"
+        },
+        "strong-on-bg": {
+          "$type": "color",
+          "$value": "{color.primitive.neutral.400}",
+          "$description": "背景上的强悬停"
+        }
+      },
+      "background": {
+        "main": {
+          "$type": "color",
+          "$value": "{color.primitive.neutral.100}",
+          "$description": "主背景（灰）"
+        },
+        "white": {
+          "$type": "color",
+          "$value": "{color.primitive.base.white}",
+          "$description": "白色表面"
+        },
+        "black": {
+          "$type": "color",
+          "$value": "{color.primitive.neutral.800}",
+          "$description": "深色表面"
+        }
+      },
+      "border": {
+        "primary": {
+          "$type": "color",
+          "$value": "{color.primitive.neutral.400}",
+          "$description": "主边框"
+        },
+        "secondary": {
+          "$type": "color",
+          "$value": "{color.primitive.neutral.200}",
+          "$description": "次边框"
+        },
+        "brand": {
+          "$type": "color",
+          "$value": "{color.primitive.brand.100}",
+          "$description": "品牌边框"
+        }
+      },
+      "error": {
+        "primary": {
+          "$type": "color",
+          "$value": "{color.primitive.red.500}",
+          "$description": "错误主色"
+        },
+        "secondary": {
+          "$type": "color",
+          "$value": "{color.primitive.red.100}",
+          "$description": "错误次色"
+        },
+        "tertiary": {
+          "$type": "color",
+          "$value": "{color.primitive.red.50}",
+          "$description": "错误浅色"
+        }
+      },
+      "mask": {
+        "primary": {
+          "$type": "color",
+          "$value": "{color.primitive.alpha.500}",
+          "$description": "遮罩蒙层"
+        }
+      },
+      "success": {
+        "primary": {
+          "$type": "color",
+          "$value": "{color.primitive.green.500}",
+          "$description": "成功主色"
+        },
+        "secondary": {
+          "$type": "color",
+          "$value": "{color.primitive.green.100}",
+          "$description": "成功浅色"
+        }
+      }
+    }
+  }
+}
