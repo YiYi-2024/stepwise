@@ -1,0 +1,79 @@
+/**
+ * 北极星设计规范 · Color CSS custom properties
+ * Primitive tokens first; semantic tokens alias primitives via var().
+ *
+ * Usage:
+ *   import '@stepwise/design-system/colors.css';
+ *   color: var(--polar-text-primary);
+ */
+
+:root {
+  /* ── Primitives: Base ── */
+  --polar-base-white: #ffffff;
+  --polar-base-black: #000000;
+
+  /* ── Primitives: Neutral ── */
+  --polar-neutral-100: #f7f7f7;
+  --polar-neutral-200: #f3f3f3;
+  --polar-neutral-300: #f2f2f2;
+  --polar-neutral-400: #e7e7e7;
+  --polar-neutral-500: #c5c5c5;
+  --polar-neutral-600: #adadad;
+  --polar-neutral-700: #8a8a8a;
+  --polar-neutral-800: #383838;
+  --polar-neutral-900: #1d1d1d;
+
+  /* ── Primitives: Red (Error source) ── */
+  --polar-red-50: #ffefef;
+  --polar-red-100: #fddbdb;
+  --polar-red-500: #f64d4d;
+
+  /* ── Primitives: Brand ── */
+  --polar-brand-100: #ffe0cf;
+  --polar-brand-500: #f36b24;
+
+  /* ── Primitives: Green (Success source) ── */
+  --polar-green-100: #ddfcdd;
+  --polar-green-500: #39ad37;
+
+  /* ── Primitives: Alpha ── */
+  --polar-alpha-500: rgba(56, 56, 56, 0.2);
+
+  /* ── Semantic: Text ── */
+  --polar-text-primary: var(--polar-neutral-800);
+  --polar-text-secondary: var(--polar-neutral-700);
+  --polar-text-tertiary: var(--polar-neutral-600);
+  --polar-text-subtle: var(--polar-neutral-500);
+  --polar-text-brand: var(--polar-brand-500);
+  --polar-text-accent: var(--polar-neutral-900);
+  --polar-text-white: var(--polar-base-white);
+
+  /* ── Semantic: Hover ── */
+  --polar-hover-subtle: var(--polar-neutral-100);
+  --polar-hover-default: var(--polar-neutral-300);
+  --polar-hover-strong-on-bg: var(--polar-neutral-400);
+
+  /* ── Semantic: Background ── */
+  --polar-bg-main: var(--polar-neutral-100);
+  --polar-bg-white: var(--polar-base-white);
+  --polar-bg-black: var(--polar-neutral-800);
+  /* Figma alias name retained for compatibility */
+  --polar-bg-grey: var(--polar-bg-main);
+
+  /* ── Semantic: Border ── */
+  --polar-border-primary: var(--polar-neutral-400);
+  --polar-border-secondary: var(--polar-neutral-200);
+  --polar-border-brand: var(--polar-brand-100);
+
+  /* ── Semantic: Error ── */
+  --polar-error-primary: var(--polar-red-500);
+  --polar-error-secondary: var(--polar-red-100);
+  --polar-error-tertiary: var(--polar-red-50);
+
+  /* ── Semantic: Mask ── */
+  --polar-mask-primary: var(--polar-alpha-500);
+
+  /* ── Semantic: Success ── */
+  --polar-success-primary: var(--polar-green-500);
+  --polar-success-secondary: var(--polar-green-100);
+}
