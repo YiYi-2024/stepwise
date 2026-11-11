@@ -1,0 +1,189 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "meta": {
+    "name": "北极星 / Polaris Semantic Colors",
+    "source": "https://www.figma.com/design/lHZQFXZ9mCxnwUxC50IgxL/?node-id=30-1254",
+    "layer": "semantic",
+    "note": "语义色引用基础色阶（primitive aliases），业务与组件应优先使用本层 token"
+  },
+  "color": {
+    "text": {
+      "primary": {
+        "$type": "color",
+        "$value": "{color.neutral.800}",
+        "$description": "主文字色",
+        "$extensions": {
+          "polaris.resolved": "#383838"
+        }
+      },
+      "secondary": {
+        "$type": "color",
+        "$value": "{color.neutral.700}",
+        "$description": "次要文字色",
+        "$extensions": {
+          "polaris.resolved": "#8A8A8A",
+          "polaris.figmaName": "Text/Seconday"
+        }
+      },
+      "tertiary": {
+        "$type": "color",
+        "$value": "{color.neutral.600}",
+        "$description": "辅助文字色",
+        "$extensions": {
+          "polaris.resolved": "#ADADAD"
+        }
+      },
+      "subtle": {
+        "$type": "color",
+        "$value": "{color.neutral.500}",
+        "$description": "弱化文字色",
+        "$extensions": {
+          "polaris.resolved": "#C5C5C5"
+        }
+      },
+      "brand": {
+        "$type": "color",
+        "$value": "{color.brand.500}",
+        "$description": "品牌文字色",
+        "$extensions": {
+          "polaris.resolved": "#F36B24"
+        }
+      },
+      "accent": {
+        "$type": "color",
+        "$value": "{color.neutral.900}",
+        "$description": "强调文字色",
+        "$extensions": {
+          "polaris.resolved": "#1D1D1D"
+        }
+      }
+    },
+    "hover": {
+      "subtle": {
+        "$type": "color",
+        "$value": "{color.neutral.100}",
+        "$description": "轻微悬停态",
+        "$extensions": {
+          "polaris.resolved": "#F7F7F7"
+        }
+      },
+      "default": {
+        "$type": "color",
+        "$value": "{color.neutral.300}",
+        "$description": "默认悬停态",
+        "$extensions": {
+          "polaris.resolved": "#F2F2F2"
+        }
+      },
+      "strong-on-bg": {
+        "$type": "color",
+        "$value": "{color.neutral.400}",
+        "$description": "背景上的强悬停态",
+        "$extensions": {
+          "polaris.resolved": "#E7E7E7",
+          "polaris.figmaName": "Hover/Strong_On-Bg"
+        }
+      }
+    },
+    "background": {
+      "main": {
+        "$type": "color",
+        "$value": "{color.neutral.100}",
+        "$description": "主页面背景",
+        "$extensions": {
+          "polaris.resolved": "#F7F7F7",
+          "polaris.figmaName": "Background/Grey"
+        }
+      },
+      "white": {
+        "$type": "color",
+        "$value": "{color.base.white}",
+        "$description": "白色表面背景",
+        "$extensions": {
+          "polaris.resolved": "#FFFFFF"
+        }
+      }
+    },
+    "border": {
+      "primary": {
+        "$type": "color",
+        "$value": "{color.neutral.400}",
+        "$description": "主边框色",
+        "$extensions": {
+          "polaris.resolved": "#E7E7E7"
+        }
+      },
+      "secondary": {
+        "$type": "color",
+        "$value": "{color.neutral.200}",
+        "$description": "次边框色",
+        "$extensions": {
+          "polaris.resolved": "#F3F3F3"
+        }
+      },
+      "brand": {
+        "$type": "color",
+        "$value": "{color.brand.100}",
+        "$description": "品牌边框色",
+        "$extensions": {
+          "polaris.resolved": "#FFE0CF"
+        }
+      }
+    },
+    "error": {
+      "primary": {
+        "$type": "color",
+        "$value": "{color.error.500}",
+        "$description": "错误主色",
+        "$extensions": {
+          "polaris.resolved": "#F64D4D"
+        }
+      },
+      "secondary": {
+        "$type": "color",
+        "$value": "{color.error.100}",
+        "$description": "错误次级色",
+        "$extensions": {
+          "polaris.resolved": "#FDDBDB"
+        }
+      },
+      "tertiary": {
+        "$type": "color",
+        "$value": "{color.error.50}",
+        "$description": "错误浅底色",
+        "$extensions": {
+          "polaris.resolved": "#FFEFEF"
+        }
+      }
+    },
+    "mask": {
+      "primary": {
+        "$type": "color",
+        "$value": "{color.alpha.500}",
+        "$description": "模态/遮罩蒙层",
+        "$extensions": {
+          "polaris.resolved": "#38383833",
+          "polaris.rgba": "rgba(56, 56, 56, 0.2)"
+        }
+      }
+    },
+    "success": {
+      "primary": {
+        "$type": "color",
+        "$value": "{color.success.500}",
+        "$description": "成功主色",
+        "$extensions": {
+          "polaris.resolved": "#39AD37"
+        }
+      },
+      "secondary": {
+        "$type": "color",
+        "$value": "{color.success.100}",
+        "$description": "成功浅色",
+        "$extensions": {
+          "polaris.resolved": "#DDFCDD"
+        }
+      }
+    }
+  }
+}

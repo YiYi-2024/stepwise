@@ -1,0 +1,27 @@
+{
+  "name": "@polaris/design-system",
+  "version": "0.1.0",
+  "private": true,
+  "description": "北极星设计规范系统 — design tokens (colors first)",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./colors": "./src/colors.ts",
+    "./css/colors.css": "./css/colors.css",
+    "./tokens/color/primitives.json": "./tokens/color/primitives.json",
+    "./tokens/color/semantic.json": "./tokens/color/semantic.json"
+  },
+  "files": [
+    "css",
+    "docs",
+    "preview",
+    "src",
+    "tokens"
+  ],
+  "keywords": [
+    "design-system",
+    "design-tokens",
+    "polaris",
+    "colors"
+  ]
+}

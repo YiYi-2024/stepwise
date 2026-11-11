@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>北极星 · Color Tokens</title>
+    <link rel="stylesheet" href="../css/colors.css" />
+    <style>
+      :root {
+        --page-pad: clamp(24px, 4vw, 64px);
+        --gap: 24px;
+        --label-w: min(280px, 100%);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Noto Sans SC", "PingFang SC", "Segoe UI", sans-serif;
+        background: var(--color-bg-main);
+        color: var(--color-text-primary);
+        line-height: 1.5;
+      }
+
+      .page {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: var(--page-pad);
+      }
+
+      .hero {
+        background: var(--color-bg-white);
+        border: 1px solid var(--color-border-primary);
+        border-radius: 20px;
+        padding: 40px 48px;
+        margin-bottom: 48px;
+      }
+
+      .hero h1 {
+        margin: 0 0 12px;
+        font-size: clamp(32px, 5vw, 48px);
+        font-weight: 600;
+        color: var(--color-text-accent);
+        letter-spacing: -0.02em;
+      }
+
+      .hero p {
+        margin: 0;
+        max-width: 52ch;
+        color: var(--color-text-tertiary);
+        font-size: 18px;
+      }
+
+      .section {
+        background: var(--color-bg-white);
+        border: 1px solid var(--color-border-primary);
+        border-radius: 16px;
+        padding: 32px;
+        margin-bottom: 24px;
+      }
+
+      .section-head {
+        display: grid;
+        gap: 4px;
+        margin-bottom: 24px;
+        max-width: var(--label-w);
+      }
+
+      .section-head h2 {
+        margin: 0;
+        font-size: 22px;
+        font-weight: 600;
+        color: var(--color-text-accent);
+      }
+
+      .section-head p {
+        margin: 0;
+        color: var(--color-text-secondary);
+        font-size: 15px;
+      }
+
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--gap);
+        align-items: flex-start;
+      }
+
+      .swatch {
+        width: 140px;
+        border: 1px solid var(--color-border-primary);
+        border-radius: 12px;
+        overflow: hidden;
+        background: var(--color-bg-white);
+      }
+
+      .swatch-chip {
+        height: 88px;
+        border-bottom: 1px solid var(--color-border-primary);
+      }
+
+      .swatch-meta {
+        padding: 12px;
+      }
+
+      .swatch-meta strong {
+        display: block;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--color-text-primary);
+      }
+
+      .swatch-meta span {
+        display: block;
+        margin-top: 2px;
+        font-size: 12px;
+        color: var(--color-text-tertiary);
+        font-variant-numeric: tabular-nums;
+      }
+
+      .chip-checkered {
+        background-image:
+          linear-gradient(45deg, #eee 25%, transparent 25%),
+          linear-gradient(-45deg, #eee 25%, transparent 25%),
+          linear-gradient(45deg, transparent 75%, #eee 75%),
+          linear-gradient(-45deg, transparent 75%, #eee 75%);
+        background-size: 16px 16px;
+        background-position: 0 0, 0 8px, 8px -8px, -8px 0;
+      }
+
+      .group-title {
+        margin: 48px 0 16px;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--color-text-subtle);
+      }
+
+      @media (max-width: 640px) {
+        .hero {
+          padding: 28px 24px;
+        }
+
+        .section {
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <h1>Color Tokens</h1>
+        <p>
+          北极星设计规范颜色系统预览。产品界面请优先使用 Semantic 变量；Primitive
+          仅用于扩展色阶。
+        </p>
+      </header>
+
+      <p class="group-title">Primitives</p>
+
+      <section class="section">
+        <div class="section-head">
+          <h2>Base</h2>
+          <p>基础黑白色，提供纯白与纯黑两种颜色。</p>
+        </div>
+        <div class="row" data-group="base"></div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <h2>Neutral</h2>
+          <p>中性色阶，用于文字、背景与边框。</p>
+        </div>
+        <div class="row" data-group="neutral"></div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <h2>Error</h2>
+          <p>错误状态色，用于异常提示与校验反馈。</p>
+        </div>
+        <div class="row" data-group="error"></div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <h2>Brand</h2>
+          <p>品牌橙色，用于品牌表达与重点强调。</p>
+        </div>
+        <div class="row" data-group="brand"></div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <h2>Success</h2>
+          <p>成功状态色，用于操作成功与正向反馈。</p>
+        </div>
+        <div class="row" data-group="success"></div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <h2>Alpha</h2>
+          <p>深灰色，20% 不透明度，用于遮罩与蒙层。</p>
+        </div>
+        <div class="row" data-group="alpha"></div>
+      </section>
+
+      <p class="group-title">Semantic</p>
+
+      <section class="section">
+        <div class="section-head">
+          <h2>Text</h2>
+          <p>Text colors for typography and labels.</p>
+        </div>
+        <div class="row" data-group="text"></div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <h2>Hover</h2>
+          <p>Hover states for interactive elements.</p>
+        </div>
+        <div class="row" data-group="hover"></div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <h2>Background</h2>
+          <p>Background colors for surfaces.</p>
+        </div>
+        <div class="row" data-group="background"></div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <h2>Border</h2>
+          <p>Border colors for dividers and outlines.</p>
+        </div>
+        <div class="row" data-group="border"></div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <h2>Error</h2>
+          <p>Error states for validation and alerts.</p>
+        </div>
+        <div class="row" data-group="semantic-error"></div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <h2>Mask</h2>
+          <p>Overlay masks for modal backgrounds.</p>
+        </div>
+        <div class="row" data-group="mask"></div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <h2>Success</h2>
+          <p>Success states for positive feedback.</p>
+        </div>
+        <div class="row" data-group="semantic-success"></div>
+      </section>
+    </main>
+
+    <script>
+      const palette = {
+        base: [
+          ["White", "var(--color-base-white)", "#FFFFFF"],
+          ["Black", "var(--color-base-black)", "#000000"],
+        ],
+        neutral: [
+          ["100", "var(--color-neutral-100)", "#F7F7F7"],
+          ["200", "var(--color-neutral-200)", "#F3F3F3"],
+          ["300", "var(--color-neutral-300)", "#F2F2F2"],
+          ["400", "var(--color-neutral-400)", "#E7E7E7"],
+          ["500", "var(--color-neutral-500)", "#C5C5C5"],
+          ["600", "var(--color-neutral-600)", "#ADADAD"],
+          ["700", "var(--color-neutral-700)", "#8A8A8A"],
+          ["800", "var(--color-neutral-800)", "#383838"],
+          ["900", "var(--color-neutral-900)", "#1D1D1D"],
+        ],
+        error: [
+          ["50", "var(--color-error-50)", "#FFEFEF"],
+          ["100", "var(--color-error-100)", "#FDDBDB"],
+          ["500", "var(--color-error-500)", "#F64D4D"],
+        ],
+        brand: [
+          ["100", "var(--color-brand-100)", "#FFE0CF"],
+          ["500", "var(--color-brand-500)", "#F36B24"],
+        ],
+        success: [
+          ["100", "var(--color-success-100)", "#DDFCDD"],
+          ["500", "var(--color-success-500)", "#39AD37"],
+        ],
+        alpha: [
+          ["500", "var(--color-alpha-500)", "#38383833 (20%)", true],
+        ],
+        text: [
+          ["Primary", "var(--color-text-primary)", "#383838"],
+          ["Secondary", "var(--color-text-secondary)", "#8A8A8A"],
+          ["Tertiary", "var(--color-text-tertiary)", "#ADADAD"],
+          ["Subtle", "var(--color-text-subtle)", "#C5C5C5"],
+          ["Brand", "var(--color-text-brand)", "#F36B24"],
+          ["Accent", "var(--color-text-accent)", "#1D1D1D"],
+        ],
+        hover: [
+          ["Subtle", "var(--color-hover-subtle)", "#F7F7F7"],
+          ["Default", "var(--color-hover-default)", "#F2F2F2"],
+          ["Strong_On-Bg", "var(--color-hover-strong-on-bg)", "#E7E7E7"],
+        ],
+        background: [
+          ["Main", "var(--color-bg-main)", "#F7F7F7"],
+          ["White", "var(--color-bg-white)", "#FFFFFF"],
+        ],
+        border: [
+          ["Primary", "var(--color-border-primary)", "#E7E7E7"],
+          ["Secondary", "var(--color-border-secondary)", "#F3F3F3"],
+          ["Brand", "var(--color-border-brand)", "#FFE0CF"],
+        ],
+        "semantic-error": [
+          ["Primary", "var(--color-error-primary)", "#F64D4D"],
+          ["Secondary", "var(--color-error-secondary)", "#FDDBDB"],
+          ["Tertiary", "var(--color-error-tertiary)", "#FFEFEF"],
+        ],
+        mask: [
+          ["Primary", "var(--color-mask-primary)", "#383838 20%", true],
+        ],
+        "semantic-success": [
+          ["Primary", "var(--color-success-primary)", "#39AD37"],
+          ["Secondary", "var(--color-success-secondary)", "#DDFCDD"],
+        ],
+      };
+
+      function renderSwatch([name, cssVar, hex, transparent]) {
+        const el = document.createElement("article");
+        el.className = "swatch";
+        el.innerHTML = `
+          <div class="swatch-chip ${transparent ? "chip-checkered" : ""}" style="background-color: ${cssVar}"></div>
+          <div class="swatch-meta">
+            <strong>${name}</strong>
+            <span>${hex}</span>
+          </div>
+        `;
+        return el;
+      }
+
+      Object.entries(palette).forEach(([key, items]) => {
+        const mount = document.querySelector(`[data-group="${key}"]`);
+        if (!mount) return;
+        items.forEach((item) => mount.appendChild(renderSwatch(item)));
+      });
+    </script>
+  </body>
+</html>
