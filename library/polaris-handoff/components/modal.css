@@ -1,0 +1,124 @@
+/* Modal 对话框
+ *
+ *   <div class="pl-modal" role="dialog">                      遮罩层，铺满视口并居中对话框
+ *     <div class="pl-modal__dialog pl-modal__dialog--small | --large">
+ *       <header class="pl-modal__header">
+ *         <div class="pl-modal__title-row">
+ *           <h2 class="pl-modal__title">标题</h2>
+ *           <button class="pl-icon-button pl-modal__close">…关闭图标</button>
+ *         </div>
+ *         <p class="pl-modal__description">说明文字</p>        仅小对话框使用，可省略
+ *       </header>
+ *       <div class="pl-modal__body">…</div>                   仅大对话框使用，中间内容区域，可自由配置
+ *       <footer class="pl-modal__footer">
+ *         <button class="pl-modal__aux">…</button>            仅大对话框使用，辅助按钮（如删除），可不展示
+ *         <div class="pl-modal__actions">取消 + 确认按钮</div>
+ *       </footer>
+ *     </div>
+ *   </div>
+ *
+ * 小对话框宽 360px：确认按钮可切换类型（pl-button--danger / --primary / --brand）
+ * 大对话框宽 640px、高 480px
+ */
+
+.pl-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--mask-primary);
+}
+
+.pl-modal__dialog {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 20px;
+  padding: 20px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: var(--background-white);
+  font-family: "PingFang SC", var(--font-family-body);
+}
+
+.pl-modal__dialog--small {
+  width: 360px;
+}
+
+.pl-modal__dialog--large {
+  width: 640px;
+  height: 480px;
+}
+
+.pl-modal__header {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.pl-modal__title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pl-modal__title {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  color: var(--text-primary);
+  font-size: var(--font-size-text-lg);
+  font-weight: var(--font-weight-medium);
+  line-height: normal;
+}
+
+.pl-modal__close {
+  flex: none;
+  color: var(--text-secondary);
+}
+
+.pl-modal__description {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: var(--font-size-text-md);
+  font-weight: var(--font-weight-regular);
+  line-height: normal;
+}
+
+.pl-modal__body {
+  flex: 1;
+  min-height: 0;
+}
+
+.pl-modal__footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.pl-modal__aux {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-right: auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--error-primary);
+  font-family: inherit;
+  font-size: var(--font-size-text-md);
+  font-weight: var(--font-weight-regular);
+  line-height: normal;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.pl-modal__actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

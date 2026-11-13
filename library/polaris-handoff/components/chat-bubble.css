@@ -1,0 +1,68 @@
+/* 对话气泡。将可选的附件组、正文和操作栏放入 .pl-chat-bubble。
+ * 正文可在文本前插入只读的 .pl-skill-reference。预览可用 is-hover 固定显示操作栏。
+ */
+.pl-chat-bubble {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  width: min(858px, 100%);
+  font: var(--font-weight-regular) var(--font-size-text-md)/var(--line-height-text-md) "PingFang SC", sans-serif;
+}
+.pl-chat-bubble__attachments {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  width: 100%;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.pl-chat-bubble__body {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  width: fit-content;
+  max-width: min(624px, 100%);
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: var(--background-grey);
+  color: var(--text-accent);
+  overflow: hidden;
+  overflow-wrap: anywhere;
+}
+.pl-chat-bubble__text {
+  flex: 1 0 0;
+  min-width: 1px;
+}
+.pl-chat-bubble__actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+  color: var(--text-tertiary);
+  opacity: 0;
+  pointer-events: none;
+}
+.pl-chat-bubble__actions time { white-space: nowrap; }
+.pl-icon-button--copy::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  background-color: var(--success-primary);
+  mask: url("../assets/icons/check.svg") center / contain no-repeat;
+  opacity: 0;
+  transform: scale(.88);
+  pointer-events: none;
+}
+.pl-icon-button--copy.is-copied::after { opacity: 1; transform: scale(1); }
+.pl-icon-button--copy.is-copied .pl-icon-button__icon { opacity: 0; transform: scale(.88); }
+@media (prefers-reduced-motion: no-preference) {
+  .pl-icon-button--copy::after,
+  .pl-icon-button--copy__icon {
+    transition: opacity 140ms ease, transform 180ms ease-out;
+  }
+}
+.pl-chat-bubble:is(:hover, :focus-within, .is-hover) .pl-chat-bubble__actions {
+  opacity: 1;
+  pointer-events: auto;
+}

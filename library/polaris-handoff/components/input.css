@@ -1,0 +1,146 @@
+/* Input 输入框（单行 + 多行）
+ *
+ *   <div class="pl-input [is-focus | is-disabled]">
+ *     <label class="pl-input__label">项目名称<span class="pl-input__required">*</span></label>   标题、必填星号可省略
+ *     <div class="pl-input__control">
+ *       <span class="pl-input__affix">¥</span>                      前缀，可省略
+ *       <input class="pl-input__field" placeholder="请输入文字">
+ *       <span class="pl-input__affix pl-input__affix--suffix">@stepfun.com</span>   后缀，可省略
+ *       <span class="pl-input__count">0/<b>30</b></span>            字数限制，可省略
+ *     </div>
+ *     <p class="pl-input__error"><span class="pl-icon--mask" style="--icon-src: url(…reminder.svg)"></span>报错信息</p>              报错提示，可省略
+ *   </div>
+ *
+ * 多行：加 .pl-input--multiline，输入区换成 <textarea class="pl-input__field">，字数限制在右下角
+ * 状态：默认；聚焦 :focus-within / .is-focus；已输入（有值）；禁用 .is-disabled（配合 disabled 属性）
+ */
+
+.pl-input {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  width: 100%;
+  font-family: "PingFang SC", var(--font-family-body);
+  font-size: var(--font-size-text-sm);
+}
+
+.pl-input__label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--text-primary);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-text-sm);
+  white-space: nowrap;
+}
+
+.pl-input__required {
+  color: var(--error-primary);
+}
+
+.pl-input__control {
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  align-self: stretch;
+  height: 36px;
+  padding: 8px 10px;
+  gap: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border-primary);
+  border-radius: 8px;
+  background: var(--background-white);
+  line-height: 20px;
+}
+
+.pl-input__control:focus-within,
+.pl-input.is-focus .pl-input__control {
+  border-color: var(--text-primary);
+}
+
+.pl-input__field {
+  flex: 1;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--text-primary);
+  font: inherit;
+  line-height: 20px;
+}
+
+.pl-input__field::placeholder {
+  color: var(--text-tertiary);
+}
+
+.pl-input__affix {
+  flex: none;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+.pl-input__affix--suffix {
+  color: var(--text-tertiary);
+}
+
+.pl-input__count {
+  flex: none;
+  color: var(--text-tertiary);
+  white-space: nowrap;
+}
+
+.pl-input__count b {
+  color: var(--text-primary);
+  font-weight: inherit;
+}
+
+.pl-input__error {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--error-primary);
+  line-height: var(--line-height-text-sm);
+}
+
+.pl-input__error .pl-icon--mask {
+  display: block;
+  flex: none;
+  width: 14px;
+  height: 14px;
+}
+
+/* 禁用 */
+.pl-input.is-disabled .pl-input__control {
+  border-color: var(--border-primary);
+  background: var(--background-grey);
+}
+
+.pl-input.is-disabled .pl-input__field,
+.pl-input.is-disabled .pl-input__affix,
+.pl-input.is-disabled .pl-input__count b {
+  color: var(--text-secondary);
+}
+
+.pl-input.is-disabled .pl-input__affix--suffix {
+  color: var(--text-tertiary);
+}
+
+/* 多行 */
+.pl-input--multiline .pl-input__control {
+  flex-direction: column;
+  align-items: stretch;
+  height: 108px;
+  gap: 6px;
+}
+
+.pl-input--multiline .pl-input__field {
+  flex: 1;
+  min-height: 0;
+  resize: none;
+}
+
+.pl-input--multiline .pl-input__count {
+  align-self: flex-end;
+}

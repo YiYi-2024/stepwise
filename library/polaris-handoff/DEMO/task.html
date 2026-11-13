@@ -1,0 +1,344 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>新建任务 · 北极星</title>
+<link rel="stylesheet" href="../polaris.css?v=feedback-zero-padding"><link rel="stylesheet" href="home.css">
+<script defer src="../components/chat-input.js"></script><script defer src="../components/cascader.js"></script><link rel="stylesheet" href="task.css"><script defer src="../components/chat-copy.js"></script><script defer src="../components/chat-parts.js"></script><script defer src="../components/thinking.js"></script><script defer src="task.js"></script><script defer src="../components/task-summary.js"></script></head><body><nav class="pl-mainbar" aria-label="主导航（无置顶）">
+  <header class="pl-mainbar__header">
+    <span class="pl-mainbar__brand"><img src="../assets/brand/mark.svg" alt=""><img src="../assets/brand/name.svg" alt="北极星"></span>
+    <button type="button" class="pl-icon-button pl-icon-button--on-bg" aria-label="搜索"><span aria-hidden="true" class="pl-icon pl-icon--mask pl-icon-button__icon" style="--icon-src:url(../assets/icons/search.svg)"></span><span class="pl-tooltip pl-icon-button__tooltip" role="tooltip">搜索</span></button>
+  </header>
+  <div><button type="button" class="pl-mainbar-item"><span aria-hidden="true" class="pl-icon pl-icon--mask pl-mainbar-item__icon" style="--icon-src:url(../assets/icons/new-task.svg)"></span><span class="pl-mainbar-item__name">新建任务</span></button>
+<button type="button" class="pl-mainbar-item"><span aria-hidden="true" class="pl-icon pl-icon--mask pl-mainbar-item__icon" style="--icon-src:url(../assets/icons/board.svg)"></span><span class="pl-mainbar-item__name">看板</span></button>
+<button type="button" class="pl-mainbar-item"><span aria-hidden="true" class="pl-icon pl-icon--mask pl-mainbar-item__icon" style="--icon-src:url(../assets/icons/library.svg)"></span><span class="pl-mainbar-item__name">资料库</span></button>
+<button type="button" class="pl-mainbar-item"><span aria-hidden="true" class="pl-icon pl-icon--mask pl-mainbar-item__icon" style="--icon-src:url(../assets/icons/skill.svg)"></span><span class="pl-mainbar-item__name">技能</span></button>
+<div class="pl-research-menu">
+<button type="button" class="pl-mainbar-item pl-mainbar-item--with-arrow"><span aria-hidden="true" class="pl-icon pl-icon--mask pl-mainbar-item__icon" style="--icon-src:url(../assets/icons/research.svg)"></span><span class="pl-mainbar-item__name">投研功能</span><span aria-hidden="true" class="pl-icon pl-icon--mask pl-mainbar-item__chevron" style="--icon-src:url(../assets/icons/chevron-right.svg)"></span></button>
+<div class="pl-select-panel pl-research-menu__panel" role="group" aria-label="投研功能">
+<button type="button" class="pl-mainbar-item"><span class="pl-icon pl-icon--mask pl-mainbar-item__icon" aria-hidden="true" style="--icon-src:url(../assets/icons/expert.svg)"></span><span class="pl-mainbar-item__name">专家服务</span></button>
+<button type="button" class="pl-mainbar-item"><span class="pl-icon pl-icon--mask pl-mainbar-item__icon" aria-hidden="true" style="--icon-src:url(../assets/icons/meeting-assistant.svg)"></span><span class="pl-mainbar-item__name">会议助手</span></button>
+<button type="button" class="pl-mainbar-item"><span class="pl-icon pl-icon--mask pl-mainbar-item__icon" aria-hidden="true" style="--icon-src:url(../assets/icons/meeting-notes.svg)"></span><span class="pl-mainbar-item__name">会议纪要</span></button>
+<button type="button" class="pl-mainbar-item"><span class="pl-icon pl-icon--mask pl-mainbar-item__icon" aria-hidden="true" style="--icon-src:url(../assets/icons/source-monitor.svg)"></span><span class="pl-mainbar-item__name">信源监控器</span></button>
+<button type="button" class="pl-mainbar-item"><span class="pl-icon pl-icon--mask pl-mainbar-item__icon" aria-hidden="true" style="--icon-src:url(../assets/icons/report.svg)"></span><span class="pl-mainbar-item__name">研报</span></button>
+<button type="button" class="pl-mainbar-item"><span class="pl-icon pl-icon--mask pl-mainbar-item__icon" aria-hidden="true" style="--icon-src:url(../assets/icons/ai-chain.svg)"></span><span class="pl-mainbar-item__name">AI产业链</span></button>
+<button type="button" class="pl-mainbar-item"><span class="pl-icon pl-icon--mask pl-mainbar-item__icon" aria-hidden="true" style="--icon-src:url(../assets/icons/today-brief.svg)"></span><span class="pl-mainbar-item__name">今日必看</span></button>
+</div>
+</div></div>
+  <div class="pl-mainbar__lists"><section>
+<div class="pl-mainbar-section">
+  <button type="button" class="pl-mainbar-section__toggle" aria-expanded="true" aria-controls="plain-projects">项目<span aria-hidden="true" class="pl-icon pl-icon--mask pl-mainbar-section__arrow"></span></button>
+  <div class="pl-mainbar-section__actions"><button type="button" class="pl-icon-button pl-icon-button--on-bg" aria-label="新建项目"><span class="pl-icon pl-icon--mask pl-icon-button__icon" style="--icon-src:url(../assets/icons/add.svg)"></span><span class="pl-tooltip pl-icon-button__tooltip" role="tooltip">新建项目</span></button>
+<button type="button" class="pl-icon-button pl-icon-button--on-bg" aria-label="全部项目"><span class="pl-icon pl-icon--mask pl-icon-button__icon" style="--icon-src:url(../assets/icons/arrow-up-right.svg)"></span><span class="pl-tooltip pl-icon-button__tooltip" role="tooltip">全部项目</span></button></div>
+</div>
+<div id="plain-projects" data-project-list>
+<div class="pl-mainbar-group"><button class="pl-mainbar-item pl-mainbar-item--project" aria-expanded="false"><span class="pl-mainbar-item__icon pl-mainbar-folder" aria-hidden="true"><span class="pl-icon pl-icon--mask pl-mainbar-folder__closed"></span><span class="pl-icon pl-icon--mask pl-mainbar-folder__open"></span></span><span class="pl-mainbar-item__project-name"><span class="pl-mainbar-item__name">项目名称</span><span class="pl-icon pl-icon--mask pl-mainbar-item__chevron" style="--icon-src:url(../assets/icons/chevron-right.svg)"></span></span><span class="pl-mainbar-item__actions"><span class="pl-mainbar-item__action"><span class="pl-icon pl-icon--mask" style="--icon-src:url(../assets/icons/more.svg)"></span></span><span class="pl-mainbar-item__action pl-mainbar-item__action--new-task"><span class="pl-icon pl-icon--mask" style="--icon-src:url(../assets/icons/new-task.svg)"></span><span class="pl-tooltip pl-icon-button__tooltip" role="tooltip">新建任务</span></span></span></button>
+<div class="pl-mainbar-group__children" hidden><button type="button" class="pl-mainbar-item pl-mainbar-item--pinned"><span aria-hidden="true" class="pl-icon pl-icon--mask pl-mainbar-item__icon" style="--icon-src:url(../assets/icons/pin.svg)"></span><span class="pl-mainbar-item__name">对话名称</span><span class="pl-mainbar-item__action"><span class="pl-icon pl-icon--mask" style="--icon-src:url(../assets/icons/more.svg)"></span></span></button>
+<button type="button" class="pl-mainbar-item"><span class="pl-mainbar-item__name">对话名称</span><span class="pl-mainbar-item__action"><span class="pl-icon pl-icon--mask" style="--icon-src:url(../assets/icons/more.svg)"></span></span></button>
+<button type="button" class="pl-mainbar-item"><span class="pl-mainbar-item__name">对话名称</span><span class="pl-mainbar-item__action"><span class="pl-icon pl-icon--mask" style="--icon-src:url(../assets/icons/more.svg)"></span></span></button></div>
+</div>
+<div class="pl-mainbar-group"><button class="pl-mainbar-item pl-mainbar-item--project" aria-expanded="false"><span class="pl-mainbar-item__icon pl-mainbar-folder" aria-hidden="true"><span class="pl-icon pl-icon--mask pl-mainbar-folder__closed"></span><span class="pl-icon pl-icon--mask pl-mainbar-folder__open"></span></span><span class="pl-mainbar-item__project-name"><span class="pl-mainbar-item__name">项目名称</span><span class="pl-icon pl-icon--mask pl-mainbar-item__chevron" style="--icon-src:url(../assets/icons/chevron-right.svg)"></span></span><span class="pl-mainbar-item__actions"><span class="pl-mainbar-item__action"><span class="pl-icon pl-icon--mask" style="--icon-src:url(../assets/icons/more.svg)"></span></span><span class="pl-mainbar-item__action pl-mainbar-item__action--new-task"><span class="pl-icon pl-icon--mask" style="--icon-src:url(../assets/icons/new-task.svg)"></span><span class="pl-tooltip pl-icon-button__tooltip" role="tooltip">新建任务</span></span></span></button>
+<div class="pl-mainbar-group__children" hidden><button type="button" class="pl-mainbar-item pl-mainbar-item--pinned"><span aria-hidden="true" class="pl-icon pl-icon--mask pl-mainbar-item__icon" style="--icon-src:url(../assets/icons/pin.svg)"></span><span class="pl-mainbar-item__name">对话名称</span><span class="pl-mainbar-item__action"><span class="pl-icon pl-icon--mask" style="--icon-src:url(../assets/icons/more.svg)"></span></span></button>
+<button type="button" class="pl-mainbar-item"><span class="pl-mainbar-item__name">对话名称</span><span class="pl-mainbar-item__action"><span class="pl-icon pl-icon--mask" style="--icon-src:url(../assets/icons/more.svg)"></span></span></button>
+<button type="button" class="pl-mainbar-item"><span class="pl-mainbar-item__name">对话名称</span><span class="pl-mainbar-item__action"><span class="pl-icon pl-icon--mask" style="--icon-src:url(../assets/icons/more.svg)"></span></span></button></div>
+</div>
+<div class="pl-mainbar-group"><button class="pl-mainbar-item pl-mainbar-item--project" aria-expanded="false"><span class="pl-mainbar-item__icon pl-mainbar-folder" aria-hidden="true"><span class="pl-icon pl-icon--mask pl-mainbar-folder__closed"></span><span class="pl-icon pl-icon--mask pl-mainbar-folder__open"></span></span><span class="pl-mainbar-item__project-name"><span class="pl-mainbar-item__name">项目名称</span><span class="pl-icon pl-icon--mask pl-mainbar-item__chevron" style="--icon-src:url(../assets/icons/chevron-right.svg)"></span></span><span class="pl-mainbar-item__actions"><span class="pl-mainbar-item__action"><span class="pl-icon pl-icon--mask" style="--icon-src:url(../assets/icons/more.svg)"></span></span><span class="pl-mainbar-item__action pl-mainbar-item__action--new-task"><span class="pl-icon pl-icon--mask" style="--icon-src:url(../assets/icons/new-task.svg)"></span><span class="pl-tooltip pl-icon-button__tooltip" role="tooltip">新建任务</span></span></span></button>
+<div class="pl-mainbar-group__children" hidden></div>
+</div>
+</div>
+</section>
+<section>
+<div class="pl-mainbar-section">
+  <button type="button" class="pl-mainbar-section__toggle" aria-expanded="true" aria-controls="plain-chats">对话<span aria-hidden="true" class="pl-icon pl-icon--mask pl-mainbar-section__arrow"></span></button>
+  
+</div>
+<div id="plain-chats">
+<button type="button" class="pl-mainbar-item"><span class="pl-mainbar-item__name">对话名称</span><span class="pl-mainbar-item__action"><span class="pl-icon pl-icon--mask" style="--icon-src:url(../assets/icons/more.svg)"></span></span></button>
+<button type="button" class="pl-mainbar-item"><span class="pl-mainbar-item__name">对话名称</span><span class="pl-mainbar-item__action"><span class="pl-icon pl-icon--mask" style="--icon-src:url(../assets/icons/more.svg)"></span></span></button>
+<button type="button" class="pl-mainbar-item"><span class="pl-mainbar-item__name">对话名称</span><span class="pl-mainbar-item__action"><span class="pl-icon pl-icon--mask" style="--icon-src:url(../assets/icons/more.svg)"></span></span></button>
+<button type="button" class="pl-mainbar-item"><span class="pl-mainbar-item__name">对话名称</span><span class="pl-mainbar-item__action"><span class="pl-icon pl-icon--mask" style="--icon-src:url(../assets/icons/more.svg)"></span></span></button>
+<button type="button" class="pl-mainbar-item"><span class="pl-mainbar-item__name">对话名称</span><span class="pl-mainbar-item__action"><span class="pl-icon pl-icon--mask" style="--icon-src:url(../assets/icons/more.svg)"></span></span></button>
+<button type="button" class="pl-mainbar-item"><span class="pl-mainbar-item__name">对话名称</span><span class="pl-mainbar-item__action"><span class="pl-icon pl-icon--mask" style="--icon-src:url(../assets/icons/more.svg)"></span></span></button>
+<button type="button" class="pl-mainbar-item"><span class="pl-mainbar-item__name">对话名称</span><span class="pl-mainbar-item__action"><span class="pl-icon pl-icon--mask" style="--icon-src:url(../assets/icons/more.svg)"></span></span></button>
+<button type="button" class="pl-mainbar-item"><span class="pl-mainbar-item__name">对话名称</span><span class="pl-mainbar-item__action"><span class="pl-icon pl-icon--mask" style="--icon-src:url(../assets/icons/more.svg)"></span></span></button>
+<button type="button" class="pl-mainbar-item"><span class="pl-mainbar-item__name">对话名称</span><span class="pl-mainbar-item__action"><span class="pl-icon pl-icon--mask" style="--icon-src:url(../assets/icons/more.svg)"></span></span></button>
+<button type="button" class="pl-mainbar-item"><span class="pl-mainbar-item__name">对话名称</span><span class="pl-mainbar-item__action"><span class="pl-icon pl-icon--mask" style="--icon-src:url(../assets/icons/more.svg)"></span></span></button>
+</div>
+</section></div>
+  <footer class="pl-mainbar__profile"><img class="pl-avatar" src="../assets/avatar/Avatar.png" alt="">176****2985</footer>
+</nav><main class="task-page"><nav class="pl-navbar" aria-label="对话顶部导航">
+            <div class="pl-navbar__title-group">
+              <span class="pl-navbar__title">新建的任务名称</span>
+              <button class="pl-icon-button pl-icon-button--large pl-navbar__title-edit" type="button" aria-label="重命名"><span class="pl-icon pl-icon--mask" style="--icon-src: url(../assets/icons/write.svg)"></span><span class="pl-tooltip pl-icon-button__tooltip" role="tooltip">重命名</span></button>
+            </div>
+            <div class="pl-navbar__actions">
+              <button class="pl-icon-button pl-icon-button--large" type="button" aria-label="任务摘要" aria-controls="task-summary-panel" aria-expanded="false"><span class="pl-icon pl-icon--mask" style="--icon-src: url(../assets/icons/summary.svg)"></span><span class="pl-tooltip pl-icon-button__tooltip" role="tooltip">任务摘要</span></button>
+            </div>
+          </nav>
+<div class="task-body"><div class="task-conversation"><div class="task-reading"><nav class="message-rail" aria-label="定位用户消息"></nav><aside id="message-preview" class="pl-chat-details" role="tooltip" hidden><strong class="pl-chat-details__title"></strong><p></p></aside><div class="task-stream"><div class="task-column"><template data-chat-part="bubble"></template>
+<article class="pl-markdown">
+<template data-chat-part="elapsed"></template>
+<div class="pl-markdown" id="task-response">
+<p>截至10月7日，克拉克森口径 VLCC 即期 TCE：TD3C（中东湾-中国）140万美元/天、TD34（阿曼湾-中国）84万美元/天、TD22（美湾-中国）跳涨23.5%至62万美元/天、TD15（西非-中国）76万美元/天。阿格斯数据显示，美湾至亚太航线单船包干运费达8100万美元，是该机构2017年有评估以来的最高值，较中东局势升级前约2250万美元的高位高出逾6300万美元</p>
+<p>需要区分两个口径：Q3 VLCC平均收益277,995美元/天是季度均值，而160万美元/天是即期峰值2。均值与峰值差5倍以上，这正是“能不能线性外推”的关键。</p>
+<p>一个容易被忽略的细节：TD3C报价虽高，但该航线成交量极小，船东实际成交集中在红海、西非和美湾。国金证券明确指出“TD3C无法代表船东的实际收益”。</p></div>
+<template data-chat-part="file"></template>
+</article>
+<template data-chat-part="feedback" data-copy-target="task-response"></template></div></div></div><footer class="task-column task-footer"><div class="pl-composer" data-mode-placement="top">
+    <div class="pl-composer__body">
+      <div class="pl-composer__content">
+        
+        <textarea class="pl-composer__query" aria-label="对话输入" placeholder="输入你想研究的问题或任务，支持@引用资料，调用快捷任务能力/skill"></textarea>
+      </div>
+      <div class="pl-composer__toolbar">
+        <button type="button" class="pl-composer__add" aria-label="添加附件" ><img class="pl-icon pl-icon--sm" src="../assets/icons/add-lg.svg" alt=""></button>
+        <div class="pl-chat-send">
+  <button type="button" class="pl-chat-send__mode" >自动模式<img src="../assets/icons/chat-mode-chevron.svg" alt=""></button>
+  <span class="pl-chat-send__action"><button type="button" class="pl-chat-send__button" aria-label="发送" disabled><img src="../assets/icons/chat-send.svg" alt=""></button><span class="pl-tooltip pl-icon-button__tooltip" role="tooltip">当前不可发送</span></span>
+</div>
+      </div>
+    </div>
+    </div><small>内容由AI生成，请核实信息</small></footer></div><aside id="task-summary-panel" aria-label="任务摘要" inert><template data-chat-part="summary"></template></aside></div></main>
+<aside class="task-editor" aria-label="文件编辑器" inert><nav class="pl-navbar pl-navbar--files" aria-label="文件浏览顶部导航">
+            <div class="pl-navbar-tabs" role="tablist">
+              <div class="pl-navbar-tabs__track">
+                <div class="pl-navbar-tab is-active" role="tab" aria-selected="true" tabindex="0" data-type="word">
+                  <span class="pl-navbar-tab__icon-wrap"><img class="pl-navbar-tab__icon" src="../assets/file-type/word.png" alt="" /></span>
+                  <span class="pl-navbar-tab__label">页签的名字</span>
+                  <button class="pl-navbar-tab__close" type="button" aria-label="关闭页签">
+                    <span class="pl-navbar-tab__close-icon pl-icon--mask" style="--icon-src: url(../assets/icons/close.svg)"></span>
+                  </button>
+                </div>
+                <div class="pl-navbar-tab" role="tab" tabindex="-1" data-type="word">
+                  <span class="pl-navbar-tab__icon-wrap"><img class="pl-navbar-tab__icon" src="../assets/file-type/word.png" alt="" /></span>
+                  <span class="pl-navbar-tab__label">页签的名字</span><button class="pl-navbar-tab__close" type="button" aria-label="关闭页签"><span class="pl-navbar-tab__close-icon pl-icon--mask" style="--icon-src: url(../assets/icons/close.svg)"></span></button></div>
+                <div class="pl-navbar-tab" role="tab" tabindex="-1" data-type="word">
+                  <span class="pl-navbar-tab__icon-wrap"><img class="pl-navbar-tab__icon" src="../assets/file-type/word.png" alt="" /></span>
+                  <span class="pl-navbar-tab__label">页签的名字</span><button class="pl-navbar-tab__close" type="button" aria-label="关闭页签"><span class="pl-navbar-tab__close-icon pl-icon--mask" style="--icon-src: url(../assets/icons/close.svg)"></span></button></div>
+              </div>
+            <span class="pl-navbar-tabs__scroll pl-navbar-tabs__scroll--left">
+                <button class="pl-page-button" type="button" aria-label="向左滚动"></button>
+              </span>
+              <span class="pl-navbar-tabs__scroll pl-navbar-tabs__scroll--right">
+                <button class="pl-page-button pl-page-button--next" type="button" aria-label="向右滚动"></button>
+              </span></div>
+            <div class="pl-navbar__actions">
+              <button class="pl-icon-button pl-icon-button--large" type="button" aria-label="展开"><span class="pl-icon pl-icon--mask" style="--icon-src: url(../assets/icons/expand.svg)"></span><span class="pl-tooltip pl-icon-button__tooltip" role="tooltip">展开</span></button>
+              <button class="pl-icon-button pl-icon-button--large" type="button" aria-label="收起侧边栏"><span class="pl-icon pl-icon--mask" style="--icon-src: url(../assets/icons/sidebar-collapse.svg?v=101719d2)"></span><span class="pl-tooltip pl-icon-button__tooltip" role="tooltip">收起侧边栏</span></button>
+            </div>
+          </nav>
+<div class="task-editor__content">编辑器内容</div></aside>
+<div id="composer-add-menu" class="pl-select-panel pl-add-menu pl-cascader" role="menu" aria-label="添加" popover>
+  <button type="button" class="pl-select-option" role="menuitem" data-action="upload"><span aria-hidden="true" class="pl-select-option__icon" style="--icon-src: url(../assets/icons/link.svg)"></span><span class="pl-select-option__text">上传文件</span></button>
+  <button type="button" class="pl-select-option" role="menuitem" data-action="library"><span aria-hidden="true" class="pl-select-option__icon" style="--icon-src: url(../assets/icons/library.svg)"></span><span class="pl-select-option__text">添加资料库文件</span></button>
+  <div class="pl-select-panel__divider" role="separator"></div>
+  <button type="button" class="pl-select-option pl-cascader__trigger" role="menuitem" data-action="skills" aria-haspopup="menu" aria-expanded="false" aria-controls="composer-skills"><span aria-hidden="true" class="pl-select-option__icon" style="--icon-src: url(../assets/icons/skill.svg)"></span><span class="pl-select-option__text">技能</span><span aria-hidden="true" class="pl-select-option__arrow pl-icon pl-icon--sm pl-icon--mask"></span></button>
+</div>
+<div class="pl-select-panel pl-skills-menu pl-cascader__panel" id="composer-skills" role="menu" aria-label="技能" popover>
+    <button type="button" role="menuitem" class="pl-select-option" data-action="skill" data-skill-id="example-1" data-description="技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍">
+      <span class="pl-select-option__icon" aria-hidden="true" style="--icon-src: url(../assets/icons/skill.svg)"></span>
+      <span class="pl-select-option__text">技能</span>
+    </button>
+    <button type="button" role="menuitem" class="pl-select-option" data-action="skill" data-skill-id="example-2" data-description="技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍">
+      <span class="pl-select-option__icon" aria-hidden="true" style="--icon-src: url(../assets/icons/skill.svg)"></span>
+      <span class="pl-select-option__text">技能</span>
+    </button>
+    <button type="button" role="menuitem" class="pl-select-option" data-action="skill" data-skill-id="example-3" data-description="技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍">
+      <span class="pl-select-option__icon" aria-hidden="true" style="--icon-src: url(../assets/icons/skill.svg)"></span>
+      <span class="pl-select-option__text">技能</span>
+    </button>
+    <button type="button" role="menuitem" class="pl-select-option" data-action="skill" data-skill-id="example-4" data-description="技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍">
+      <span class="pl-select-option__icon" aria-hidden="true" style="--icon-src: url(../assets/icons/skill.svg)"></span>
+      <span class="pl-select-option__text">技能</span>
+    </button>
+    <button type="button" role="menuitem" class="pl-select-option" data-action="skill" data-skill-id="example-5" data-description="技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍">
+      <span class="pl-select-option__icon" aria-hidden="true" style="--icon-src: url(../assets/icons/skill.svg)"></span>
+      <span class="pl-select-option__text">技能</span>
+    </button>
+    <button type="button" role="menuitem" class="pl-select-option" data-action="skill" data-skill-id="example-6" data-description="技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍">
+      <span class="pl-select-option__icon" aria-hidden="true" style="--icon-src: url(../assets/icons/skill.svg)"></span>
+      <span class="pl-select-option__text">技能技能技能技能技能技能技能技能技能技能技能技能</span>
+    </button>
+    <div class="pl-select-panel__divider" role="separator"></div>
+    <button type="button" role="menuitem" class="pl-select-option" data-action="manage-skills">
+      <span class="pl-select-option__icon" aria-hidden="true" style="--icon-src: url(../assets/icons/manage.svg)"></span>
+      <span class="pl-select-option__text">管理技能</span>
+    </button>
+    <div class="pl-tooltip pl-skills-menu__tip" id="composer-skill-tip" role="tooltip" popover="manual"></div>
+</div>
+<aside class="pl-chat-details" id="chat-details" role="tooltip" hidden>
+  <strong class="pl-chat-details__title"></strong>
+  <div class="pl-chat-details__meta">
+    <div><span aria-hidden="true" class="pl-icon pl-icon--sm pl-icon--mask" style="--icon-src:url(../assets/icons/path.svg)"></span><span data-path></span></div>
+    <div data-project-line><span aria-hidden="true" class="pl-icon pl-icon--sm pl-icon--mask" style="--icon-src:url(../assets/icons/folder.svg)"></span><span data-project></span></div>
+    <div><span aria-hidden="true" class="pl-icon pl-icon--sm pl-icon--mask" style="--icon-src:url(../assets/icons/time.svg)"></span><span data-updated></span></div>
+  </div>
+</aside>
+<template id="empty-project-list">
+  <button type="button" class="pl-project-empty__create">
+    <span aria-hidden="true" class="pl-icon pl-icon--mask" style="--icon-src:url(../assets/icons/add.svg)"></span>创建项目
+  </button>
+</template>
+<script>
+const emptyProjects = document.querySelector('#empty-project-list');
+document.querySelectorAll('[data-project-list]').forEach(list => {
+  if (list.childElementCount) return;
+  list.append(emptyProjects.content.cloneNode(true));
+  const section = list.previousElementSibling;
+  if (section) section.classList.add('pl-project-empty__title');
+});
+</script>
+<script>
+const listAnimations = new WeakMap();
+
+function toggleList(button, list) {
+  const opening = button.getAttribute('aria-expanded') !== 'true';
+  button.setAttribute('aria-expanded', String(opening));
+  if (!list) return;
+
+  const startHeight = list.getBoundingClientRect().height;
+  listAnimations.get(list)?.cancel();
+  list.inert = !opening;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    list.hidden = !opening;
+    list.style.removeProperty('overflow');
+    listAnimations.delete(list);
+    return;
+  }
+
+  list.hidden = false;
+  list.style.overflow = 'hidden';
+  const animation = list.animate([
+    { height: startHeight + 'px' },
+    { height: (opening ? list.scrollHeight : 0) + 'px' }
+  ], { duration: 160, easing: 'ease-in-out' });
+  listAnimations.set(list, animation);
+  animation.onfinish = () => {
+    if (listAnimations.get(list) !== animation) return;
+    list.hidden = !opening;
+    list.style.removeProperty('overflow');
+    listAnimations.delete(list);
+  };
+}
+
+document.querySelectorAll('.pl-mainbar-item--project').forEach(button => {
+  const list = button.closest('.pl-mainbar-group').querySelector('.pl-mainbar-group__children');
+  if (list) button.addEventListener('click', () => toggleList(button, list));
+});
+
+document.querySelectorAll('.pl-mainbar-section__toggle').forEach(button => {
+  button.addEventListener('click', () => {
+    button.closest('.pl-mainbar-section').classList.remove('is-hover');
+    toggleList(button, document.getElementById(button.getAttribute('aria-controls')));
+  });
+});
+
+document.querySelectorAll('.pl-mainbar-group__more').forEach(button => {
+  button.addEventListener('click', () => {
+    button.closest('.pl-mainbar-group').querySelectorAll('[data-extra]').forEach(item => item.hidden = false);
+    button.remove();
+  });
+});
+</script>
+<script>
+document.querySelectorAll('.pl-icon-button--on-bg, .pl-mainbar-item__action--new-task').forEach(button => {
+  const tip = button.querySelector('[role="tooltip"]');
+  if (!tip || !tip.showPopover) return;
+  tip.popover = 'manual';
+
+  function positionTip() {
+    const rect = button.getBoundingClientRect();
+    tip.style.left = (rect.left + rect.width / 2) + 'px';
+    const below = button.getAttribute('aria-label') === '搜索';
+    tip.style.top = (below ? rect.bottom + 6 : rect.top - 6) + 'px';
+    tip.style.transform = below ? 'translateX(-50%)' : '';
+  }
+
+  function updateTip() {
+    if (button.matches(':hover, :focus-visible')) {
+      positionTip();
+      tip.showPopover();
+    } else {
+      tip.hidePopover();
+    }
+  }
+
+  for (const event of ['pointerenter', 'pointerleave', 'focus', 'blur']) {
+    button.addEventListener(event, updateTip);
+  }
+  function repositionOpenTip() {
+    if (tip.matches(':popover-open')) positionTip();
+  }
+  window.addEventListener('scroll', repositionOpenTip, true);
+  window.addEventListener('resize', repositionOpenTip);
+});
+</script>
+
+
+<script>
+const details = document.getElementById('chat-details');
+const chatRows = document.querySelectorAll(
+  '[id$="-chats"] > .pl-mainbar-item, #pinned-items > .pl-mainbar-item, ' +
+  '.pl-mainbar-group__children > .pl-mainbar-item, [data-chat-examples] > .pl-mainbar-item, ' +
+  '.pl-mainbar-conversations--project > .pl-mainbar-item'
+);
+let currentChat;
+let hoverTimer;
+
+function closeDetails() {
+  clearTimeout(hoverTimer);
+  currentChat?.removeAttribute('aria-describedby');
+  currentChat = null;
+  details.hidden = true;
+}
+
+function positionDetails() {
+  if (!currentChat) return;
+  const rect = currentChat.getBoundingClientRect();
+  const centeredTop = rect.top + (rect.height - details.offsetHeight) / 2;
+  details.style.left = rect.right + 'px';
+  details.style.top = Math.max(4, Math.min(centeredTop, innerHeight - details.offsetHeight - 4)) + 'px';
+}
+
+function showDetails(row) {
+  if (document.querySelector(".pl-mainbar-menu:popover-open")) return;
+  closeDetails();
+  currentChat = row;
+  const title = row.querySelector('.pl-mainbar-item__name').textContent;
+  const inProject = row.closest('.pl-mainbar-group__children, .pl-mainbar-conversations--project');
+  const project = row.closest('.pl-mainbar-group')?.querySelector('.pl-mainbar-item--project .pl-mainbar-item__name')?.textContent || '项目名称';
+  details.querySelector('.pl-chat-details__title').textContent = title;
+  details.querySelector('[data-path]').textContent = row.dataset.path || ['~/Documents/Northstar', ...(inProject ? [project] : []), title].join('/');
+  details.querySelector('[data-project-line]').hidden = !inProject;
+  details.querySelector('[data-project]').textContent = project;
+  details.querySelector('[data-updated]').textContent = '更新于 ' + (row.dataset.updated || '2026/11/04 20:30:00');
+  details.hidden = false;
+  positionDetails();
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    details.getAnimations().forEach(animation => animation.cancel());
+    details.animate([
+      { opacity: 0, transform: 'translateX(-4px)' },
+      { opacity: 1, transform: 'translateX(0)' }
+    ], { duration: 160, easing: 'ease-out' });
+  }
+  row.setAttribute('aria-describedby', details.id);
+}
+
+chatRows.forEach(row => {
+  row.addEventListener('click', event => {
+    const nav = row.closest('nav');
+    if (!nav || event.target.closest('.pl-mainbar-item__action')) return;
+    nav.querySelector('[aria-current="page"]')?.removeAttribute('aria-current');
+    row.setAttribute('aria-current', 'page');
+  });
+  row.addEventListener('pointerenter', () => {
+    closeDetails();
+    hoverTimer = setTimeout(() => showDetails(row), 500);
+  });
+  row.addEventListener('pointerleave', closeDetails);
+  row.addEventListener('focus', () => { if (row.matches(':focus-visible')) showDetails(row); });
+  row.addEventListener('blur', closeDetails);
+});
+document.addEventListener('keydown', event => { if (event.key === 'Escape') closeDetails(); });
+document.addEventListener('scroll', closeDetails, true);
+window.addEventListener('resize', positionDetails);
+</script>
+<script src="../components/mainbar-menu.js?v=more-icon"></script>
+<script src="../components/research-pins.js"></script>
+<script src="../components/chat-search.js"></script></body></html>

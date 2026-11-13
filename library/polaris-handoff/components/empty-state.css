@@ -1,0 +1,63 @@
+/* Empty state 空状态
+ *
+ *   <div class="pl-empty-state">
+ *     <div class="pl-empty-state__content">
+ *       <img class="pl-empty-state__illustration" src="assets/illustrations/project.png" alt="" />
+ *       <div class="pl-empty-state__message">
+ *         <p class="pl-empty-state__title">暂无新项目</p>            可省略
+ *         <p class="pl-empty-state__description">创建项目……</p>
+ *       </div>
+ *     </div>
+ *     <button class="pl-button pl-button--primary">…</button>        可省略
+ *   </div>
+ *
+ * 插画可替换，位于 assets/illustrations/（PNG，4 倍图，显示尺寸 100×72）：
+ *   project 项目 / session 会话 / board 看板 / library 资料库 / skill 技能 / search 搜索 / empty 暂无
+ */
+
+.pl-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.pl-empty-state__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.pl-empty-state__illustration {
+  display: block;
+  flex: none;
+  width: 100px;
+  height: 72px;
+  object-fit: contain;
+}
+
+.pl-empty-state__message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.pl-empty-state__title {
+  color: var(--text-primary);
+  font-family: "PingFang SC", var(--font-family-body);
+  font-size: var(--font-size-text-lg);
+  font-weight: var(--font-weight-medium);
+  line-height: normal;
+}
+
+.pl-empty-state__description {
+  color: var(--text-tertiary);
+  font-family: "PingFang SC", var(--font-family-body);
+  font-size: var(--font-size-text-md);
+  font-weight: var(--font-weight-regular);
+  line-height: normal;
+}

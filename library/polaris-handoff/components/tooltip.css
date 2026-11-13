@@ -1,0 +1,20 @@
+/* Tooltip 轻提示
+ *
+ *   <span class="pl-tooltip" role="tooltip">通过对话修改</span>
+ *
+ * 只负责外观；定位和显隐由使用方控制（如图标按钮的 .pl-icon-button__tooltip）。
+ */
+
+.pl-tooltip {
+  box-sizing: border-box;
+  width: fit-content;
+  padding: 6px 8px;
+  border-radius: 6px;
+  color: var(--text-white);
+  background: var(--text-primary);
+  font-family: "PingFang SC", var(--font-family-body);
+  font-size: var(--font-size-text-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: normal;
+  white-space: nowrap;
+}

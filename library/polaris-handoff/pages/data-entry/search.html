@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>Search 搜索框</title>
+  <link rel="stylesheet" href="../../polaris.css" />
+  <link rel="stylesheet" href="../preview.css" />
+</head>
+<body>
+  <main class="preview-page">
+    <h1 class="preview-page__title">Search 搜索框</h1>
+
+    <section class="preview-section">
+      <header class="preview-section__header">
+        <h2 class="preview-section__title">搜索框</h2>
+        <p class="preview-section__description">左侧为 16px 搜索图标，聚焦时边框变深。</p>
+      </header>
+      <div class="preview-panel preview-panel--normal">
+      <div class="preview-tiles">
+        <div class="preview-tile">
+          <span class="preview-tile__label">默认</span>
+          <label class="pl-search"><span class="pl-search__icon pl-icon--mask" style="--icon-src: url(../../assets/icons/search.svg)"></span><input class="pl-search__field" type="text" placeholder="请输入文字" /></label>
+        </div>
+        <div class="preview-tile">
+          <span class="preview-tile__label">聚焦</span>
+          <label class="pl-search is-focus"><span class="pl-search__icon pl-icon--mask" style="--icon-src: url(../../assets/icons/search.svg)"></span><input class="pl-search__field" type="text" value="输入内容" /></label>
+        </div>
+        <div class="preview-tile">
+          <span class="preview-tile__label">已输入</span>
+          <label class="pl-search"><span class="pl-search__icon pl-icon--mask" style="--icon-src: url(../../assets/icons/search.svg)"></span><input class="pl-search__field" type="text" value="输入内容" /></label>
+        </div>
+      </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

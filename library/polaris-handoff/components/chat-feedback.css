@@ -1,0 +1,7 @@
+/* 对话反馈按钮组 */
+.pl-chat-feedback {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding-block: 0;
+}

@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chat search 搜索对话</title><link rel="stylesheet" href="../../polaris.css"><link rel="stylesheet" href="../preview.css">
+<style>
+.search-preview { position: relative; display: grid; place-items: center; width: min(747px,100%); height: 558px; }
+.search-preview > .pl-modal { position: absolute; z-index: auto; padding: 12px; }
+.search-preview > [hidden] { display: none; }
+</style></head><body><main class="preview-page"><h1 class="preview-page__title">Chat search 搜索对话</h1>
+<section class="preview-section">
+  <header><h2 class="preview-section__title">默认</h2></header>
+  <div class="search-preview">
+    <button hidden type="button" data-open-search class="pl-button pl-button--secondary">打开搜索对话</button>
+    <div class="pl-modal">
+      <template data-default-search></template>
+    </div>
+  </div>
+</section>
+<section class="preview-section">
+  <header><h2 class="preview-section__title">有结果</h2></header>
+  <div class="search-preview">
+    <button hidden type="button" data-open-search class="pl-button pl-button--secondary">打开搜索对话</button>
+    <div class="pl-modal">
+      <div role="dialog" aria-label="搜索对话" class="pl-modal__dialog pl-chat-search">
+        <div class="pl-chat-search__header">
+          <label class="pl-search"><span aria-hidden="true" class="pl-search__icon pl-icon--mask" style="--icon-src:url(../../assets/icons/search.svg)"></span><input aria-label="搜索对话" class="pl-search__field" placeholder="搜索对话" value="金融"></label>
+          <button type="button" data-close-search class="pl-icon-button" aria-label="关闭搜索"><span aria-hidden="true" class="pl-icon-button__icon pl-icon--mask" style="--icon-src:url(../../assets/icons/close.svg)"></span></button>
+        </div>
+        <div class="pl-chat-search__body">
+          <p class="pl-chat-search__label" aria-live="polite">最近对话</p>
+          <div class="pl-chat-search__group" data-recent>
+  <div class="pl-chat-search__row"><span aria-hidden="true" class="pl-icon pl-icon--mask" style="--icon-src:url(../../assets/icons/message.svg)"></span><span class="pl-chat-search__name">金融决策支持</span><span class="pl-chat-search__project" hidden><span aria-hidden="true" class="pl-icon pl-icon--sm pl-icon--mask" style="--icon-src:url(../../assets/icons/folder.svg)"></span>金融项目</span><time data-full="2026-10-21 10:00" data-short="10-22 19:00">2026-10-21 10:00</time></div>
+  <p class="pl-chat-search__snippet" hidden>这是一句关于 金融 的话，这是一句关于 Hi 的话，这是一句关于 Hi 的话，这是一句关于 Hi 的话，这是一句关于 Hi 的话，这是一句关于 Hi 的话，这是一句关于 Hi 的话，这是一句关于 Hi 的话，这是一句关于 Hi 的话，</p><p class="pl-chat-search__snippet" hidden>这是一句关于 金融 的话，这是一句关于 Hi 的话，这是一句关于 Hi 的话，这是一句关于 Hi 的话，这是一句关于 Hi 的话，这是一句关于 Hi 的话，这是一句关于 Hi 的话，这是一句关于 Hi 的话，这是一句关于 Hi 的话，</p><p class="pl-chat-search__snippet" hidden>这是一句关于 金融 的话，这是一句关于 Hi 的话，这是一句关于 Hi 的话，这是一句关于 Hi 的话，这是一句关于 Hi 的话，这是一句关于 Hi 的话，这是一句关于 Hi 的话，这是一句关于 Hi 的话，这是一句关于 Hi 的话，</p>
+</div><div class="pl-chat-search__group" data-recent>
+  <div class="pl-chat-search__row"><span aria-hidden="true" class="pl-icon pl-icon--mask" style="--icon-src:url(../../assets/icons/message.svg)"></span><span class="pl-chat-search__name">风险评估引擎</span><time data-full="2026-10-22 11:15" data-short="10-22 19:00">2026-10-22 11:15</time></div>
+  
+</div><div class="pl-chat-search__group" data-recent>
+  <div class="pl-chat-search__row"><span aria-hidden="true" class="pl-icon pl-icon--mask" style="--icon-src:url(../../assets/icons/message.svg)"></span><span class="pl-chat-search__name">投资组合优化工具</span><time data-full="2026-10-23 14:45" data-short="10-22 19:00">2026-10-23 14:45</time></div>
+  
+</div><div class="pl-chat-search__group" data-recent>
+  <div class="pl-chat-search__row"><span aria-hidden="true" class="pl-icon pl-icon--mask" style="--icon-src:url(../../assets/icons/message.svg)"></span><span class="pl-chat-search__name">市场趋势预测仪</span><time data-full="2026-10-24 08:30" data-short="10-22 19:00">2026-10-24 08:30</time></div>
+  
+</div><div class="pl-chat-search__group" data-recent>
+  <div class="pl-chat-search__row"><span aria-hidden="true" class="pl-icon pl-icon--mask" style="--icon-src:url(../../assets/icons/message.svg)"></span><span class="pl-chat-search__name">用户资产管理系统</span><time data-full="2026-10-26 15:30" data-short="10-22 19:00">2026-10-26 15:30</time></div>
+  
+</div><div class="pl-chat-search__group" data-recent>
+  <div class="pl-chat-search__row"><span aria-hidden="true" class="pl-icon pl-icon--mask" style="--icon-src:url(../../assets/icons/message.svg)"></span><span class="pl-chat-search__name">个性化投资建议</span><time data-full="2026-10-27 16:00" data-short="10-22 19:00">2026-10-27 16:00</time></div>
+  
+</div><div class="pl-chat-search__group" data-recent>
+  <div class="pl-chat-search__row"><span aria-hidden="true" class="pl-icon pl-icon--mask" style="--icon-src:url(../../assets/icons/message.svg)"></span><span class="pl-chat-search__name">智能财务顾问</span><time data-full="2026-10-25 12:00" data-short="10-22 19:00">2026-10-25 12:00</time></div>
+  
+</div><div class="pl-chat-search__group" data-recent>
+  <div class="pl-chat-search__row"><span aria-hidden="true" class="pl-icon pl-icon--mask" style="--icon-src:url(../../assets/icons/message.svg)"></span><span class="pl-chat-search__name">用户资产管理系统</span><time data-full="2026-10-26 15:30" data-short="10-22 19:00">2026-10-26 15:30</time></div>
+  
+</div><div class="pl-chat-search__group">
+  <div class="pl-chat-search__row"><span aria-hidden="true" class="pl-icon pl-icon--mask" style="--icon-src:url(../../assets/icons/message.svg)"></span><span class="pl-chat-search__name">金融优化工具</span><time data-full="2026-10-22 19:00" data-short="10-22 19:00">2026-10-22 19:00</time></div>
+  
+</div><div class="pl-chat-search__group">
+  <div class="pl-chat-search__row"><span aria-hidden="true" class="pl-icon pl-icon--mask" style="--icon-src:url(../../assets/icons/message.svg)"></span><span class="pl-chat-search__name">个性化金融建议</span><time data-full="2026-10-22 19:00" data-short="10-22 19:00">2026-10-22 19:00</time></div>
+  
+</div>
+          <div class="pl-empty-state" hidden><div class="pl-empty-state__content"><img class="pl-empty-state__illustration" src="../../assets/illustrations/search.png" alt=""><p class="pl-empty-state__description">暂无搜索结果</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="preview-section">
+  <header><h2 class="preview-section__title">无结果</h2></header>
+  <div class="search-preview">
+    <button hidden type="button" data-open-search class="pl-button pl-button--secondary">打开搜索对话</button>
+    <div class="pl-modal">
+      <div role="dialog" aria-label="搜索对话" class="pl-modal__dialog pl-chat-search">
+        <div class="pl-chat-search__header">
+          <label class="pl-search"><span aria-hidden="true" class="pl-search__icon pl-icon--mask" style="--icon-src:url(../../assets/icons/search.svg)"></span><input aria-label="搜索对话" class="pl-search__field" placeholder="搜索对话" value="金融决策支持方案"></label>
+          <button type="button" data-close-search class="pl-icon-button" aria-label="关闭搜索"><span aria-hidden="true" class="pl-icon-button__icon pl-icon--mask" style="--icon-src:url(../../assets/icons/close.svg)"></span></button>
+        </div>
+        <div class="pl-chat-search__body">
+          <p class="pl-chat-search__label" aria-live="polite">最近对话</p>
+          <div class="pl-chat-search__group" data-recent>
+  <div class="pl-chat-search__row"><span aria-hidden="true" class="pl-icon pl-icon--mask" style="--icon-src:url(../../assets/icons/message.svg)"></span><span class="pl-chat-search__name">金融决策支持</span><span class="pl-chat-search__project" hidden><span aria-hidden="true" class="pl-icon pl-icon--sm pl-icon--mask" style="--icon-src:url(../../assets/icons/folder.svg)"></span>金融项目</span><time data-full="2026-10-21 10:00" data-short="10-22 19:00">2026-10-21 10:00</time></div>
+  <p class="pl-chat-search__snippet" hidden>这是一句关于 金融 的话，这是一句关于 Hi 的话，这是一句关于 Hi 的话，这是一句关于 Hi 的话，这是一句关于 Hi 的话，这是一句关于 Hi 的话，这是一句关于 Hi 的话，这是一句关于 Hi 的话，这是一句关于 Hi 的话，</p><p class="pl-chat-search__snippet" hidden>这是一句关于 金融 的话，这是一句关于 Hi 的话，这是一句关于 Hi 的话，这是一句关于 Hi 的话，这是一句关于 Hi 的话，这是一句关于 Hi 的话，这是一句关于 Hi 的话，这是一句关于 Hi 的话，这是一句关于 Hi 的话，</p><p class="pl-chat-search__snippet" hidden>这是一句关于 金融 的话，这是一句关于 Hi 的话，这是一句关于 Hi 的话，这是一句关于 Hi 的话，这是一句关于 Hi 的话，这是一句关于 Hi 的话，这是一句关于 Hi 的话，这是一句关于 Hi 的话，这是一句关于 Hi 的话，</p>
+</div><div class="pl-chat-search__group" data-recent>
+  <div class="pl-chat-search__row"><span aria-hidden="true" class="pl-icon pl-icon--mask" style="--icon-src:url(../../assets/icons/message.svg)"></span><span class="pl-chat-search__name">风险评估引擎</span><time data-full="2026-10-22 11:15" data-short="10-22 19:00">2026-10-22 11:15</time></div>
+  
+</div><div class="pl-chat-search__group" data-recent>
+  <div class="pl-chat-search__row"><span aria-hidden="true" class="pl-icon pl-icon--mask" style="--icon-src:url(../../assets/icons/message.svg)"></span><span class="pl-chat-search__name">投资组合优化工具</span><time data-full="2026-10-23 14:45" data-short="10-22 19:00">2026-10-23 14:45</time></div>
+  
+</div><div class="pl-chat-search__group" data-recent>
+  <div class="pl-chat-search__row"><span aria-hidden="true" class="pl-icon pl-icon--mask" style="--icon-src:url(../../assets/icons/message.svg)"></span><span class="pl-chat-search__name">市场趋势预测仪</span><time data-full="2026-10-24 08:30" data-short="10-22 19:00">2026-10-24 08:30</time></div>
+  
+</div><div class="pl-chat-search__group" data-recent>
+  <div class="pl-chat-search__row"><span aria-hidden="true" class="pl-icon pl-icon--mask" style="--icon-src:url(../../assets/icons/message.svg)"></span><span class="pl-chat-search__name">用户资产管理系统</span><time data-full="2026-10-26 15:30" data-short="10-22 19:00">2026-10-26 15:30</time></div>
+  
+</div><div class="pl-chat-search__group" data-recent>
+  <div class="pl-chat-search__row"><span aria-hidden="true" class="pl-icon pl-icon--mask" style="--icon-src:url(../../assets/icons/message.svg)"></span><span class="pl-chat-search__name">个性化投资建议</span><time data-full="2026-10-27 16:00" data-short="10-22 19:00">2026-10-27 16:00</time></div>
+  
+</div><div class="pl-chat-search__group" data-recent>
+  <div class="pl-chat-search__row"><span aria-hidden="true" class="pl-icon pl-icon--mask" style="--icon-src:url(../../assets/icons/message.svg)"></span><span class="pl-chat-search__name">智能财务顾问</span><time data-full="2026-10-25 12:00" data-short="10-22 19:00">2026-10-25 12:00</time></div>
+  
+</div><div class="pl-chat-search__group" data-recent>
+  <div class="pl-chat-search__row"><span aria-hidden="true" class="pl-icon pl-icon--mask" style="--icon-src:url(../../assets/icons/message.svg)"></span><span class="pl-chat-search__name">用户资产管理系统</span><time data-full="2026-10-26 15:30" data-short="10-22 19:00">2026-10-26 15:30</time></div>
+  
+</div><div class="pl-chat-search__group">
+  <div class="pl-chat-search__row"><span aria-hidden="true" class="pl-icon pl-icon--mask" style="--icon-src:url(../../assets/icons/message.svg)"></span><span class="pl-chat-search__name">金融优化工具</span><time data-full="2026-10-22 19:00" data-short="10-22 19:00">2026-10-22 19:00</time></div>
+  
+</div><div class="pl-chat-search__group">
+  <div class="pl-chat-search__row"><span aria-hidden="true" class="pl-icon pl-icon--mask" style="--icon-src:url(../../assets/icons/message.svg)"></span><span class="pl-chat-search__name">个性化金融建议</span><time data-full="2026-10-22 19:00" data-short="10-22 19:00">2026-10-22 19:00</time></div>
+  
+</div>
+          <div class="pl-empty-state" hidden><div class="pl-empty-state__content"><img class="pl-empty-state__illustration" src="../../assets/illustrations/search.png" alt=""><p class="pl-empty-state__description">暂无搜索结果</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section></main><script src="../../components/chat-search.js"></script></body></html>

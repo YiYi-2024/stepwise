@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>Modal 对话框</title>
+  <link rel="stylesheet" href="../../polaris.css" />
+  <link rel="stylesheet" href="../preview.css" />
+</head>
+<body>
+  <main class="preview-page">
+    <h1 class="preview-page__title">Modal 对话框</h1>
+
+    <section class="preview-section">
+      <header class="preview-section__header">
+        <h2 class="preview-section__title">类型一：对话框小</h2>
+        <p class="preview-section__description">宽 360px，用于简单确认。确认按钮支持切换类型：危险、主要、品牌。</p>
+      </header>
+      <div class="preview-panel preview-panel--normal">
+        <div class="preview-block">
+          <div class="preview-spec"><strong class="preview-spec__title">确认按钮：危险</strong></div>
+        <div class="preview-modal" style="--preview-modal-height: 240px">
+          <div class="pl-modal" role="dialog" aria-label="确定删除该对话吗？">
+            <div class="pl-modal__dialog pl-modal__dialog--small">
+              <header class="pl-modal__header">
+                <div class="pl-modal__title-row"><h2 class="pl-modal__title">确定删除该对话吗？</h2><button class="pl-icon-button pl-modal__close" type="button" aria-label="关闭"><span class="pl-icon pl-icon--mask" style="--icon-src: url(../../assets/icons/close.svg)"></span></button></div>
+                <p class="pl-modal__description">删除后，聊天记录将不可恢复。</p>
+              </header>
+              <footer class="pl-modal__footer"><button class="pl-button pl-button--secondary" type="button">取消</button><button class="pl-button pl-button--danger" type="button"><span class="pl-button__icon pl-icon--mask" style="--icon-src: url(../../assets/icons/delete.svg)"></span>确定删除</button></footer>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="preview-block">
+          <div class="preview-spec"><strong class="preview-spec__title">确认按钮：主要</strong></div>
+        <div class="preview-modal" style="--preview-modal-height: 240px">
+          <div class="pl-modal" role="dialog" aria-label="确定删除该对话吗？">
+            <div class="pl-modal__dialog pl-modal__dialog--small">
+              <header class="pl-modal__header">
+                <div class="pl-modal__title-row"><h2 class="pl-modal__title">确定删除该对话吗？</h2><button class="pl-icon-button pl-modal__close" type="button" aria-label="关闭"><span class="pl-icon pl-icon--mask" style="--icon-src: url(../../assets/icons/close.svg)"></span></button></div>
+                <p class="pl-modal__description">删除后，聊天记录将不可恢复。</p>
+              </header>
+              <footer class="pl-modal__footer"><button class="pl-button pl-button--secondary" type="button">取消</button><button class="pl-button pl-button--primary" type="button">确定</button></footer>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="preview-block">
+          <div class="preview-spec"><strong class="preview-spec__title">确认按钮：品牌</strong></div>
+        <div class="preview-modal" style="--preview-modal-height: 240px">
+          <div class="pl-modal" role="dialog" aria-label="确定删除该对话吗？">
+            <div class="pl-modal__dialog pl-modal__dialog--small">
+              <header class="pl-modal__header">
+                <div class="pl-modal__title-row"><h2 class="pl-modal__title">确定删除该对话吗？</h2><button class="pl-icon-button pl-modal__close" type="button" aria-label="关闭"><span class="pl-icon pl-icon--mask" style="--icon-src: url(../../assets/icons/close.svg)"></span></button></div>
+                <p class="pl-modal__description">删除后，聊天记录将不可恢复。</p>
+              </header>
+              <footer class="pl-modal__footer"><button class="pl-button pl-button--secondary" type="button">取消</button><button class="pl-button pl-button--brand" type="button">确定</button></footer>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="preview-section">
+      <header class="preview-section__header">
+        <h2 class="preview-section__title">类型二：对话框大</h2>
+        <p class="preview-section__description">宽 640px、高 480px，中间为可配置的内容区域。左下角的辅助按钮（如删除）可以不展示。</p>
+      </header>
+      <div class="preview-panel preview-panel--normal">
+        <div class="preview-block">
+          <div class="preview-spec"><strong class="preview-spec__title">带辅助按钮</strong></div>
+        <div class="preview-modal" style="--preview-modal-height: 560px">
+          <div class="pl-modal" role="dialog" aria-label="标题">
+            <div class="pl-modal__dialog pl-modal__dialog--large">
+              <header class="pl-modal__header">
+                <div class="pl-modal__title-row"><h2 class="pl-modal__title">标题</h2><button class="pl-icon-button pl-modal__close" type="button" aria-label="关闭"><span class="pl-icon pl-icon--mask" style="--icon-src: url(../../assets/icons/close.svg)"></span></button></div>
+              </header>
+              <div class="pl-modal__body"></div>
+              <footer class="pl-modal__footer"><button class="pl-modal__aux" type="button"><span class="pl-button__icon pl-icon--mask" style="--icon-src: url(../../assets/icons/delete.svg)"></span>删除项目</button><div class="pl-modal__actions"><button class="pl-button pl-button--secondary" type="button">取消</button><button class="pl-button pl-button--primary" type="button">确定</button></div></footer>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="preview-block">
+          <div class="preview-spec"><strong class="preview-spec__title">不带辅助按钮</strong></div>
+        <div class="preview-modal" style="--preview-modal-height: 560px">
+          <div class="pl-modal" role="dialog" aria-label="标题">
+            <div class="pl-modal__dialog pl-modal__dialog--large">
+              <header class="pl-modal__header">
+                <div class="pl-modal__title-row"><h2 class="pl-modal__title">标题</h2><button class="pl-icon-button pl-modal__close" type="button" aria-label="关闭"><span class="pl-icon pl-icon--mask" style="--icon-src: url(../../assets/icons/close.svg)"></span></button></div>
+              </header>
+              <div class="pl-modal__body"></div>
+              <footer class="pl-modal__footer"><div class="pl-modal__actions"><button class="pl-button pl-button--secondary" type="button">取消</button><button class="pl-button pl-button--primary" type="button">确定</button></div></footer>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

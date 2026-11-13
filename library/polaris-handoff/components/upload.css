@@ -1,0 +1,149 @@
+/* Upload 上传组件
+ *
+ *   <div class="pl-upload [is-hover | pl-upload--uploading | pl-upload--success | pl-upload--error]">
+ *     默认 / Hover：  __icon（上传图标） + __title + __hint
+ *     上传中：        __file（文件图标） + __name + __progress（__bar + __percent）
+ *     上传成功：      __file + __name + __status--success + __remove（右上角删除图标按钮，hover 显示“删除文件”）
+ *     上传失败：      __file + __name + __status--error + __remove + 重试按钮（pl-button--secondary pl-button--small）
+ *   </div>
+ *
+ * 状态：默认；Hover :hover / .is-hover（浅底色）；上传中；上传成功；上传失败
+ */
+
+.pl-upload {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 200px;
+  border: 1px dashed var(--border-primary);
+  border-radius: 12px;
+  background: var(--background-white);
+  font-family: "PingFang SC", var(--font-family-body);
+  text-align: center;
+}
+
+.pl-upload:not(.pl-upload--uploading):not(.pl-upload--success):not(.pl-upload--error):hover,
+.pl-upload.is-hover {
+  background: var(--hover-subtle);
+}
+
+.pl-upload--uploading,
+.pl-upload--success,
+.pl-upload--error {
+  gap: 12px;
+}
+
+.pl-upload__icon {
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  margin-bottom: 12px;
+  border: 1px solid var(--border-primary);
+  border-radius: 8px;
+  background: var(--background-white);
+}
+
+.pl-upload__icon .pl-icon--mask {
+  display: block;
+  width: 20px;
+  height: 20px;
+  color: var(--text-secondary);
+}
+
+.pl-upload__title,
+.pl-upload__name {
+  color: var(--text-primary);
+  font-size: var(--font-size-text-md);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-text-md);
+  white-space: nowrap;
+}
+
+.pl-upload__hint {
+  margin-top: 2px;
+  color: var(--text-tertiary);
+  font-size: var(--font-size-text-sm);
+  line-height: var(--line-height-text-sm);
+  white-space: nowrap;
+}
+
+.pl-upload__file {
+  display: block;
+  flex: none;
+  width: 36px;
+  height: 36px;
+}
+
+.pl-upload__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.pl-upload__progress {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pl-upload__bar {
+  position: relative;
+  width: 100px;
+  height: 6px;
+  overflow: hidden;
+  border-radius: 9999px;
+  background: var(--hover-default);
+}
+
+.pl-upload__bar::after {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: var(--progress, 0%);
+  border-radius: 9999px;
+  background: var(--text-brand);
+}
+
+.pl-upload__percent {
+  color: var(--text-secondary);
+  font-size: var(--font-size-text-sm);
+  line-height: var(--line-height-text-sm);
+}
+
+.pl-upload__status {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--font-size-text-sm);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-text-sm);
+}
+
+.pl-upload__status .pl-icon--mask {
+  display: block;
+  width: 14px;
+  height: 14px;
+}
+
+.pl-upload__status--success {
+  color: var(--success-primary);
+}
+
+.pl-upload__status--error {
+  color: var(--error-primary);
+}
+
+.pl-upload__remove {
+  color: var(--text-tertiary);
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}

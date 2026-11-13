@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>Navbar 顶部导航</title>
+  <link rel="stylesheet" href="../../polaris.css?v=tooltip-below" />
+  <link rel="stylesheet" href="../preview.css" />
+</head>
+<body>
+  <main class="preview-page">
+    <h1 class="preview-page__title">Navbar 顶部导航</h1>
+
+    <section class="preview-section">
+      <header class="preview-section__header">
+        <h2 class="preview-section__title">类型一：对话</h2>
+        <p class="preview-section__description">展示任务名称、名称编辑入口和右侧对话操作。</p>
+      </header>
+
+      <div class="preview-panel preview-panel--normal preview-panel--dense">
+        <div class="preview-block">
+          <div class="preview-spec"><strong class="preview-spec__title">默认</strong></div>
+          <nav class="pl-navbar" aria-label="对话顶部导航">
+            <div class="pl-navbar__title-group">
+              <span class="pl-navbar__title">新建的任务名称</span>
+              <button class="pl-icon-button pl-icon-button--large pl-navbar__title-edit" type="button" aria-label="重命名"><span class="pl-icon pl-icon--mask" style="--icon-src: url(../../assets/icons/write.svg)"></span><span class="pl-tooltip pl-icon-button__tooltip" role="tooltip">重命名</span></button>
+            </div>
+            <div class="pl-navbar__actions">
+              <button class="pl-icon-button pl-icon-button--large" type="button" aria-label="任务摘要"><span class="pl-icon pl-icon--mask" style="--icon-src: url(../../assets/icons/summary.svg)"></span><span class="pl-tooltip pl-icon-button__tooltip" role="tooltip">任务摘要</span></button>
+            </div>
+          </nav>
+        </div>
+
+        <div class="preview-block">
+          <div class="preview-spec"><strong class="preview-spec__title">Hover 到名称</strong></div>
+          <nav class="pl-navbar" aria-label="对话顶部导航 Hover 状态">
+            <div class="pl-navbar__title-group is-hover">
+              <span class="pl-navbar__title">新建的任务名称</span>
+              <button class="pl-icon-button pl-icon-button--large pl-navbar__title-edit" type="button" aria-label="重命名"><span class="pl-icon pl-icon--mask" style="--icon-src: url(../../assets/icons/write.svg)"></span><span class="pl-tooltip pl-icon-button__tooltip" role="tooltip">重命名</span></button>
+            </div>
+            <div class="pl-navbar__actions">
+              <button class="pl-icon-button pl-icon-button--large" type="button" aria-label="任务摘要"><span class="pl-icon pl-icon--mask" style="--icon-src: url(../../assets/icons/summary.svg)"></span><span class="pl-tooltip pl-icon-button__tooltip" role="tooltip">任务摘要</span></button>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <section class="preview-section">
+      <header class="preview-section__header">
+        <h2 class="preview-section__title">类型二：页签</h2>
+        <p class="preview-section__description">页签默认宽度及最大宽度为 200px，空间不足时等宽收缩至最小 140px；超出后可点击翻页按钮平滑滑动。</p>
+      </header>
+
+      <div class="preview-panel preview-panel--normal preview-panel--dense">
+        <div class="preview-block">
+          <div class="preview-spec"><strong class="preview-spec__title">收起 · 默认</strong></div>
+          <nav class="pl-navbar pl-navbar--files" aria-label="文件浏览顶部导航">
+            <div class="pl-navbar-tabs" role="tablist">
+              <div class="pl-navbar-tabs__track">
+                <div class="pl-navbar-tab is-active" role="tab" aria-selected="true" tabindex="0" data-type="word">
+                  <span class="pl-navbar-tab__icon-wrap"><img class="pl-navbar-tab__icon" src="../../assets/file-type/word.png" alt="" /></span>
+                  <span class="pl-navbar-tab__label">页签的名字</span>
+                  <button class="pl-navbar-tab__close" type="button" aria-label="关闭页签">
+                    <span class="pl-navbar-tab__close-icon pl-icon--mask" style="--icon-src: url(../../assets/icons/close.svg)"></span>
+                  </button>
+                </div>
+                <div class="pl-navbar-tab" role="tab" tabindex="-1" data-type="excel">
+                  <span class="pl-navbar-tab__icon-wrap"><img class="pl-navbar-tab__icon" src="../../assets/file-type/excel.png" alt="" /></span>
+                  <span class="pl-navbar-tab__label">页签的名字</span><button class="pl-navbar-tab__close" type="button" aria-label="关闭页签"><span class="pl-navbar-tab__close-icon pl-icon--mask" style="--icon-src: url(../../assets/icons/close.svg)"></span></button></div>
+                <div class="pl-navbar-tab" role="tab" tabindex="-1" data-type="md">
+                  <span class="pl-navbar-tab__icon-wrap"><img class="pl-navbar-tab__icon" src="../../assets/file-type/md.png" alt="" /></span>
+                  <span class="pl-navbar-tab__label">页签的名字</span><button class="pl-navbar-tab__close" type="button" aria-label="关闭页签"><span class="pl-navbar-tab__close-icon pl-icon--mask" style="--icon-src: url(../../assets/icons/close.svg)"></span></button></div>
+              </div>
+            </div>
+            <div class="pl-navbar__actions">
+              <button class="pl-icon-button pl-icon-button--large" type="button" aria-label="展开"><span class="pl-icon pl-icon--mask" style="--icon-src: url(../../assets/icons/expand.svg)"></span><span class="pl-tooltip pl-icon-button__tooltip" role="tooltip">展开</span></button>
+              <button class="pl-icon-button pl-icon-button--large" type="button" aria-label="收起侧边栏"><span class="pl-icon pl-icon--mask" style="--icon-src: url(../../assets/icons/sidebar-collapse.svg?v=101719d2)"></span><span class="pl-tooltip pl-icon-button__tooltip" role="tooltip">收起侧边栏</span></button>
+            </div>
+          </nav>
+        </div>
+
+        <div class="preview-block">
+          <div class="preview-spec"><strong class="preview-spec__title">收起 · 左右滑动</strong></div>
+          <nav class="pl-navbar pl-navbar--files" aria-label="文件浏览顶部导航溢出状态" style="width:720px;max-width:100%">
+            <div class="pl-navbar-tabs pl-navbar-tabs--overflow" role="tablist">
+              <div class="pl-navbar-tabs__track">
+                <div class="pl-navbar-tab" role="tab" aria-selected="false" tabindex="-1" data-type="word">
+                  <span class="pl-navbar-tab__icon-wrap"><img class="pl-navbar-tab__icon" src="../../assets/file-type/word.png" alt="" /></span><span class="pl-navbar-tab__label">页签的名字</span><button class="pl-navbar-tab__close" type="button" aria-label="关闭页签"><span class="pl-navbar-tab__close-icon pl-icon--mask" style="--icon-src: url(../../assets/icons/close.svg)"></span></button>
+                </div>
+                <div class="pl-navbar-tab pl-navbar-tab--compact" role="tab" aria-selected="false" tabindex="-1" data-type="word">
+                  <span class="pl-navbar-tab__icon-wrap"><img class="pl-navbar-tab__icon" src="../../assets/file-type/word.png" alt="" /></span><span class="pl-navbar-tab__label">页签的名字</span><button class="pl-navbar-tab__close" type="button" aria-label="关闭页签"><span class="pl-navbar-tab__close-icon pl-icon--mask" style="--icon-src: url(../../assets/icons/close.svg)"></span></button>
+                </div>
+                <div class="pl-navbar-tab pl-navbar-tab--compact" role="tab" aria-selected="false" tabindex="-1" data-type="word">
+                  <span class="pl-navbar-tab__icon-wrap"><img class="pl-navbar-tab__icon" src="../../assets/file-type/word.png" alt="" /></span><span class="pl-navbar-tab__label">页签的名字</span><button class="pl-navbar-tab__close" type="button" aria-label="关闭页签"><span class="pl-navbar-tab__close-icon pl-icon--mask" style="--icon-src: url(../../assets/icons/close.svg)"></span></button>
+                </div>
+                <div class="pl-navbar-tab pl-navbar-tab--compact" role="tab" aria-selected="false" tabindex="-1" data-type="word">
+                  <span class="pl-navbar-tab__icon-wrap"><img class="pl-navbar-tab__icon" src="../../assets/file-type/word.png" alt="" /></span><span class="pl-navbar-tab__label">页签的名字</span><button class="pl-navbar-tab__close" type="button" aria-label="关闭页签"><span class="pl-navbar-tab__close-icon pl-icon--mask" style="--icon-src: url(../../assets/icons/close.svg)"></span></button>
+                </div>
+                <div class="pl-navbar-tab pl-navbar-tab--compact" role="tab" aria-selected="false" tabindex="-1" data-type="word">
+                  <span class="pl-navbar-tab__icon-wrap"><img class="pl-navbar-tab__icon" src="../../assets/file-type/word.png" alt="" /></span><span class="pl-navbar-tab__label">页签的名字</span><button class="pl-navbar-tab__close" type="button" aria-label="关闭页签"><span class="pl-navbar-tab__close-icon pl-icon--mask" style="--icon-src: url(../../assets/icons/close.svg)"></span></button>
+                </div>
+                <div class="pl-navbar-tab pl-navbar-tab--compact" role="tab" aria-selected="false" tabindex="-1" data-type="word">
+                  <span class="pl-navbar-tab__icon-wrap"><img class="pl-navbar-tab__icon" src="../../assets/file-type/word.png" alt="" /></span><span class="pl-navbar-tab__label">页签的名字</span><button class="pl-navbar-tab__close" type="button" aria-label="关闭页签"><span class="pl-navbar-tab__close-icon pl-icon--mask" style="--icon-src: url(../../assets/icons/close.svg)"></span></button>
+                </div>
+                <div class="pl-navbar-tab pl-navbar-tab--compact" role="tab" aria-selected="true" tabindex="0" data-type="word">
+                  <span class="pl-navbar-tab__icon-wrap"><img class="pl-navbar-tab__icon" src="../../assets/file-type/word.png" alt="" /></span><span class="pl-navbar-tab__label">页签的名字</span><button class="pl-navbar-tab__close" type="button" aria-label="关闭页签"><span class="pl-navbar-tab__close-icon pl-icon--mask" style="--icon-src: url(../../assets/icons/close.svg)"></span></button>
+                </div>
+              </div>
+              <span class="pl-navbar-tabs__scroll pl-navbar-tabs__scroll--left">
+                <button class="pl-page-button" type="button" aria-label="向左滚动"></button>
+              </span>
+              <span class="pl-navbar-tabs__scroll pl-navbar-tabs__scroll--right">
+                <button class="pl-page-button pl-page-button--next" type="button" aria-label="向右滚动"></button>
+              </span>
+            </div>
+            <div class="pl-navbar__actions">
+              <button class="pl-icon-button pl-icon-button--large" type="button" aria-label="展开"><span class="pl-icon pl-icon--mask" style="--icon-src: url(../../assets/icons/expand.svg)"></span><span class="pl-tooltip pl-icon-button__tooltip" role="tooltip">展开</span></button>
+              <button class="pl-icon-button pl-icon-button--large" type="button" aria-label="收起侧边栏"><span class="pl-icon pl-icon--mask" style="--icon-src: url(../../assets/icons/sidebar-collapse.svg?v=101719d2)"></span><span class="pl-tooltip pl-icon-button__tooltip" role="tooltip">收起侧边栏</span></button>
+            </div>
+          </nav>
+        </div>
+
+        <div class="preview-block">
+          <div class="preview-spec"><strong class="preview-spec__title">全屏 · 默认</strong></div>
+          <nav class="pl-navbar pl-navbar--files" aria-label="全屏文件浏览顶部导航">
+            <div class="pl-navbar-tabs" role="tablist">
+              <div class="pl-navbar-tabs__track">
+                <div class="pl-navbar-tab is-active" role="tab" aria-selected="true" tabindex="0" data-type="word">
+                  <span class="pl-navbar-tab__icon-wrap"><img class="pl-navbar-tab__icon" src="../../assets/file-type/word.png" alt="" /></span>
+                  <span class="pl-navbar-tab__label">页签的名字</span>
+                  <button class="pl-navbar-tab__close" type="button" aria-label="关闭页签">
+                    <span class="pl-navbar-tab__close-icon pl-icon--mask" style="--icon-src: url(../../assets/icons/close.svg)"></span>
+                  </button>
+                </div>
+                <div class="pl-navbar-tab" role="tab" tabindex="-1" data-type="pdf">
+                  <span class="pl-navbar-tab__icon-wrap"><img class="pl-navbar-tab__icon" src="../../assets/file-type/pdf.png" alt="" /></span><span class="pl-navbar-tab__label">页签的名字</span><button class="pl-navbar-tab__close" type="button" aria-label="关闭页签"><span class="pl-navbar-tab__close-icon pl-icon--mask" style="--icon-src: url(../../assets/icons/close.svg)"></span></button></div>
+                <div class="pl-navbar-tab" role="tab" tabindex="-1" data-type="ppt">
+                  <span class="pl-navbar-tab__icon-wrap"><img class="pl-navbar-tab__icon" src="../../assets/file-type/ppt.png" alt="" /></span><span class="pl-navbar-tab__label">页签的名字</span><button class="pl-navbar-tab__close" type="button" aria-label="关闭页签"><span class="pl-navbar-tab__close-icon pl-icon--mask" style="--icon-src: url(../../assets/icons/close.svg)"></span></button></div>
+              </div>
+            </div>
+            <div class="pl-navbar__actions">
+              <button class="pl-icon-button pl-icon-button--large" type="button" aria-label="收起"><span class="pl-icon pl-icon--mask" style="--icon-src: url(../../assets/icons/collapse.svg)"></span><span class="pl-tooltip pl-icon-button__tooltip" role="tooltip">收起</span></button>
+              <button class="pl-icon-button pl-icon-button--large" type="button" aria-label="收起侧边栏"><span class="pl-icon pl-icon--mask" style="--icon-src: url(../../assets/icons/sidebar-collapse.svg?v=101719d2)"></span><span class="pl-tooltip pl-icon-button__tooltip" role="tooltip">收起侧边栏</span></button>
+            </div>
+          </nav>
+        </div>
+
+        <div class="preview-block">
+          <div class="preview-spec"><strong class="preview-spec__title">全屏 · 左右滑动</strong></div>
+          <nav class="pl-navbar pl-navbar--files" aria-label="全屏文件浏览顶部导航溢出状态">
+            <div class="pl-navbar-tabs pl-navbar-tabs--overflow" role="tablist">
+              <div class="pl-navbar-tabs__track">
+                <div class="pl-navbar-tab pl-navbar-tab--compact" role="tab" tabindex="-1" data-type="word"><span class="pl-navbar-tab__icon-wrap"><img class="pl-navbar-tab__icon" src="../../assets/file-type/word.png" alt="" /></span><span class="pl-navbar-tab__label">页签的名字</span><button class="pl-navbar-tab__close" type="button" aria-label="关闭页签"><span class="pl-navbar-tab__close-icon pl-icon--mask" style="--icon-src: url(../../assets/icons/close.svg)"></span></button></div>
+                <div class="pl-navbar-tab pl-navbar-tab--compact" role="tab" tabindex="-1" data-type="excel"><span class="pl-navbar-tab__icon-wrap"><img class="pl-navbar-tab__icon" src="../../assets/file-type/excel.png" alt="" /></span><span class="pl-navbar-tab__label">页签的名字</span><button class="pl-navbar-tab__close" type="button" aria-label="关闭页签"><span class="pl-navbar-tab__close-icon pl-icon--mask" style="--icon-src: url(../../assets/icons/close.svg)"></span></button></div>
+                <div class="pl-navbar-tab pl-navbar-tab--compact" role="tab" tabindex="-1" data-type="md"><span class="pl-navbar-tab__icon-wrap"><img class="pl-navbar-tab__icon" src="../../assets/file-type/md.png" alt="" /></span><span class="pl-navbar-tab__label">页签的名字</span><button class="pl-navbar-tab__close" type="button" aria-label="关闭页签"><span class="pl-navbar-tab__close-icon pl-icon--mask" style="--icon-src: url(../../assets/icons/close.svg)"></span></button></div>
+                <div class="pl-navbar-tab pl-navbar-tab--compact" role="tab" tabindex="-1" data-type="ppt"><span class="pl-navbar-tab__icon-wrap"><img class="pl-navbar-tab__icon" src="../../assets/file-type/ppt.png" alt="" /></span><span class="pl-navbar-tab__label">页签的名字</span><button class="pl-navbar-tab__close" type="button" aria-label="关闭页签"><span class="pl-navbar-tab__close-icon pl-icon--mask" style="--icon-src: url(../../assets/icons/close.svg)"></span></button></div>
+                <div class="pl-navbar-tab pl-navbar-tab--compact" role="tab" tabindex="-1" data-type="txt"><span class="pl-navbar-tab__icon-wrap"><img class="pl-navbar-tab__icon" src="../../assets/file-type/txt.png" alt="" /></span><span class="pl-navbar-tab__label">页签的名字</span><button class="pl-navbar-tab__close" type="button" aria-label="关闭页签"><span class="pl-navbar-tab__close-icon pl-icon--mask" style="--icon-src: url(../../assets/icons/close.svg)"></span></button></div>
+                <div class="pl-navbar-tab pl-navbar-tab--compact is-active" role="tab" aria-selected="true" tabindex="0" data-type="pdf"><span class="pl-navbar-tab__icon-wrap"><img class="pl-navbar-tab__icon" src="../../assets/file-type/pdf.png" alt="" /></span><span class="pl-navbar-tab__label">页签的名字</span><button class="pl-navbar-tab__close" type="button" aria-label="关闭页签"><span class="pl-navbar-tab__close-icon pl-icon--mask" style="--icon-src: url(../../assets/icons/close.svg)"></span></button></div>
+              </div>
+              <span class="pl-navbar-tabs__scroll pl-navbar-tabs__scroll--left">
+                <button class="pl-page-button" type="button" aria-label="向左滚动"></button>
+              </span>
+              <span class="pl-navbar-tabs__scroll pl-navbar-tabs__scroll--right">
+                <button class="pl-page-button pl-page-button--next" type="button" aria-label="向右滚动"></button>
+              </span>
+            </div>
+            <div class="pl-navbar__actions">
+              <button class="pl-icon-button pl-icon-button--large" type="button" aria-label="收起"><span class="pl-icon pl-icon--mask" style="--icon-src: url(../../assets/icons/collapse.svg)"></span><span class="pl-tooltip pl-icon-button__tooltip" role="tooltip">收起</span></button>
+              <button class="pl-icon-button pl-icon-button--large" type="button" aria-label="收起侧边栏"><span class="pl-icon pl-icon--mask" style="--icon-src: url(../../assets/icons/sidebar-collapse.svg?v=101719d2)"></span><span class="pl-tooltip pl-icon-button__tooltip" role="tooltip">收起侧边栏</span></button>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <section class="preview-section">
+      <header class="preview-section__header">
+        <h2 class="preview-section__title">子组件：页签</h2>
+        <p class="preview-section__description">支持默认、Hover到箭头、Hover和选中三种状态。最大宽度 200px，最小宽度 140px，文字超出显示省略号。</p>
+      </header>
+
+      <div class="preview-panel preview-panel--normal">
+      <div class="preview-tiles">
+        <div class="preview-tile">
+          <span class="preview-tile__label">默认</span>
+          <div class="pl-navbar-tab" role="tab" tabindex="0" data-type="word">
+            <span class="pl-navbar-tab__icon-wrap"><img class="pl-navbar-tab__icon" src="../../assets/file-type/word.png" alt="" /></span>
+            <span class="pl-navbar-tab__label">页签的名字</span><button class="pl-navbar-tab__close" type="button" aria-label="关闭页签"><span class="pl-navbar-tab__close-icon pl-icon--mask" style="--icon-src: url(../../assets/icons/close.svg)"></span></button></div>
+        </div>
+
+        <div class="preview-tile">
+          <span class="preview-tile__label">Hover到箭头</span>
+          <div class="pl-navbar-tab is-hover" role="tab" tabindex="0" data-type="word">
+            <span class="pl-navbar-tab__icon-wrap"><img class="pl-navbar-tab__icon" src="../../assets/file-type/word.png" alt="" /></span>
+            <span class="pl-navbar-tab__label">页签的名字</span>
+            <button class="pl-navbar-tab__close is-hover" type="button" aria-label="关闭页签">
+              <span class="pl-navbar-tab__close-icon pl-icon--mask" style="--icon-src: url(../../assets/icons/close.svg)"></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="preview-tile">
+          <span class="preview-tile__label">Hover和选中</span>
+          <div class="pl-navbar-tab is-active is-hover" role="tab" aria-selected="true" tabindex="0" data-type="word">
+            <span class="pl-navbar-tab__icon-wrap"><img class="pl-navbar-tab__icon" src="../../assets/file-type/word.png" alt="" /></span>
+            <span class="pl-navbar-tab__label">页签的名字</span>
+            <button class="pl-navbar-tab__close" type="button" aria-label="关闭页签">
+              <span class="pl-navbar-tab__close-icon pl-icon--mask" style="--icon-src: url(../../assets/icons/close.svg)"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <section class="preview-section">
+      <header class="preview-section__header">
+        <h2 class="preview-section__title">页签类型穷举</h2>
+        <p class="preview-section__description">按文件类型显示对应图标，普通网页使用联网搜索图标。</p>
+      </header>
+
+      <div class="preview-panel preview-panel--normal">
+      <div class="preview-tiles">
+        <div class="preview-tile">
+          <span class="preview-tile__label">Word</span>
+          <div class="pl-navbar-tab" role="tab" tabindex="0" data-type="word">
+            <span class="pl-navbar-tab__icon-wrap"><img class="pl-navbar-tab__icon" src="../../assets/file-type/word.png" alt="" /></span>
+            <span class="pl-navbar-tab__label">页签的名字</span><button class="pl-navbar-tab__close" type="button" aria-label="关闭页签"><span class="pl-navbar-tab__close-icon pl-icon--mask" style="--icon-src: url(../../assets/icons/close.svg)"></span></button>
+          </div>
+        </div>
+        <div class="preview-tile">
+          <span class="preview-tile__label">Excel</span>
+          <div class="pl-navbar-tab" role="tab" tabindex="0" data-type="excel">
+            <span class="pl-navbar-tab__icon-wrap"><img class="pl-navbar-tab__icon" src="../../assets/file-type/excel.png" alt="" /></span>
+            <span class="pl-navbar-tab__label">页签的名字</span><button class="pl-navbar-tab__close" type="button" aria-label="关闭页签"><span class="pl-navbar-tab__close-icon pl-icon--mask" style="--icon-src: url(../../assets/icons/close.svg)"></span></button>
+          </div>
+        </div>
+        <div class="preview-tile">
+          <span class="preview-tile__label">PPT</span>
+          <div class="pl-navbar-tab" role="tab" tabindex="0" data-type="ppt">
+            <span class="pl-navbar-tab__icon-wrap"><img class="pl-navbar-tab__icon" src="../../assets/file-type/ppt.png" alt="" /></span>
+            <span class="pl-navbar-tab__label">页签的名字</span><button class="pl-navbar-tab__close" type="button" aria-label="关闭页签"><span class="pl-navbar-tab__close-icon pl-icon--mask" style="--icon-src: url(../../assets/icons/close.svg)"></span></button>
+          </div>
+        </div>
+        <div class="preview-tile">
+          <span class="preview-tile__label">PDF</span>
+          <div class="pl-navbar-tab" role="tab" tabindex="0" data-type="pdf">
+            <span class="pl-navbar-tab__icon-wrap"><img class="pl-navbar-tab__icon" src="../../assets/file-type/pdf.png" alt="" /></span>
+            <span class="pl-navbar-tab__label">页签的名字</span><button class="pl-navbar-tab__close" type="button" aria-label="关闭页签"><span class="pl-navbar-tab__close-icon pl-icon--mask" style="--icon-src: url(../../assets/icons/close.svg)"></span></button>
+          </div>
+        </div>
+        <div class="preview-tile">
+          <span class="preview-tile__label">Markdown</span>
+          <div class="pl-navbar-tab" role="tab" tabindex="0" data-type="md">
+            <span class="pl-navbar-tab__icon-wrap"><img class="pl-navbar-tab__icon" src="../../assets/file-type/md.png" alt="" /></span>
+            <span class="pl-navbar-tab__label">页签的名字</span><button class="pl-navbar-tab__close" type="button" aria-label="关闭页签"><span class="pl-navbar-tab__close-icon pl-icon--mask" style="--icon-src: url(../../assets/icons/close.svg)"></span></button>
+          </div>
+        </div>
+        <div class="preview-tile">
+          <span class="preview-tile__label">TXT</span>
+          <div class="pl-navbar-tab" role="tab" tabindex="0" data-type="txt">
+            <span class="pl-navbar-tab__icon-wrap"><img class="pl-navbar-tab__icon" src="../../assets/file-type/txt.png" alt="" /></span>
+            <span class="pl-navbar-tab__label">页签的名字</span><button class="pl-navbar-tab__close" type="button" aria-label="关闭页签"><span class="pl-navbar-tab__close-icon pl-icon--mask" style="--icon-src: url(../../assets/icons/close.svg)"></span></button>
+          </div>
+        </div>
+        <div class="preview-tile">
+          <span class="preview-tile__label">普通网页</span>
+          <div class="pl-navbar-tab" role="tab" tabindex="0" data-type="web">
+            <span class="pl-navbar-tab__icon-wrap"><span class="pl-navbar-tab__icon pl-icon--mask" style="--icon-src: url(../../assets/icons/web-search.svg)"></span></span>
+            <span class="pl-navbar-tab__label">页签的名字</span><button class="pl-navbar-tab__close" type="button" aria-label="关闭页签"><span class="pl-navbar-tab__close-icon pl-icon--mask" style="--icon-src: url(../../assets/icons/close.svg)"></span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+  <script>
+    for (const tabs of document.querySelectorAll('.pl-navbar-tabs--overflow')) {
+      const track = tabs.querySelector('.pl-navbar-tabs__track');
+      track.scrollLeft = (track.scrollWidth - track.clientWidth) / 2;
+      for (const button of tabs.querySelectorAll('.pl-page-button')) {
+        const direction = button.classList.contains('pl-page-button--next') ? 1 : -1;
+        button.addEventListener('click', () => track.scrollBy({
+          left: direction * track.clientWidth,
+          behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'
+        }));
+      }
+    }
+  </script>
+</body>
+</html>

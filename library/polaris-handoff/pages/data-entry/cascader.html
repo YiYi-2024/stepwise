@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cascader 级联选择</title>
+  <link rel="stylesheet" href="../../polaris.css" />
+  <link rel="stylesheet" href="../preview.css" />
+</head>
+<body>
+  <main class="preview-page">
+    <h1 class="preview-page__title">Cascader 级联选择</h1>
+    <section class="preview-section">
+      <header class="preview-section__header">
+        <h2 class="preview-section__title">级联面板</h2>
+        <p class="preview-section__description">用于具有下一级的选项。子面板紧贴当前选项右侧并与选项顶部对齐。</p>
+      </header>
+      <div class="preview-panel preview-panel--normal" style="min-height: 340px">
+        <div class="pl-select-panel" role="menu" style="width: 180px">
+          <button class="pl-select-option" type="button" role="menuitem">
+            <span class="pl-select-option__icon" style="--icon-src: url(../../assets/icons/link.svg)"></span>
+            <span class="pl-select-option__text">上传文件</span>
+          </button>
+          <button class="pl-select-option" type="button" role="menuitem">
+            <span class="pl-select-option__icon" style="--icon-src: url(../../assets/icons/library.svg)"></span>
+            <span class="pl-select-option__text">添加资料库文件</span>
+          </button>
+          <div class="pl-select-panel__divider" role="separator"></div>
+          <button class="pl-select-option pl-cascader__trigger" type="button" role="menuitem"
+            aria-haspopup="menu" aria-expanded="false" aria-controls="cascader-skills">
+            <span class="pl-select-option__icon" style="--icon-src: url(../../assets/icons/skill.svg)"></span>
+            <span class="pl-select-option__text">技能</span>
+            <span class="pl-select-option__arrow pl-icon pl-icon--sm pl-icon--mask" aria-hidden="true"></span>
+          </button>
+        </div>
+        <div class="pl-select-panel pl-cascader__panel" id="cascader-skills" role="menu" popover style="width: 200px">
+          <button class="pl-select-option" type="button" role="menuitem">
+            <span class="pl-select-option__icon" style="--icon-src: url(../../assets/icons/skill.svg)"></span>
+            <span class="pl-select-option__text">技能</span>
+          </button>
+          <button class="pl-select-option" type="button" role="menuitem">
+            <span class="pl-select-option__icon" style="--icon-src: url(../../assets/icons/skill.svg)"></span>
+            <span class="pl-select-option__text">技能技能技能技能技能技能</span>
+          </button>
+          <div class="pl-select-panel__divider" role="separator"></div>
+          <button class="pl-select-option" type="button" role="menuitem">
+            <span class="pl-select-option__icon" style="--icon-src: url(../../assets/icons/manage.svg)"></span>
+            <span class="pl-select-option__text">管理技能</span>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="../../components/cascader.js"></script>
+</body>
+</html>

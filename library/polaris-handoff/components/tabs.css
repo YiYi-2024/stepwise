@@ -1,0 +1,83 @@
+/* Tabs 标签
+ *
+ * 子组件：.pl-tab（单个 Tab，最小粒度），分一级 / 二级两种：
+ *   <button class="pl-tab pl-tab--level-1 [is-active]" role="tab">Tab名称</button>
+ *   <button class="pl-tab pl-tab--level-2 [is-active]" role="tab">Tab名称</button>
+ * 状态：:hover / .is-hover、.is-active（选中）
+ *
+ * 容器：.pl-tabs（--level-1 / --level-2，决定 Tab 间距），可 2~4 个 Tab 横向排列；
+ * 一二级组合：两个 .pl-tabs 竖向堆叠，间距由 .pl-tabs-group 提供。
+ */
+
+.pl-tab {
+  position: relative;
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  color: var(--text-secondary);
+  font-family: "PingFang SC", var(--font-family-body);
+  font-weight: var(--font-weight-regular);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+/* 一级：18px，默认灰，hover 变深，选中加粗 */
+.pl-tab--level-1 {
+  padding: 0;
+  font-size: var(--font-size-text-lg);
+  line-height: normal;
+}
+
+.pl-tab--level-1:hover,
+.pl-tab--level-1.is-hover {
+  color: var(--text-primary);
+}
+
+.pl-tab--level-1.is-active {
+  color: var(--text-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* 二级：14px，带圆角底色 */
+.pl-tab--level-2 {
+  padding: 6px 16px;
+  border-radius: 8px;
+  font-size: var(--font-size-text-md);
+  line-height: var(--line-height-text-md);
+}
+
+.pl-tab--level-2:hover,
+.pl-tab--level-2.is-hover {
+  background: var(--hover-subtle);
+}
+
+.pl-tab--level-2.is-active {
+  background: var(--background-grey);
+  color: var(--text-primary);
+  font-weight: var(--font-weight-medium);
+}
+
+/* 容器 */
+.pl-tabs {
+  display: flex;
+  align-items: center;
+}
+
+.pl-tabs--level-1 {
+  gap: 20px;
+}
+
+.pl-tabs--level-2 {
+  gap: 8px;
+}
+
+.pl-tabs-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}

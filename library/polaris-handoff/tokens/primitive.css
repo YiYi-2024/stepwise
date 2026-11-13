@@ -1,0 +1,40 @@
+/* Primitive 原始色板：只放色值，组件禁止直接引用 */
+
+:root {
+  --color-blue-500: #508ef1;
+  /* Base */
+  --color-base-white: #ffffff;
+  --color-base-black: #000000;
+
+  /* Neutral */
+  --color-neutral-100: #f7f7f7;
+  --color-neutral-200: #f3f3f3;
+  --color-neutral-300: #f2f2f2;
+  --color-neutral-350: #efefef;
+  --color-neutral-400: #e7e7e7;
+  --color-neutral-500: #c5c5c5;
+  --color-neutral-600: #adadad;
+  --color-neutral-700: #8a8a8a;
+  --color-neutral-800: #383838;
+  --color-neutral-900: #1d1d1d;
+
+  --color-neutral-480: #c9c9c9;
+  --color-brand-50: #fff7f4;
+  --color-brand-alpha-120: rgba(243, 107, 36, 0.12);
+
+  /* Brand */
+  --color-brand-100: #ffe0cf;
+  --color-brand-500: #f36b24;
+
+  /* Red */
+  --color-red-50: #ffefef;
+  --color-red-100: #fddbdb;
+  --color-red-500: #f64d4d;
+
+  /* Green */
+  --color-green-100: #ddfcdd;
+  --color-green-500: #39ad37;
+
+  /* Alpha */
+  --color-alpha-500: #38383833;
+}

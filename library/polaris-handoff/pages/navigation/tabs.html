@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tabs 标签</title>
+  <link rel="stylesheet" href="../../polaris.css" />
+  <link rel="stylesheet" href="../preview.css" />
+</head>
+<body>
+  <main class="preview-page">
+    <h1 class="preview-page__title">Tabs 标签</h1>
+
+    <section class="preview-section">
+      <header class="preview-section__header">
+        <h2 class="preview-section__title">类型一：一级 Tab</h2>
+        <p class="preview-section__description">2 至 4 个 Tab 横向排列，间距 20px，首个为选中。</p>
+      </header>
+      <div class="preview-panel preview-panel--normal">
+      <div class="preview-tiles">
+        <div class="preview-tile">
+          <span class="preview-tile__label">2 个</span>
+          <div class="pl-tabs pl-tabs--level-1" role="tablist"><button class="pl-tab pl-tab--level-1 is-active" type="button" role="tab">Tab名称</button><button class="pl-tab pl-tab--level-1" type="button" role="tab">Tab名称</button></div>
+        </div>
+        <div class="preview-tile">
+          <span class="preview-tile__label">3 个</span>
+          <div class="pl-tabs pl-tabs--level-1" role="tablist"><button class="pl-tab pl-tab--level-1 is-active" type="button" role="tab">Tab名称</button><button class="pl-tab pl-tab--level-1" type="button" role="tab">Tab名称</button><button class="pl-tab pl-tab--level-1" type="button" role="tab">Tab名称</button></div>
+        </div>
+        <div class="preview-tile">
+          <span class="preview-tile__label">4 个</span>
+          <div class="pl-tabs pl-tabs--level-1" role="tablist"><button class="pl-tab pl-tab--level-1 is-active" type="button" role="tab">Tab名称</button><button class="pl-tab pl-tab--level-1" type="button" role="tab">Tab名称</button><button class="pl-tab pl-tab--level-1" type="button" role="tab">Tab名称</button><button class="pl-tab pl-tab--level-1" type="button" role="tab">Tab名称</button></div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <section class="preview-section">
+      <header class="preview-section__header">
+        <h2 class="preview-section__title">类型二：二级 Tab</h2>
+        <p class="preview-section__description">2 至 4 个 Tab 横向排列，间距 8px，首个为选中。</p>
+      </header>
+      <div class="preview-panel preview-panel--normal">
+      <div class="preview-tiles">
+        <div class="preview-tile">
+          <span class="preview-tile__label">2 个</span>
+          <div class="pl-tabs pl-tabs--level-2" role="tablist"><button class="pl-tab pl-tab--level-2 is-active" type="button" role="tab">Tab名称</button><button class="pl-tab pl-tab--level-2" type="button" role="tab">Tab名称</button></div>
+        </div>
+        <div class="preview-tile">
+          <span class="preview-tile__label">3 个</span>
+          <div class="pl-tabs pl-tabs--level-2" role="tablist"><button class="pl-tab pl-tab--level-2 is-active" type="button" role="tab">Tab名称</button><button class="pl-tab pl-tab--level-2" type="button" role="tab">Tab名称</button><button class="pl-tab pl-tab--level-2" type="button" role="tab">Tab名称</button></div>
+        </div>
+        <div class="preview-tile">
+          <span class="preview-tile__label">4 个</span>
+          <div class="pl-tabs pl-tabs--level-2" role="tablist"><button class="pl-tab pl-tab--level-2 is-active" type="button" role="tab">Tab名称</button><button class="pl-tab pl-tab--level-2" type="button" role="tab">Tab名称</button><button class="pl-tab pl-tab--level-2" type="button" role="tab">Tab名称</button><button class="pl-tab pl-tab--level-2" type="button" role="tab">Tab名称</button></div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <section class="preview-section">
+      <header class="preview-section__header">
+        <h2 class="preview-section__title">类型三：一二级 Tab 组合</h2>
+        <p class="preview-section__description">一级在上、二级在下，间距 16px。</p>
+      </header>
+      <div class="preview-panel preview-panel--normal">
+      <div class="preview-tiles">
+        <div class="preview-tile">
+          <span class="preview-tile__label">3 个</span>
+          <div class="pl-tabs-group"><div class="pl-tabs pl-tabs--level-1" role="tablist"><button class="pl-tab pl-tab--level-1 is-active" type="button" role="tab">Tab名称</button><button class="pl-tab pl-tab--level-1" type="button" role="tab">Tab名称</button><button class="pl-tab pl-tab--level-1" type="button" role="tab">Tab名称</button></div><div class="pl-tabs pl-tabs--level-2" role="tablist"><button class="pl-tab pl-tab--level-2 is-active" type="button" role="tab">Tab名称</button><button class="pl-tab pl-tab--level-2" type="button" role="tab">Tab名称</button><button class="pl-tab pl-tab--level-2" type="button" role="tab">Tab名称</button></div></div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <section class="preview-section">
+      <header class="preview-section__header">
+        <h2 class="preview-section__title">子组件：一级 Tab</h2>
+        <p class="preview-section__description">18px。默认为次要文字色，Hover 变为主要文字色，选中加粗（Semibold）。</p>
+      </header>
+      <div class="preview-panel preview-panel--normal">
+      <div class="preview-tiles">
+        <div class="preview-tile">
+          <span class="preview-tile__label">默认</span>
+          <button class="pl-tab pl-tab--level-1" type="button" role="tab">Tab名称</button>
+        </div>
+        <div class="preview-tile">
+          <span class="preview-tile__label">Hover</span>
+          <button class="pl-tab pl-tab--level-1 is-hover" type="button" role="tab">Tab名称</button>
+        </div>
+        <div class="preview-tile">
+          <span class="preview-tile__label">选中</span>
+          <button class="pl-tab pl-tab--level-1 is-active" type="button" role="tab">Tab名称</button>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <section class="preview-section">
+      <header class="preview-section__header">
+        <h2 class="preview-section__title">子组件：二级 Tab</h2>
+        <p class="preview-section__description">14px，内边距 6px 16px，圆角 8px。Hover 显示浅底色，选中显示灰底色并加粗（Medium）。</p>
+      </header>
+      <div class="preview-panel preview-panel--normal">
+      <div class="preview-tiles">
+        <div class="preview-tile">
+          <span class="preview-tile__label">默认</span>
+          <button class="pl-tab pl-tab--level-2" type="button" role="tab">Tab名称</button>
+        </div>
+        <div class="preview-tile">
+          <span class="preview-tile__label">Hover</span>
+          <button class="pl-tab pl-tab--level-2 is-hover" type="button" role="tab">Tab名称</button>
+        </div>
+        <div class="preview-tile">
+          <span class="preview-tile__label">选中</span>
+          <button class="pl-tab pl-tab--level-2 is-active" type="button" role="tab">Tab名称</button>
+        </div>
+      </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

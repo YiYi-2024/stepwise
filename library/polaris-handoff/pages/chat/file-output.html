@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>File output 文件输出</title>
+  <link rel="stylesheet" href="../../polaris.css">
+  <link rel="stylesheet" href="../preview.css">
+<script defer src="../../components/chat-parts.js"></script>
+</head>
+<body>
+  <main class="preview-page">
+    <h1 class="preview-page__title">File output 文件输出</h1>
+    <section class="preview-section">
+      <header><h2 class="preview-section__title">生成状态</h2></header>
+      <div class="preview-panel preview-panel--normal">
+        <div class="preview-matrix" style="--preview-cols:1; --preview-column-width:360px; --preview-label-width:90px">
+        <span class="preview-matrix__label">成功 · 默认</span>
+        <template data-chat-part="file"></template>
+        <span class="preview-matrix__label">成功 · Hover</span>
+        <article class="pl-file-output is-hover">
+          <img class="pl-file-output__icon" src="../../assets/file-type/word.png" alt="Word">
+          <div class="pl-file-output__body">
+            <div class="pl-file-output__heading">
+              <p class="pl-file-output__name">文件名称.后缀</p>
+              <span class="pl-file-output__version">V1</span>
+            </div>
+            <p class="pl-file-output__status">创建时间：<time datetime="2026-10-19T11:00">2026-10-19 11:00</time></p>
+          </div>
+        </article>
+        <span class="preview-matrix__label">失败</span>
+        <article class="pl-file-output is-failed">
+          <img class="pl-file-output__icon" src="../../assets/file-type/word.png" alt="Word">
+          <div class="pl-file-output__body">
+            <div class="pl-file-output__heading">
+              <p class="pl-file-output__name">文件名称.后缀</p>
+              <span class="pl-file-output__version">V1</span>
+            </div>
+            <p class="pl-file-output__status">生成失败</p>
+          </div>
+        </article>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

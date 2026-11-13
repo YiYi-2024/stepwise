@@ -1,0 +1,49 @@
+/* 全局提示。容器控制堆叠，卡片可单独使用。 */
+.pl-toast {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  width: min(420px, 100%);
+  padding: 16px 20px;
+  border: 1px solid var(--border-secondary);
+  border-radius: 16px;
+  background: var(--background-white);
+  box-shadow: var(--shadow-toast);
+}
+.pl-toast__icon { flex: none; width: 16px; height: 16px; margin-top: 3px; }
+.pl-toast--info .pl-toast__icon { --icon-src: url(../assets/icons/reminder.svg); color: var(--info-primary); }
+.pl-toast--success .pl-toast__icon { --icon-src: url(../assets/icons/success.svg); color: var(--success-primary); }
+.pl-toast--error .pl-toast__icon { --icon-src: url(../assets/icons/error.svg); color: var(--error-primary); }
+.pl-toast--loading .pl-toast__icon { --icon-src: url(../assets/icons/loading.svg); color: var(--text-brand); }
+.pl-toast__body { min-width: 0; flex: 1; overflow-wrap: anywhere; }
+.pl-toast__title { color: var(--text-accent); font-size: 16px; font-weight: var(--font-weight-medium); line-height: 1.4; }
+.pl-toast__description { margin-top: 4px; color: var(--text-secondary); font-size: var(--font-size-text-md); line-height: 22px; }
+.pl-toast__close { color: var(--text-tertiary); }
+.pl-toast__close .pl-icon { --icon-src: url(../assets/icons/close.svg); }
+.pl-toast-stack {
+  position: relative; isolation: isolate; width: min(420px, 100%);
+  height: var(--stack-height, auto);
+}
+.pl-toast-stack > .pl-toast {
+  position: absolute; inset: 0 0 auto; width: 100%; transform-origin: center top;
+  transform: translateY(var(--stack-y, 0px)) scale(var(--stack-sx, 1), var(--stack-sy, 1));
+}
+.pl-toast-stack:not(:hover, :focus-within) > .pl-toast:nth-child(n+2) > * { opacity: 0; pointer-events: none; }
+.pl-toast-stack:not(:hover, :focus-within) > .pl-toast:nth-child(n+4) { opacity: 0; pointer-events: none; }
+.pl-toast-stack:is(:hover, :focus-within) { height: var(--list-height); }
+.pl-toast-stack:is(:hover, :focus-within) > .pl-toast { transform: translateY(var(--list-y)); }
+.pl-toast-stack:empty { display: none; }
+.pl-toast-stack--global {
+  position: fixed; z-index: 1000; top: 16px; left: 50%; transform: translateX(-50%);
+  width: min(420px, calc(100% - 32px));
+}
+.pl-toast-stack--global.pl-toast-stack--scroll:is(:hover, :focus-within) {
+  max-height: calc(100dvh - 32px); overflow-y: auto; overscroll-behavior: contain;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .pl-toast-stack { transition: height 280ms cubic-bezier(.2,.8,.2,1); }
+  .pl-toast-stack > .pl-toast { transition: transform 280ms cubic-bezier(.2,.8,.2,1), opacity 180ms ease; }
+  .pl-toast-stack > .pl-toast > * { transition: opacity 180ms ease; }
+  .pl-toast--loading .pl-toast__icon { animation: pl-toast-spin 1s linear infinite; }
+  @keyframes pl-toast-spin { to { transform: rotate(360deg); } }
+}

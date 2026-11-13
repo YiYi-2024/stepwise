@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Chat input 对话输入</title>
+  <link rel="stylesheet" href="../../polaris.css?v=menu-arrows">
+  <link rel="stylesheet" href="../preview.css">
+  <script defer src="../../components/chat-input.js?v=menu-toggle">
+  <script defer src="../../components/cascader.js"></script>
+</head>
+<body>
+<main class="preview-page"><h1 class="preview-page__title">Chat input 对话输入</h1>
+<section class="preview-section"><h2 class="preview-section__title">对话框 · 无上传文件</h2><div class="preview-section"><div class="preview-chat-state">
+  <p class="preview-matrix__label">默认</p>
+  <div class="pl-composer">
+    <div class="pl-composer__body">
+      <div class="pl-composer__content">
+        
+        <textarea class="pl-composer__query" aria-label="对话输入" placeholder="输入你想研究的问题或任务，支持@引用资料，调用快捷任务能力/skill"></textarea>
+      </div>
+      <div class="pl-composer__toolbar">
+        <button type="button" class="pl-composer__add" aria-label="添加附件" ><img class="pl-icon pl-icon--sm" src="../../assets/icons/add-lg.svg" alt=""></button>
+        <div class="pl-chat-send">
+  <button type="button" class="pl-chat-send__mode" >自动模式<img src="../../assets/icons/chat-mode-chevron.svg" alt=""></button>
+  <span class="pl-chat-send__action"><button type="button" class="pl-chat-send__button" aria-label="发送" disabled><img src="../../assets/icons/chat-send.svg" alt=""></button><span class="pl-tooltip pl-icon-button__tooltip" role="tooltip">当前不可发送</span></span>
+</div>
+      </div>
+    </div>
+    <div class="pl-composer__footer"><span class="pl-project-selector">
+  <button type="button" class="pl-composer__project"><img class="pl-icon pl-icon--sm" src="../../assets/icons/folder.svg" alt=""><span class="pl-project-selector__name">选择项目</span><img class="pl-icon pl-icon--sm" src="../../assets/icons/chevron-down.svg" alt=""></button>
+  <button type="button" class="pl-project-selector__clear" aria-label="清除已选项目"><span class="pl-icon pl-icon--sm pl-icon--mask" style="--icon-src: url(../../assets/icons/close.svg)"></span></button>
+</span></div>
+  </div>
+</div>
+<div class="preview-chat-state">
+  <p class="preview-matrix__label">聚焦</p>
+  <div class="pl-composer is-focused">
+    <div class="pl-composer__body">
+      <div class="pl-composer__content">
+        
+        <textarea class="pl-composer__query" aria-label="对话输入" placeholder="输入你想研究的问题或任务，支持@引用资料，调用快捷任务能力/skill">这是已经输入的query这是已经输入的query这是已经输入的query</textarea>
+      </div>
+      <div class="pl-composer__toolbar">
+        <button type="button" class="pl-composer__add" aria-label="添加附件" ><img class="pl-icon pl-icon--sm" src="../../assets/icons/add-lg.svg" alt=""></button>
+        <div class="pl-chat-send">
+  <button type="button" class="pl-chat-send__mode" >自动模式<img src="../../assets/icons/chat-mode-chevron.svg" alt=""></button>
+  <span class="pl-chat-send__action"><button type="button" class="pl-chat-send__button" aria-label="发送" ><img src="../../assets/icons/chat-send.svg" alt=""></button><span class="pl-tooltip pl-icon-button__tooltip" role="tooltip">发送</span></span>
+</div>
+      </div>
+    </div>
+    <div class="pl-composer__footer"><span class="pl-project-selector">
+  <button type="button" class="pl-composer__project"><img class="pl-icon pl-icon--sm" src="../../assets/icons/folder.svg" alt=""><span class="pl-project-selector__name">选择项目</span><img class="pl-icon pl-icon--sm" src="../../assets/icons/chevron-down.svg" alt=""></button>
+  <button type="button" class="pl-project-selector__clear" aria-label="清除已选项目"><span class="pl-icon pl-icon--sm pl-icon--mask" style="--icon-src: url(../../assets/icons/close.svg)"></span></button>
+</span></div>
+  </div>
+</div>
+<div class="preview-chat-state">
+  <p class="preview-matrix__label">已输入</p>
+  <div class="pl-composer">
+    <div class="pl-composer__body">
+      <div class="pl-composer__content">
+        
+        <textarea class="pl-composer__query" aria-label="对话输入" placeholder="输入你想研究的问题或任务，支持@引用资料，调用快捷任务能力/skill">这是已经输入的query这是已经输入的query这是已经输入的query</textarea>
+      </div>
+      <div class="pl-composer__toolbar">
+        <button type="button" class="pl-composer__add" aria-label="添加附件" ><img class="pl-icon pl-icon--sm" src="../../assets/icons/add-lg.svg" alt=""></button>
+        <div class="pl-chat-send">
+  <button type="button" class="pl-chat-send__mode" >自动模式<img src="../../assets/icons/chat-mode-chevron.svg" alt=""></button>
+  <span class="pl-chat-send__action"><button type="button" class="pl-chat-send__button" aria-label="发送" ><img src="../../assets/icons/chat-send.svg" alt=""></button><span class="pl-tooltip pl-icon-button__tooltip" role="tooltip">发送</span></span>
+</div>
+      </div>
+    </div>
+    <div class="pl-composer__footer"><span class="pl-project-selector">
+  <button type="button" class="pl-composer__project"><img class="pl-icon pl-icon--sm" src="../../assets/icons/folder.svg" alt=""><span class="pl-project-selector__name">选择项目</span><img class="pl-icon pl-icon--sm" src="../../assets/icons/chevron-down.svg" alt=""></button>
+  <button type="button" class="pl-project-selector__clear" aria-label="清除已选项目"><span class="pl-icon pl-icon--sm pl-icon--mask" style="--icon-src: url(../../assets/icons/close.svg)"></span></button>
+</span></div>
+  </div>
+</div>
+<div class="preview-chat-state">
+  <p class="preview-matrix__label">已输入超出</p>
+  <div class="pl-composer">
+    <div class="pl-composer__body">
+      <div class="pl-composer__content">
+        
+        <textarea class="pl-composer__query" aria-label="对话输入" placeholder="输入你想研究的问题或任务，支持@引用资料，调用快捷任务能力/skill">这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query</textarea>
+      </div>
+      <div class="pl-composer__toolbar">
+        <button type="button" class="pl-composer__add" aria-label="添加附件" ><img class="pl-icon pl-icon--sm" src="../../assets/icons/add-lg.svg" alt=""></button>
+        <div class="pl-chat-send">
+  <button type="button" class="pl-chat-send__mode" >自动模式<img src="../../assets/icons/chat-mode-chevron.svg" alt=""></button>
+  <span class="pl-chat-send__action"><button type="button" class="pl-chat-send__button" aria-label="发送" ><img src="../../assets/icons/chat-send.svg" alt=""></button><span class="pl-tooltip pl-icon-button__tooltip" role="tooltip">发送</span></span>
+</div>
+      </div>
+    </div>
+    <div class="pl-composer__footer"><span class="pl-project-selector">
+  <button type="button" class="pl-composer__project"><img class="pl-icon pl-icon--sm" src="../../assets/icons/folder.svg" alt=""><span class="pl-project-selector__name">选择项目</span><img class="pl-icon pl-icon--sm" src="../../assets/icons/chevron-down.svg" alt=""></button>
+  <button type="button" class="pl-project-selector__clear" aria-label="清除已选项目"><span class="pl-icon pl-icon--sm pl-icon--mask" style="--icon-src: url(../../assets/icons/close.svg)"></span></button>
+</span></div>
+  </div>
+</div>
+<div class="preview-chat-state">
+  <p class="preview-matrix__label">运行中</p>
+  <div class="pl-composer">
+    <div class="pl-composer__body">
+      <div class="pl-composer__content">
+        
+        <textarea class="pl-composer__query" aria-label="对话输入" placeholder="输入你想研究的问题或任务，支持@引用资料，调用快捷任务能力/skill"></textarea>
+      </div>
+      <div class="pl-composer__toolbar">
+        <button type="button" class="pl-composer__add" aria-label="添加附件" disabled><img class="pl-icon pl-icon--sm" src="../../assets/icons/add-lg.svg" alt=""></button>
+        <div class="pl-chat-send">
+  <button type="button" class="pl-chat-send__mode" disabled>自动模式<img src="../../assets/icons/chat-mode-chevron.svg" alt=""></button>
+  <span class="pl-chat-send__action"><button type="button" class="pl-chat-send__button pl-chat-send__button--pause" aria-label="暂停" ></button><span class="pl-tooltip pl-icon-button__tooltip" role="tooltip">暂停</span></span>
+</div>
+      </div>
+    </div>
+    <div class="pl-composer__footer"><span class="pl-project-selector">
+  <button type="button" class="pl-composer__project"><img class="pl-icon pl-icon--sm" src="../../assets/icons/folder.svg" alt=""><span class="pl-project-selector__name">选择项目</span><img class="pl-icon pl-icon--sm" src="../../assets/icons/chevron-down.svg" alt=""></button>
+  <button type="button" class="pl-project-selector__clear" aria-label="清除已选项目"><span class="pl-icon pl-icon--sm pl-icon--mask" style="--icon-src: url(../../assets/icons/close.svg)"></span></button>
+</span></div>
+  </div>
+</div></div></section>
+<section class="preview-section"><h2 class="preview-section__title">对话框 · 有上传文件</h2><div class="preview-section"><div class="preview-chat-state">
+  <p class="preview-matrix__label">默认</p>
+  <div class="pl-composer">
+    <div class="pl-composer__body">
+      <div class="pl-composer__content">
+        <div class="pl-chat-uploads"><div class="pl-chat-uploads__track" tabindex="0">
+<div class="pl-chat-file ">
+  <img class="pl-chat-file__icon" src="../../assets/file-type/pdf.png" alt="">
+  <div class="pl-chat-file__info">
+    <p class="pl-chat-file__name">文件名称.后缀</p>
+    <p class="pl-chat-file__meta">PDF<span class="pl-chat-file__dot"></span>800KB</p>
+  </div>
+  <button type="button" class="pl-chat-attachment__remove" aria-label="移除附件"><img class="pl-icon pl-icon--lg" src="../../assets/icons/close-circle.svg" alt=""></button>
+</div>
+<div class="pl-chat-image "><span class="pl-chat-image__crop"><img class="pl-chat-image__sample" src="../../assets/illustrations/chat-thumbnail.svg" alt="已上传图片"></span><button type="button" class="pl-chat-attachment__remove" aria-label="移除附件"><img class="pl-icon pl-icon--lg" src="../../assets/icons/close-circle.svg" alt=""></button></div>
+<div class="pl-chat-file ">
+  <img class="pl-chat-file__icon" src="../../assets/file-type/pdf.png" alt="">
+  <div class="pl-chat-file__info">
+    <p class="pl-chat-file__name">文件名称.后缀</p>
+    <p class="pl-chat-file__meta">PDF<span class="pl-chat-file__dot"></span>800KB</p>
+  </div>
+  <button type="button" class="pl-chat-attachment__remove" aria-label="移除附件"><img class="pl-icon pl-icon--lg" src="../../assets/icons/close-circle.svg" alt=""></button>
+</div>
+<div class="pl-chat-file ">
+  <img class="pl-chat-file__icon" src="../../assets/file-type/pdf.png" alt="">
+  <div class="pl-chat-file__info">
+    <p class="pl-chat-file__name">文件名称.后缀</p>
+    <p class="pl-chat-file__meta">PDF<span class="pl-chat-file__dot"></span>800KB</p>
+  </div>
+  <button type="button" class="pl-chat-attachment__remove" aria-label="移除附件"><img class="pl-icon pl-icon--lg" src="../../assets/icons/close-circle.svg" alt=""></button>
+</div></div><div class="pl-chat-uploads__edge" hidden><button type="button" class="pl-page-button" aria-label="向左滑动"></button></div><div class="pl-chat-uploads__edge pl-chat-uploads__edge--end" hidden><button type="button" class="pl-page-button pl-page-button--next" aria-label="向右滑动"></button></div></div>
+        <textarea class="pl-composer__query" aria-label="对话输入" placeholder="输入你想研究的问题或任务，支持@引用资料，调用快捷任务能力/skill"></textarea>
+      </div>
+      <div class="pl-composer__toolbar">
+        <button type="button" class="pl-composer__add" aria-label="添加附件" ><img class="pl-icon pl-icon--sm" src="../../assets/icons/add-lg.svg" alt=""></button>
+        <div class="pl-chat-send">
+  <button type="button" class="pl-chat-send__mode" >自动模式<img src="../../assets/icons/chat-mode-chevron.svg" alt=""></button>
+  <span class="pl-chat-send__action"><button type="button" class="pl-chat-send__button" aria-label="发送" ><img src="../../assets/icons/chat-send.svg" alt=""></button><span class="pl-tooltip pl-icon-button__tooltip" role="tooltip">发送</span></span>
+</div>
+      </div>
+    </div>
+    <div class="pl-composer__footer"><span class="pl-project-selector">
+  <button type="button" class="pl-composer__project"><img class="pl-icon pl-icon--sm" src="../../assets/icons/folder.svg" alt=""><span class="pl-project-selector__name">选择项目</span><img class="pl-icon pl-icon--sm" src="../../assets/icons/chevron-down.svg" alt=""></button>
+  <button type="button" class="pl-project-selector__clear" aria-label="清除已选项目"><span class="pl-icon pl-icon--sm pl-icon--mask" style="--icon-src: url(../../assets/icons/close.svg)"></span></button>
+</span></div>
+  </div>
+</div>
+<div class="preview-chat-state">
+  <p class="preview-matrix__label">聚焦</p>
+  <div class="pl-composer is-focused">
+    <div class="pl-composer__body">
+      <div class="pl-composer__content">
+        <div class="pl-chat-uploads"><div class="pl-chat-uploads__track" tabindex="0">
+<div class="pl-chat-file ">
+  <img class="pl-chat-file__icon" src="../../assets/file-type/pdf.png" alt="">
+  <div class="pl-chat-file__info">
+    <p class="pl-chat-file__name">文件名称.后缀</p>
+    <p class="pl-chat-file__meta">PDF<span class="pl-chat-file__dot"></span>800KB</p>
+  </div>
+  <button type="button" class="pl-chat-attachment__remove" aria-label="移除附件"><img class="pl-icon pl-icon--lg" src="../../assets/icons/close-circle.svg" alt=""></button>
+</div>
+<div class="pl-chat-image "><span class="pl-chat-image__crop"><img class="pl-chat-image__sample" src="../../assets/illustrations/chat-thumbnail.svg" alt="已上传图片"></span><button type="button" class="pl-chat-attachment__remove" aria-label="移除附件"><img class="pl-icon pl-icon--lg" src="../../assets/icons/close-circle.svg" alt=""></button></div>
+<div class="pl-chat-file ">
+  <img class="pl-chat-file__icon" src="../../assets/file-type/pdf.png" alt="">
+  <div class="pl-chat-file__info">
+    <p class="pl-chat-file__name">文件名称.后缀</p>
+    <p class="pl-chat-file__meta">PDF<span class="pl-chat-file__dot"></span>800KB</p>
+  </div>
+  <button type="button" class="pl-chat-attachment__remove" aria-label="移除附件"><img class="pl-icon pl-icon--lg" src="../../assets/icons/close-circle.svg" alt=""></button>
+</div>
+<div class="pl-chat-file ">
+  <img class="pl-chat-file__icon" src="../../assets/file-type/pdf.png" alt="">
+  <div class="pl-chat-file__info">
+    <p class="pl-chat-file__name">文件名称.后缀</p>
+    <p class="pl-chat-file__meta">PDF<span class="pl-chat-file__dot"></span>800KB</p>
+  </div>
+  <button type="button" class="pl-chat-attachment__remove" aria-label="移除附件"><img class="pl-icon pl-icon--lg" src="../../assets/icons/close-circle.svg" alt=""></button>
+</div></div><div class="pl-chat-uploads__edge" hidden><button type="button" class="pl-page-button" aria-label="向左滑动"></button></div><div class="pl-chat-uploads__edge pl-chat-uploads__edge--end" hidden><button type="button" class="pl-page-button pl-page-button--next" aria-label="向右滑动"></button></div></div>
+        <textarea class="pl-composer__query" aria-label="对话输入" placeholder="输入你想研究的问题或任务，支持@引用资料，调用快捷任务能力/skill">这是已经输入的query这是已经输入的query这是已经输入的query</textarea>
+      </div>
+      <div class="pl-composer__toolbar">
+        <button type="button" class="pl-composer__add" aria-label="添加附件" ><img class="pl-icon pl-icon--sm" src="../../assets/icons/add-lg.svg" alt=""></button>
+        <div class="pl-chat-send">
+  <button type="button" class="pl-chat-send__mode" >自动模式<img src="../../assets/icons/chat-mode-chevron.svg" alt=""></button>
+  <span class="pl-chat-send__action"><button type="button" class="pl-chat-send__button" aria-label="发送" ><img src="../../assets/icons/chat-send.svg" alt=""></button><span class="pl-tooltip pl-icon-button__tooltip" role="tooltip">发送</span></span>
+</div>
+      </div>
+    </div>
+    <div class="pl-composer__footer"><span class="pl-project-selector">
+  <button type="button" class="pl-composer__project"><img class="pl-icon pl-icon--sm" src="../../assets/icons/folder.svg" alt=""><span class="pl-project-selector__name">选择项目</span><img class="pl-icon pl-icon--sm" src="../../assets/icons/chevron-down.svg" alt=""></button>
+  <button type="button" class="pl-project-selector__clear" aria-label="清除已选项目"><span class="pl-icon pl-icon--sm pl-icon--mask" style="--icon-src: url(../../assets/icons/close.svg)"></span></button>
+</span></div>
+  </div>
+</div>
+<div class="preview-chat-state">
+  <p class="preview-matrix__label">已输入</p>
+  <div class="pl-composer">
+    <div class="pl-composer__body">
+      <div class="pl-composer__content">
+        <div class="pl-chat-uploads"><div class="pl-chat-uploads__track" tabindex="0">
+<div class="pl-chat-file ">
+  <img class="pl-chat-file__icon" src="../../assets/file-type/pdf.png" alt="">
+  <div class="pl-chat-file__info">
+    <p class="pl-chat-file__name">文件名称.后缀</p>
+    <p class="pl-chat-file__meta">PDF<span class="pl-chat-file__dot"></span>800KB</p>
+  </div>
+  <button type="button" class="pl-chat-attachment__remove" aria-label="移除附件"><img class="pl-icon pl-icon--lg" src="../../assets/icons/close-circle.svg" alt=""></button>
+</div>
+<div class="pl-chat-image "><span class="pl-chat-image__crop"><img class="pl-chat-image__sample" src="../../assets/illustrations/chat-thumbnail.svg" alt="已上传图片"></span><button type="button" class="pl-chat-attachment__remove" aria-label="移除附件"><img class="pl-icon pl-icon--lg" src="../../assets/icons/close-circle.svg" alt=""></button></div>
+<div class="pl-chat-file ">
+  <img class="pl-chat-file__icon" src="../../assets/file-type/pdf.png" alt="">
+  <div class="pl-chat-file__info">
+    <p class="pl-chat-file__name">文件名称.后缀</p>
+    <p class="pl-chat-file__meta">PDF<span class="pl-chat-file__dot"></span>800KB</p>
+  </div>
+  <button type="button" class="pl-chat-attachment__remove" aria-label="移除附件"><img class="pl-icon pl-icon--lg" src="../../assets/icons/close-circle.svg" alt=""></button>
+</div>
+<div class="pl-chat-file ">
+  <img class="pl-chat-file__icon" src="../../assets/file-type/pdf.png" alt="">
+  <div class="pl-chat-file__info">
+    <p class="pl-chat-file__name">文件名称.后缀</p>
+    <p class="pl-chat-file__meta">PDF<span class="pl-chat-file__dot"></span>800KB</p>
+  </div>
+  <button type="button" class="pl-chat-attachment__remove" aria-label="移除附件"><img class="pl-icon pl-icon--lg" src="../../assets/icons/close-circle.svg" alt=""></button>
+</div></div><div class="pl-chat-uploads__edge" hidden><button type="button" class="pl-page-button" aria-label="向左滑动"></button></div><div class="pl-chat-uploads__edge pl-chat-uploads__edge--end" hidden><button type="button" class="pl-page-button pl-page-button--next" aria-label="向右滑动"></button></div></div>
+        <textarea class="pl-composer__query" aria-label="对话输入" placeholder="输入你想研究的问题或任务，支持@引用资料，调用快捷任务能力/skill">这是已经输入的query这是已经输入的query这是已经输入的query</textarea>
+      </div>
+      <div class="pl-composer__toolbar">
+        <button type="button" class="pl-composer__add" aria-label="添加附件" ><img class="pl-icon pl-icon--sm" src="../../assets/icons/add-lg.svg" alt=""></button>
+        <div class="pl-chat-send">
+  <button type="button" class="pl-chat-send__mode" >自动模式<img src="../../assets/icons/chat-mode-chevron.svg" alt=""></button>
+  <span class="pl-chat-send__action"><button type="button" class="pl-chat-send__button" aria-label="发送" ><img src="../../assets/icons/chat-send.svg" alt=""></button><span class="pl-tooltip pl-icon-button__tooltip" role="tooltip">发送</span></span>
+</div>
+      </div>
+    </div>
+    <div class="pl-composer__footer"><span class="pl-project-selector">
+  <button type="button" class="pl-composer__project"><img class="pl-icon pl-icon--sm" src="../../assets/icons/folder.svg" alt=""><span class="pl-project-selector__name">选择项目</span><img class="pl-icon pl-icon--sm" src="../../assets/icons/chevron-down.svg" alt=""></button>
+  <button type="button" class="pl-project-selector__clear" aria-label="清除已选项目"><span class="pl-icon pl-icon--sm pl-icon--mask" style="--icon-src: url(../../assets/icons/close.svg)"></span></button>
+</span></div>
+  </div>
+</div>
+<div class="preview-chat-state">
+  <p class="preview-matrix__label">已输入超出</p>
+  <div class="pl-composer">
+    <div class="pl-composer__body">
+      <div class="pl-composer__content">
+        <div class="pl-chat-uploads"><div class="pl-chat-uploads__track" tabindex="0">
+<div class="pl-chat-file ">
+  <img class="pl-chat-file__icon" src="../../assets/file-type/pdf.png" alt="">
+  <div class="pl-chat-file__info">
+    <p class="pl-chat-file__name">文件名称.后缀</p>
+    <p class="pl-chat-file__meta">PDF<span class="pl-chat-file__dot"></span>800KB</p>
+  </div>
+  <button type="button" class="pl-chat-attachment__remove" aria-label="移除附件"><img class="pl-icon pl-icon--lg" src="../../assets/icons/close-circle.svg" alt=""></button>
+</div>
+<div class="pl-chat-image "><span class="pl-chat-image__crop"><img class="pl-chat-image__sample" src="../../assets/illustrations/chat-thumbnail.svg" alt="已上传图片"></span><button type="button" class="pl-chat-attachment__remove" aria-label="移除附件"><img class="pl-icon pl-icon--lg" src="../../assets/icons/close-circle.svg" alt=""></button></div>
+<div class="pl-chat-file ">
+  <img class="pl-chat-file__icon" src="../../assets/file-type/pdf.png" alt="">
+  <div class="pl-chat-file__info">
+    <p class="pl-chat-file__name">文件名称.后缀</p>
+    <p class="pl-chat-file__meta">PDF<span class="pl-chat-file__dot"></span>800KB</p>
+  </div>
+  <button type="button" class="pl-chat-attachment__remove" aria-label="移除附件"><img class="pl-icon pl-icon--lg" src="../../assets/icons/close-circle.svg" alt=""></button>
+</div>
+<div class="pl-chat-file ">
+  <img class="pl-chat-file__icon" src="../../assets/file-type/pdf.png" alt="">
+  <div class="pl-chat-file__info">
+    <p class="pl-chat-file__name">文件名称.后缀</p>
+    <p class="pl-chat-file__meta">PDF<span class="pl-chat-file__dot"></span>800KB</p>
+  </div>
+  <button type="button" class="pl-chat-attachment__remove" aria-label="移除附件"><img class="pl-icon pl-icon--lg" src="../../assets/icons/close-circle.svg" alt=""></button>
+</div></div><div class="pl-chat-uploads__edge" hidden><button type="button" class="pl-page-button" aria-label="向左滑动"></button></div><div class="pl-chat-uploads__edge pl-chat-uploads__edge--end" hidden><button type="button" class="pl-page-button pl-page-button--next" aria-label="向右滑动"></button></div></div>
+        <textarea class="pl-composer__query" aria-label="对话输入" placeholder="输入你想研究的问题或任务，支持@引用资料，调用快捷任务能力/skill">这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query这是已经输入的query</textarea>
+      </div>
+      <div class="pl-composer__toolbar">
+        <button type="button" class="pl-composer__add" aria-label="添加附件" ><img class="pl-icon pl-icon--sm" src="../../assets/icons/add-lg.svg" alt=""></button>
+        <div class="pl-chat-send">
+  <button type="button" class="pl-chat-send__mode" >自动模式<img src="../../assets/icons/chat-mode-chevron.svg" alt=""></button>
+  <span class="pl-chat-send__action"><button type="button" class="pl-chat-send__button" aria-label="发送" ><img src="../../assets/icons/chat-send.svg" alt=""></button><span class="pl-tooltip pl-icon-button__tooltip" role="tooltip">发送</span></span>
+</div>
+      </div>
+    </div>
+    <div class="pl-composer__footer"><span class="pl-project-selector">
+  <button type="button" class="pl-composer__project"><img class="pl-icon pl-icon--sm" src="../../assets/icons/folder.svg" alt=""><span class="pl-project-selector__name">选择项目</span><img class="pl-icon pl-icon--sm" src="../../assets/icons/chevron-down.svg" alt=""></button>
+  <button type="button" class="pl-project-selector__clear" aria-label="清除已选项目"><span class="pl-icon pl-icon--sm pl-icon--mask" style="--icon-src: url(../../assets/icons/close.svg)"></span></button>
+</span></div>
+  </div>
+</div></div></section>
+<section class="preview-section"><header class="preview-section__header"><h2 class="preview-section__title">子组件-图片</h2></header><div class="preview-panel preview-panel--chat-states">
+<div class="preview-chat-state"><p class="preview-matrix__label">上传中</p><div><div class="pl-chat-image is-loading"><span class="pl-chat-loading" role="status" aria-label="上传中"><img src="../../assets/illustrations/chat-loading.png" alt="" width="22" height="22"></span></div></div></div>
+<div class="preview-chat-state"><p class="preview-matrix__label">默认</p><div><div class="pl-chat-image "><span class="pl-chat-image__crop"><img class="pl-chat-image__sample" src="../../assets/illustrations/chat-thumbnail.svg" alt="已上传图片"></span><button type="button" class="pl-chat-attachment__remove" aria-label="移除附件"><img class="pl-icon pl-icon--lg" src="../../assets/icons/close-circle.svg" alt=""></button></div></div></div>
+<div class="preview-chat-state"><p class="preview-matrix__label">Hover</p><div><div class="pl-chat-image is-hover"><span class="pl-chat-image__crop"><img class="pl-chat-image__sample" src="../../assets/illustrations/chat-thumbnail.svg" alt="已上传图片"></span><button type="button" class="pl-chat-attachment__remove" aria-label="移除附件"><img class="pl-icon pl-icon--lg" src="../../assets/icons/close-circle.svg" alt=""></button></div></div></div></div></section>
+<section class="preview-section"><header class="preview-section__header"><h2 class="preview-section__title">子组件-文件块</h2><p class="preview-section__description">文件块会自动识别上传文件的类型，并引用对应的文件类型图标。文件类型变化时，图标随之切换。文件名超出可用宽度时，末尾显示省略号。</p></header><div class="preview-panel preview-panel--chat-states">
+<div class="preview-chat-state"><p class="preview-matrix__label">上传中</p><div><div class="pl-chat-file is-loading">
+  <span class="pl-chat-loading" role="status" aria-label="上传中"><img src="../../assets/illustrations/chat-loading.png" alt="" width="22" height="22"></span>
+  <div class="pl-chat-file__info">
+    <p class="pl-chat-file__name">文件名称.后缀</p>
+    <p class="pl-chat-file__meta">MD<span class="pl-chat-file__dot"></span>800KB</p>
+  </div>
+  
+</div></div></div>
+<div class="preview-chat-state"><p class="preview-matrix__label">上传完成</p><div><div class="pl-chat-file ">
+  <img class="pl-chat-file__icon" src="../../assets/file-type/pdf.png" alt="">
+  <div class="pl-chat-file__info">
+    <p class="pl-chat-file__name">北极星设计系统组件使用说明与更新记录.pdf</p>
+    <p class="pl-chat-file__meta">PDF<span class="pl-chat-file__dot"></span>800KB</p>
+  </div>
+  <button type="button" class="pl-chat-attachment__remove" aria-label="移除附件"><img class="pl-icon pl-icon--lg" src="../../assets/icons/close-circle.svg" alt=""></button>
+</div></div></div>
+<div class="preview-chat-state"><p class="preview-matrix__label">Hover</p><div><div class="pl-chat-file is-hover">
+  <img class="pl-chat-file__icon" src="../../assets/file-type/pdf.png" alt="">
+  <div class="pl-chat-file__info">
+    <p class="pl-chat-file__name">文件名称.后缀</p>
+    <p class="pl-chat-file__meta">PDF<span class="pl-chat-file__dot"></span>800KB</p>
+  </div>
+  <button type="button" class="pl-chat-attachment__remove" aria-label="移除附件"><img class="pl-icon pl-icon--lg" src="../../assets/icons/close-circle.svg" alt=""></button>
+</div></div></div></div></section>
+<section class="preview-section"><header class="preview-section__header"><h2 class="preview-section__title">子组件-已上传文件</h2></header><div class="preview-panel preview-panel--chat-uploads">
+<div class="preview-chat-state"><p class="preview-matrix__label">不用滑动</p><div><div class="pl-chat-uploads" data-position="fit"><div class="pl-chat-uploads__track" tabindex="0">
+<div class="pl-chat-file ">
+  <img class="pl-chat-file__icon" src="../../assets/file-type/pdf.png" alt="">
+  <div class="pl-chat-file__info">
+    <p class="pl-chat-file__name">文件名称.后缀</p>
+    <p class="pl-chat-file__meta">PDF<span class="pl-chat-file__dot"></span>800KB</p>
+  </div>
+  <button type="button" class="pl-chat-attachment__remove" aria-label="移除附件"><img class="pl-icon pl-icon--lg" src="../../assets/icons/close-circle.svg" alt=""></button>
+</div>
+<div class="pl-chat-image "><span class="pl-chat-image__crop"><img class="pl-chat-image__sample" src="../../assets/illustrations/chat-thumbnail.svg" alt="已上传图片"></span><button type="button" class="pl-chat-attachment__remove" aria-label="移除附件"><img class="pl-icon pl-icon--lg" src="../../assets/icons/close-circle.svg" alt=""></button></div>
+<div class="pl-chat-file ">
+  <img class="pl-chat-file__icon" src="../../assets/file-type/pdf.png" alt="">
+  <div class="pl-chat-file__info">
+    <p class="pl-chat-file__name">文件名称.后缀</p>
+    <p class="pl-chat-file__meta">PDF<span class="pl-chat-file__dot"></span>800KB</p>
+  </div>
+  <button type="button" class="pl-chat-attachment__remove" aria-label="移除附件"><img class="pl-icon pl-icon--lg" src="../../assets/icons/close-circle.svg" alt=""></button>
+</div>
+<div class="pl-chat-file ">
+  <img class="pl-chat-file__icon" src="../../assets/file-type/pdf.png" alt="">
+  <div class="pl-chat-file__info">
+    <p class="pl-chat-file__name">文件名称.后缀</p>
+    <p class="pl-chat-file__meta">PDF<span class="pl-chat-file__dot"></span>800KB</p>
+  </div>
+  <button type="button" class="pl-chat-attachment__remove" aria-label="移除附件"><img class="pl-icon pl-icon--lg" src="../../assets/icons/close-circle.svg" alt=""></button>
+</div></div><div class="pl-chat-uploads__edge" hidden><button type="button" class="pl-page-button" aria-label="向左滑动"></button></div><div class="pl-chat-uploads__edge pl-chat-uploads__edge--end" hidden><button type="button" class="pl-page-button pl-page-button--next" aria-label="向右滑动"></button></div></div></div></div>
+<div class="preview-chat-state"><p class="preview-matrix__label">右边滑</p><div><div class="pl-chat-uploads" data-position="start"><div class="pl-chat-uploads__track" tabindex="0">
+<div class="pl-chat-file ">
+  <img class="pl-chat-file__icon" src="../../assets/file-type/pdf.png" alt="">
+  <div class="pl-chat-file__info">
+    <p class="pl-chat-file__name">文件名称.后缀</p>
+    <p class="pl-chat-file__meta">PDF<span class="pl-chat-file__dot"></span>800KB</p>
+  </div>
+  <button type="button" class="pl-chat-attachment__remove" aria-label="移除附件"><img class="pl-icon pl-icon--lg" src="../../assets/icons/close-circle.svg" alt=""></button>
+</div>
+<div class="pl-chat-file ">
+  <img class="pl-chat-file__icon" src="../../assets/file-type/pdf.png" alt="">
+  <div class="pl-chat-file__info">
+    <p class="pl-chat-file__name">文件名称.后缀</p>
+    <p class="pl-chat-file__meta">PDF<span class="pl-chat-file__dot"></span>800KB</p>
+  </div>
+  <button type="button" class="pl-chat-attachment__remove" aria-label="移除附件"><img class="pl-icon pl-icon--lg" src="../../assets/icons/close-circle.svg" alt=""></button>
+</div>
+<div class="pl-chat-file ">
+  <img class="pl-chat-file__icon" src="../../assets/file-type/pdf.png" alt="">
+  <div class="pl-chat-file__info">
+    <p class="pl-chat-file__name">文件名称.后缀</p>
+    <p class="pl-chat-file__meta">PDF<span class="pl-chat-file__dot"></span>800KB</p>
+  </div>
+  <button type="button" class="pl-chat-attachment__remove" aria-label="移除附件"><img class="pl-icon pl-icon--lg" src="../../assets/icons/close-circle.svg" alt=""></button>
+</div>
+<div class="pl-chat-file ">
+  <img class="pl-chat-file__icon" src="../../assets/file-type/pdf.png" alt="">
+  <div class="pl-chat-file__info">
+    <p class="pl-chat-file__name">文件名称.后缀</p>
+    <p class="pl-chat-file__meta">PDF<span class="pl-chat-file__dot"></span>800KB</p>
+  </div>
+  <button type="button" class="pl-chat-attachment__remove" aria-label="移除附件"><img class="pl-icon pl-icon--lg" src="../../assets/icons/close-circle.svg" alt=""></button>
+</div>
+<div class="pl-chat-file ">
+  <img class="pl-chat-file__icon" src="../../assets/file-type/pdf.png" alt="">
+  <div class="pl-chat-file__info">
+    <p class="pl-chat-file__name">文件名称.后缀</p>
+    <p class="pl-chat-file__meta">PDF<span class="pl-chat-file__dot"></span>800KB</p>
+  </div>
+  <button type="button" class="pl-chat-attachment__remove" aria-label="移除附件"><img class="pl-icon pl-icon--lg" src="../../assets/icons/close-circle.svg" alt=""></button>
+</div></div><div class="pl-chat-uploads__edge" hidden><button type="button" class="pl-page-button" aria-label="向左滑动"></button></div><div class="pl-chat-uploads__edge pl-chat-uploads__edge--end" hidden><button type="button" class="pl-page-button pl-page-button--next" aria-label="向右滑动"></button></div></div></div></div>
+<div class="preview-chat-state"><p class="preview-matrix__label">左边滑</p><div><div class="pl-chat-uploads" data-position="end"><div class="pl-chat-uploads__track" tabindex="0">
+<div class="pl-chat-file ">
+  <img class="pl-chat-file__icon" src="../../assets/file-type/pdf.png" alt="">
+  <div class="pl-chat-file__info">
+    <p class="pl-chat-file__name">文件名称.后缀</p>
+    <p class="pl-chat-file__meta">PDF<span class="pl-chat-file__dot"></span>800KB</p>
+  </div>
+  <button type="button" class="pl-chat-attachment__remove" aria-label="移除附件"><img class="pl-icon pl-icon--lg" src="../../assets/icons/close-circle.svg" alt=""></button>
+</div>
+<div class="pl-chat-file ">
+  <img class="pl-chat-file__icon" src="../../assets/file-type/pdf.png" alt="">
+  <div class="pl-chat-file__info">
+    <p class="pl-chat-file__name">文件名称.后缀</p>
+    <p class="pl-chat-file__meta">PDF<span class="pl-chat-file__dot"></span>800KB</p>
+  </div>
+  <button type="button" class="pl-chat-attachment__remove" aria-label="移除附件"><img class="pl-icon pl-icon--lg" src="../../assets/icons/close-circle.svg" alt=""></button>
+</div>
+<div class="pl-chat-file ">
+  <img class="pl-chat-file__icon" src="../../assets/file-type/pdf.png" alt="">
+  <div class="pl-chat-file__info">
+    <p class="pl-chat-file__name">文件名称.后缀</p>
+    <p class="pl-chat-file__meta">PDF<span class="pl-chat-file__dot"></span>800KB</p>
+  </div>
+  <button type="button" class="pl-chat-attachment__remove" aria-label="移除附件"><img class="pl-icon pl-icon--lg" src="../../assets/icons/close-circle.svg" alt=""></button>
+</div>
+<div class="pl-chat-file ">
+  <img class="pl-chat-file__icon" src="../../assets/file-type/pdf.png" alt="">
+  <div class="pl-chat-file__info">
+    <p class="pl-chat-file__name">文件名称.后缀</p>
+    <p class="pl-chat-file__meta">PDF<span class="pl-chat-file__dot"></span>800KB</p>
+  </div>
+  <button type="button" class="pl-chat-attachment__remove" aria-label="移除附件"><img class="pl-icon pl-icon--lg" src="../../assets/icons/close-circle.svg" alt=""></button>
+</div>
+<div class="pl-chat-file ">
+  <img class="pl-chat-file__icon" src="../../assets/file-type/pdf.png" alt="">
+  <div class="pl-chat-file__info">
+    <p class="pl-chat-file__name">文件名称.后缀</p>
+    <p class="pl-chat-file__meta">PDF<span class="pl-chat-file__dot"></span>800KB</p>
+  </div>
+  <button type="button" class="pl-chat-attachment__remove" aria-label="移除附件"><img class="pl-icon pl-icon--lg" src="../../assets/icons/close-circle.svg" alt=""></button>
+</div></div><div class="pl-chat-uploads__edge" hidden><button type="button" class="pl-page-button" aria-label="向左滑动"></button></div><div class="pl-chat-uploads__edge pl-chat-uploads__edge--end" hidden><button type="button" class="pl-page-button pl-page-button--next" aria-label="向右滑动"></button></div></div></div></div>
+<div class="preview-chat-state"><p class="preview-matrix__label">左右滑</p><div><div class="pl-chat-uploads" data-position="middle"><div class="pl-chat-uploads__track" tabindex="0">
+<div class="pl-chat-file ">
+  <img class="pl-chat-file__icon" src="../../assets/file-type/pdf.png" alt="">
+  <div class="pl-chat-file__info">
+    <p class="pl-chat-file__name">文件名称.后缀</p>
+    <p class="pl-chat-file__meta">PDF<span class="pl-chat-file__dot"></span>800KB</p>
+  </div>
+  <button type="button" class="pl-chat-attachment__remove" aria-label="移除附件"><img class="pl-icon pl-icon--lg" src="../../assets/icons/close-circle.svg" alt=""></button>
+</div>
+<div class="pl-chat-file ">
+  <img class="pl-chat-file__icon" src="../../assets/file-type/pdf.png" alt="">
+  <div class="pl-chat-file__info">
+    <p class="pl-chat-file__name">文件名称.后缀</p>
+    <p class="pl-chat-file__meta">PDF<span class="pl-chat-file__dot"></span>800KB</p>
+  </div>
+  <button type="button" class="pl-chat-attachment__remove" aria-label="移除附件"><img class="pl-icon pl-icon--lg" src="../../assets/icons/close-circle.svg" alt=""></button>
+</div>
+<div class="pl-chat-file ">
+  <img class="pl-chat-file__icon" src="../../assets/file-type/pdf.png" alt="">
+  <div class="pl-chat-file__info">
+    <p class="pl-chat-file__name">文件名称.后缀</p>
+    <p class="pl-chat-file__meta">PDF<span class="pl-chat-file__dot"></span>800KB</p>
+  </div>
+  <button type="button" class="pl-chat-attachment__remove" aria-label="移除附件"><img class="pl-icon pl-icon--lg" src="../../assets/icons/close-circle.svg" alt=""></button>
+</div>
+<div class="pl-chat-file ">
+  <img class="pl-chat-file__icon" src="../../assets/file-type/pdf.png" alt="">
+  <div class="pl-chat-file__info">
+    <p class="pl-chat-file__name">文件名称.后缀</p>
+    <p class="pl-chat-file__meta">PDF<span class="pl-chat-file__dot"></span>800KB</p>
+  </div>
+  <button type="button" class="pl-chat-attachment__remove" aria-label="移除附件"><img class="pl-icon pl-icon--lg" src="../../assets/icons/close-circle.svg" alt=""></button>
+</div>
+<div class="pl-chat-file ">
+  <img class="pl-chat-file__icon" src="../../assets/file-type/pdf.png" alt="">
+  <div class="pl-chat-file__info">
+    <p class="pl-chat-file__name">文件名称.后缀</p>
+    <p class="pl-chat-file__meta">PDF<span class="pl-chat-file__dot"></span>800KB</p>
+  </div>
+  <button type="button" class="pl-chat-attachment__remove" aria-label="移除附件"><img class="pl-icon pl-icon--lg" src="../../assets/icons/close-circle.svg" alt=""></button>
+</div></div><div class="pl-chat-uploads__edge" hidden><button type="button" class="pl-page-button" aria-label="向左滑动"></button></div><div class="pl-chat-uploads__edge pl-chat-uploads__edge--end" hidden><button type="button" class="pl-page-button pl-page-button--next" aria-label="向右滑动"></button></div></div></div></div></div></section>
+<section class="preview-section"><header class="preview-section__header"><h2 class="preview-section__title">子组件-技能引用</h2><p class="preview-section__description">选择技能后回写到对话输入区；对话气泡复用同一组件的只读形态。</p></header><div class="preview-panel preview-panel--normal preview-panel--compact">
+<div class="preview-matrix" style="--preview-cols: 3; --preview-label-width: 64px; --preview-column-width: 112px">
+<span></span><span class="preview-matrix__head">默认</span><span class="preview-matrix__head">Hover</span><span class="preview-matrix__head">Hover 到关闭</span>
+<span class="preview-matrix__label">技能引用</span>
+<button type="button" class="pl-skill-reference" aria-label="移除技能：技能名称"><span class="pl-skill-reference__icon" aria-hidden="true"></span><span class="pl-skill-reference__label">技能名称</span></button>
+<button type="button" class="pl-skill-reference is-hover" aria-label="移除技能：技能名称"><span class="pl-skill-reference__icon" aria-hidden="true"></span><span class="pl-skill-reference__label">技能名称</span></button>
+<button type="button" class="pl-skill-reference is-close-hover" aria-label="移除技能：技能名称"><span class="pl-skill-reference__icon" aria-hidden="true"></span><span class="pl-skill-reference__label">技能名称</span></button>
+</div></div></section>
+<section class="preview-section"><header class="preview-section__header"><h2 class="preview-section__title">子组件-发送</h2></header><div class="preview-panel preview-panel--chat-states">
+<div class="preview-chat-state"><p class="preview-matrix__label">不可用</p><div><div class="pl-chat-send">
+  <button type="button" class="pl-chat-send__mode" >自动模式<img src="../../assets/icons/chat-mode-chevron.svg" alt=""></button>
+  <span class="pl-chat-send__action"><button type="button" class="pl-chat-send__button" aria-label="发送" disabled><img src="../../assets/icons/chat-send.svg" alt=""></button><span class="pl-tooltip pl-icon-button__tooltip" role="tooltip">当前不可发送</span></span>
+</div></div></div>
+<div class="preview-chat-state"><p class="preview-matrix__label">可发送</p><div><div class="pl-chat-send">
+  <button type="button" class="pl-chat-send__mode" >自动模式<img src="../../assets/icons/chat-mode-chevron.svg" alt=""></button>
+  <span class="pl-chat-send__action"><button type="button" class="pl-chat-send__button" aria-label="发送" ><img src="../../assets/icons/chat-send.svg" alt=""></button><span class="pl-tooltip pl-icon-button__tooltip" role="tooltip">发送</span></span>
+</div></div></div>
+<div class="preview-chat-state"><p class="preview-matrix__label">可暂停</p><div><div class="pl-chat-send">
+  <button type="button" class="pl-chat-send__mode" disabled>自动模式<img src="../../assets/icons/chat-mode-chevron.svg" alt=""></button>
+  <span class="pl-chat-send__action"><button type="button" class="pl-chat-send__button pl-chat-send__button--pause" aria-label="暂停" ></button><span class="pl-tooltip pl-icon-button__tooltip" role="tooltip">暂停</span></span>
+</div></div></div></div></section>
+<section class="preview-section"><h2 class="preview-section__title">子组件-项目选择器</h2><div class="preview-panel preview-panel--chat-states" style="row-gap: 28px"><div class="preview-chat-state"><p class="preview-matrix__label">无项目</p><span class="pl-project-selector">
+  <button type="button" class="pl-composer__project"><img class="pl-icon pl-icon--sm" src="../../assets/icons/folder.svg" alt=""><span class="pl-project-selector__name">选择项目</span><img class="pl-icon pl-icon--sm" src="../../assets/icons/chevron-down.svg" alt=""></button>
+  <button type="button" class="pl-project-selector__clear" aria-label="清除已选项目"><span class="pl-icon pl-icon--sm pl-icon--mask" style="--icon-src: url(../../assets/icons/close.svg)"></span></button>
+</span></div>
+<div class="preview-chat-state"><p class="preview-matrix__label">无项目 · Hover</p><span class="pl-project-selector is-hover">
+  <button type="button" class="pl-composer__project"><img class="pl-icon pl-icon--sm" src="../../assets/icons/folder.svg" alt=""><span class="pl-project-selector__name">选择项目</span><img class="pl-icon pl-icon--sm" src="../../assets/icons/chevron-down.svg" alt=""></button>
+  <button type="button" class="pl-project-selector__clear" aria-label="清除已选项目"><span class="pl-icon pl-icon--sm pl-icon--mask" style="--icon-src: url(../../assets/icons/close.svg)"></span></button>
+</span></div>
+<div class="preview-chat-state"><p class="preview-matrix__label">有项目</p><span class="pl-project-selector is-selected">
+  <button type="button" class="pl-composer__project"><img class="pl-icon pl-icon--sm" src="../../assets/icons/folder.svg" alt=""><span class="pl-project-selector__name">已有项目A</span><img class="pl-icon pl-icon--sm" src="../../assets/icons/chevron-down.svg" alt=""></button>
+  <button type="button" class="pl-project-selector__clear" aria-label="清除已选项目"><span class="pl-icon pl-icon--sm pl-icon--mask" style="--icon-src: url(../../assets/icons/close.svg)"></span></button>
+</span></div>
+<div class="preview-chat-state"><p class="preview-matrix__label">有项目 · Hover</p><span class="pl-project-selector is-selected is-hover">
+  <button type="button" class="pl-composer__project"><img class="pl-icon pl-icon--sm" src="../../assets/icons/folder.svg" alt=""><span class="pl-project-selector__name">已有项目A</span><img class="pl-icon pl-icon--sm" src="../../assets/icons/chevron-down.svg" alt=""></button>
+  <button type="button" class="pl-project-selector__clear" aria-label="清除已选项目"><span class="pl-icon pl-icon--sm pl-icon--mask" style="--icon-src: url(../../assets/icons/close.svg)"></span></button>
+</span></div>
+<div class="preview-chat-state"><p class="preview-matrix__label">Hover 到关闭</p><span class="pl-project-selector is-selected is-hover">
+  <button type="button" class="pl-composer__project"><img class="pl-icon pl-icon--sm" src="../../assets/icons/folder.svg" alt=""><span class="pl-project-selector__name">已有项目A</span><img class="pl-icon pl-icon--sm" src="../../assets/icons/chevron-down.svg" alt=""></button>
+  <button type="button" class="pl-project-selector__clear is-hover" aria-label="清除已选项目"><span class="pl-icon pl-icon--sm pl-icon--mask" style="--icon-src: url(../../assets/icons/close.svg)"></span></button>
+</span></div></div></section>
+</main>
+<div id="composer-add-menu" class="pl-select-panel pl-add-menu pl-cascader" role="menu" aria-label="添加" popover>
+  <button type="button" class="pl-select-option" role="menuitem" data-action="upload"><span aria-hidden="true" class="pl-select-option__icon" style="--icon-src: url(../../assets/icons/link.svg)"></span><span class="pl-select-option__text">上传文件</span></button>
+  <button type="button" class="pl-select-option" role="menuitem" data-action="library"><span aria-hidden="true" class="pl-select-option__icon" style="--icon-src: url(../../assets/icons/library.svg)"></span><span class="pl-select-option__text">添加资料库文件</span></button>
+  <div class="pl-select-panel__divider" role="separator"></div>
+  <button type="button" class="pl-select-option pl-cascader__trigger" role="menuitem" data-action="skills" aria-haspopup="menu" aria-expanded="false" aria-controls="composer-skills"><span aria-hidden="true" class="pl-select-option__icon" style="--icon-src: url(../../assets/icons/skill.svg)"></span><span class="pl-select-option__text">技能</span><span aria-hidden="true" class="pl-select-option__arrow pl-icon pl-icon--sm pl-icon--mask"></span></button>
+</div>
+<div class="pl-select-panel pl-skills-menu pl-cascader__panel" id="composer-skills" role="menu" aria-label="技能" popover>
+    <button type="button" role="menuitem" class="pl-select-option" data-action="skill" data-skill-id="example-1" data-description="技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍">
+      <span class="pl-select-option__icon" aria-hidden="true" style="--icon-src: url(../../assets/icons/skill.svg)"></span>
+      <span class="pl-select-option__text">技能</span>
+    </button>
+    <button type="button" role="menuitem" class="pl-select-option" data-action="skill" data-skill-id="example-2" data-description="技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍">
+      <span class="pl-select-option__icon" aria-hidden="true" style="--icon-src: url(../../assets/icons/skill.svg)"></span>
+      <span class="pl-select-option__text">技能</span>
+    </button>
+    <button type="button" role="menuitem" class="pl-select-option" data-action="skill" data-skill-id="example-3" data-description="技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍">
+      <span class="pl-select-option__icon" aria-hidden="true" style="--icon-src: url(../../assets/icons/skill.svg)"></span>
+      <span class="pl-select-option__text">技能</span>
+    </button>
+    <button type="button" role="menuitem" class="pl-select-option" data-action="skill" data-skill-id="example-4" data-description="技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍">
+      <span class="pl-select-option__icon" aria-hidden="true" style="--icon-src: url(../../assets/icons/skill.svg)"></span>
+      <span class="pl-select-option__text">技能</span>
+    </button>
+    <button type="button" role="menuitem" class="pl-select-option" data-action="skill" data-skill-id="example-5" data-description="技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍">
+      <span class="pl-select-option__icon" aria-hidden="true" style="--icon-src: url(../../assets/icons/skill.svg)"></span>
+      <span class="pl-select-option__text">技能</span>
+    </button>
+    <button type="button" role="menuitem" class="pl-select-option" data-action="skill" data-skill-id="example-6" data-description="技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍技能的介绍">
+      <span class="pl-select-option__icon" aria-hidden="true" style="--icon-src: url(../../assets/icons/skill.svg)"></span>
+      <span class="pl-select-option__text">技能技能技能技能技能技能技能技能技能技能技能技能</span>
+    </button>
+    <div class="pl-select-panel__divider" role="separator"></div>
+    <button type="button" role="menuitem" class="pl-select-option" data-action="manage-skills">
+      <span class="pl-select-option__icon" aria-hidden="true" style="--icon-src: url(../../assets/icons/manage.svg)"></span>
+      <span class="pl-select-option__text">管理技能</span>
+    </button>
+    <div class="pl-tooltip pl-skills-menu__tip" id="composer-skill-tip" role="tooltip" popover="manual"></div>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  for (const row of document.querySelectorAll('[data-position]')) {
+    const track = row.querySelector('.pl-chat-uploads__track');
+    const limit = track.scrollWidth - track.clientWidth;
+    if (row.dataset.position === 'end') track.scrollLeft = limit;
+    if (row.dataset.position === 'middle') track.scrollLeft = limit / 2;
+  }
+});
+</script>
+</body>
+</html>

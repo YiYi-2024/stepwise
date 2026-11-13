@@ -1,0 +1,217 @@
+/* Button 按钮 */
+
+.pl-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 36px;
+  padding: 8px 16px;
+  overflow: hidden;
+  border: 0;
+  border-radius: 8px;
+  font-family: "PingFang SC", var(--font-family-body);
+  font-size: var(--font-size-text-md);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-text-md);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.pl-button__icon {
+  display: block;
+  flex: none;
+  width: 16px;
+  height: 16px;
+}
+
+.pl-button--small .pl-button__icon {
+  width: 14px;
+  height: 14px;
+}
+
+.pl-button--small {
+  min-height: 32px;
+  padding: 7px 12px;
+  font-size: var(--font-size-text-sm);
+  line-height: var(--line-height-text-sm);
+}
+
+.pl-button--brand {
+  color: var(--text-white);
+  background: var(--text-brand);
+}
+
+.pl-button--brand:not(:disabled):hover,
+.pl-button--brand.is-hover {
+  background: color-mix(in srgb, var(--text-brand) 80%, var(--background-white));
+}
+
+.pl-button--brand:disabled {
+  color: var(--text-white);
+  background: color-mix(in srgb, var(--text-brand) 40%, transparent);
+}
+
+.pl-button--primary {
+  color: var(--text-white);
+  background: var(--text-primary);
+}
+
+.pl-button--primary:not(:disabled):hover,
+.pl-button--primary.is-hover {
+  background: color-mix(in srgb, var(--text-primary) 80%, var(--background-white));
+}
+
+.pl-button--primary:disabled {
+  color: var(--text-white);
+  background: color-mix(in srgb, var(--text-primary) 40%, transparent);
+}
+
+.pl-button--secondary {
+  color: var(--text-primary);
+  background: var(--background-white);
+  box-shadow: inset 0 0 0 1px var(--border-primary);
+}
+
+.pl-button--secondary:not(:disabled):hover,
+.pl-button--secondary.is-hover {
+  background: var(--hover-subtle);
+}
+
+.pl-button--ghost {
+  color: var(--text-primary);
+  background: transparent;
+}
+
+.pl-button--ghost:not(:disabled):hover,
+.pl-button--ghost.is-hover {
+  background: var(--hover-subtle);
+}
+
+.pl-button--secondary:disabled,
+.pl-button--ghost:disabled {
+  color: var(--text-tertiary);
+  background: var(--background-white);
+}
+
+.pl-button:disabled {
+  cursor: not-allowed;
+}
+
+.pl-button--danger {
+  color: var(--error-primary);
+  background: var(--error-tertiary);
+}
+
+.pl-button--danger:not(:disabled):hover,
+.pl-button--danger.is-hover {
+  background: var(--error-secondary);
+}
+
+.pl-icon-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 4px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.pl-icon-button--small {
+  width: 22px;
+  height: 22px;
+  padding: 4px;
+}
+
+.pl-icon-button--large {
+  width: 32px;
+  height: 32px;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.pl-icon-button:hover,
+.pl-icon-button.is-hover,
+.pl-icon-button.is-active {
+  background: var(--pl-icon-button-hover, var(--hover-default));
+}
+
+.pl-icon-button--on-bg {
+  --pl-icon-button-hover: var(--hover-strong-on-bg);
+}
+
+.pl-icon-button__icon {
+  display: block;
+  flex: none;
+  width: 16px;
+  height: 16px;
+  color: var(--text-tertiary);
+}
+
+.pl-icon-button--small .pl-icon-button__icon {
+  width: 14px;
+  height: 14px;
+}
+
+/* 图标按钮 hover 提示：外观引用 .pl-tooltip，这里只管定位、显隐和动画
+ * <span class="pl-tooltip pl-icon-button__tooltip" role="tooltip">提示</span>
+ *
+ * 动画：hover 时立即纯淡入（无位移、无延迟）；移开时快速淡出。
+ * 不能用 display:none（无法做动画），改用 opacity + visibility。 */
+.pl-icon-button__tooltip {
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-50%);
+  pointer-events: none;
+  transition:
+    opacity 100ms ease,
+    visibility 0s linear 100ms;
+}
+
+.pl-icon-button:hover .pl-icon-button__tooltip,
+.pl-icon-button.is-hover .pl-icon-button__tooltip {
+  opacity: 1;
+  visibility: visible;
+  transition:
+    opacity 160ms ease,
+    visibility 0s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pl-icon-button__tooltip {
+    transition: none !important;
+  }
+}
+
+/* 翻页按钮。默认向左，--next 向右，is-hover 用于状态预览。
+ * <button class="pl-page-button" type="button" aria-label="上一页"></button> */
+.pl-page-button {
+  display: inline-flex;
+  width: 24px;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  padding: 4px;
+  border: 1px solid var(--border-primary);
+  border-radius: 8px;
+  background: var(--background-white);
+}
+.pl-page-button::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  background: url("../assets/icons/chat-prev.svg") center / contain no-repeat;
+}
+.pl-page-button--next::before { background-image: url("../assets/icons/chat-next.svg"); }
+.pl-page-button:is(:hover, .is-hover) { background-color: var(--hover-default); }

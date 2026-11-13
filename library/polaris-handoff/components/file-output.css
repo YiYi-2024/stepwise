@@ -1,0 +1,68 @@
+/* File output 文件输出 */
+.pl-file-output {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 360px;
+  max-width: 100%;
+  padding: 16px;
+  border: 1px solid var(--border-primary);
+  border-radius: 12px;
+  background: var(--background-white);
+}
+
+.pl-file-output:not(.is-failed):is(:hover, .is-hover) {
+  box-shadow: var(--shadow-dropdown);
+}
+
+.pl-file-output__icon {
+  flex: none;
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.pl-file-output__body {
+  display: grid;
+  flex: 1;
+  min-width: 0;
+  gap: 4px;
+}
+
+.pl-file-output__heading {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.pl-file-output.is-failed .pl-file-output__heading { gap: 12px; }
+
+.pl-file-output__name {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  color: var(--text-primary);
+  font-size: var(--font-size-text-md);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-text-md);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.pl-file-output__version {
+  flex: none;
+  padding: 1px 6px;
+  border-radius: 999px;
+  background: var(--background-grey);
+  color: var(--text-secondary);
+  font-size: var(--font-size-text-xs);
+  line-height: normal;
+}
+
+.pl-file-output__status {
+  color: var(--text-tertiary);
+  font-size: var(--font-size-text-xs);
+  line-height: 1.4;
+}
+
+.pl-file-output.is-failed .pl-file-output__status { color: var(--error-primary); }

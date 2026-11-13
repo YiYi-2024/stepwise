@@ -1,0 +1,325 @@
+/* Select 下拉选择
+ *
+ * 由三部分组成：触发器（两种）+ 下拉面板 + 面板选项。
+ *
+ * 类型一：下拉筛选触发器（32px，图标可替换/可省略）
+ *   <button class="pl-select-filter [is-open]" type="button" aria-expanded="false">
+ *     <span class="pl-select-filter__icon" style="--icon-src: url(assets/icons/file.svg)"></span>   可省略/替换
+ *     <span class="pl-select-filter__text">全部类型</span>
+ *     <span class="pl-select-filter__arrow"></span>
+ *   </button>
+ *   状态：默认；hover；已展开 .is-open（背景保持白色）
+ *
+ * 类型二：表单下拉（36px，标题与必填星号可省略）
+ *   <div class="pl-select-field">
+ *     <label class="pl-select-field__label">项目名称<span class="pl-select-field__required">*</span></label>
+ *     <button class="pl-select-field__control" type="button">
+ *       <span class="pl-select-field__value pl-select-field__value--placeholder">请选择</span>   已选去掉 --placeholder
+ *       <span class="pl-select-field__arrow"></span>
+ *     </button>
+ *     <div class="pl-select-panel">…</div>                                                      展开时显示
+ *   </div>
+ *
+ * 类型三：下拉面板（宽度跟随容器，最大高度 300px，超出滚动）
+ *   <div class="pl-select-panel" role="listbox">
+ *     <div class="pl-select-option is-selected" role="option">
+ *       <span class="pl-select-option__icon" style="--icon-src: url(assets/icons/file.svg)"></span>   可省略/替换
+ *       <span class="pl-select-option__text">全部类型</span>
+ *       <span class="pl-select-option__check"></span>                                              仅已选项
+ *     </div>
+ *   </div>
+ *   选项状态：未选 · 默认；未选 · Hover；已选 · 默认；已选 · Hover（.is-selected + :hover / .is-hover；已选右侧显示对勾）
+ *
+ * 图标用 mask 着色，需通过 http 打开预览。
+ */
+
+/* ---------- 共用：mask 小图标 ---------- */
+.pl-select-filter__icon,
+.pl-select-filter__arrow,
+.pl-select-field__arrow,
+.pl-select-option__icon,
+.pl-select-option__check {
+  display: block;
+  flex: none;
+  background-color: currentColor;
+  mask: var(--icon-src) center / contain no-repeat;
+  -webkit-mask: var(--icon-src) center / contain no-repeat;
+}
+
+.pl-select-filter__arrow,
+.pl-select-field__arrow {
+  --icon-src: url("../assets/icons/chevron-down.svg");
+  color: var(--text-tertiary);
+}
+
+/* ---------- 类型一：下拉筛选 ---------- */
+.pl-select-filter {
+  display: inline-flex;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 32px;
+  padding: 7px 10px;
+  overflow: hidden;
+  border: 1px solid var(--border-primary);
+  border-radius: 8px;
+  background: var(--background-white);
+  color: var(--text-primary);
+  font-family: "PingFang SC", var(--font-family-body);
+  font-size: var(--font-size-text-sm);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.4;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.pl-select-filter:hover,
+.pl-select-filter.is-hover {
+  background: var(--hover-subtle);
+}
+
+.pl-select-filter.is-open {
+  background: var(--background-white);
+}
+
+.pl-select-filter__icon,
+.pl-select-filter__arrow {
+  width: 14px;
+  height: 14px;
+}
+
+/* ---------- 类型二：表单下拉 ---------- */
+.pl-select-field {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 6px;
+  width: 100%;
+  font-family: "PingFang SC", var(--font-family-body);
+  font-size: var(--font-size-text-sm);
+}
+
+.pl-select-field__label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--text-primary);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.pl-select-field__required {
+  color: var(--error-primary);
+}
+
+.pl-select-field__control {
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  height: 36px;
+  padding: 8px 10px;
+  overflow: hidden;
+  border: 1px solid var(--border-primary);
+  border-radius: 8px;
+  background: var(--background-white);
+  color: var(--text-primary);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.pl-select-field__value {
+  flex: 1 0 0;
+  min-width: 1px;
+  overflow: hidden;
+  font-size: var(--font-size-text-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.pl-select-field__value--placeholder {
+  color: var(--text-tertiary);
+}
+
+.pl-select-field__arrow {
+  width: 16px;
+  height: 16px;
+}
+
+/* ---------- 类型三：下拉面板 ---------- */
+.pl-select-panel {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 4px;
+  width: 100%;
+  max-height: 300px;
+  padding: var(--select-panel-padding, 6px);
+  overflow: auto;
+  border: 1px solid var(--border-secondary);
+  border-radius: var(--select-panel-radius, 12px);
+  background: var(--background-white);
+  box-shadow: var(--shadow-dropdown);
+}
+
+/* 原生浮层沿用下拉面板，关闭时交由 popover 隐藏。 */
+.pl-select-panel[popover] {
+  position: fixed;
+  inset: auto;
+  margin: 0;
+}
+.pl-select-panel[popover]:not(:popover-open) { display: none; }
+
+/* ---------- 子组件：面板选项 ---------- */
+.pl-select-option {
+  display: flex;
+  box-sizing: border-box;
+  flex: none;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  height: 32px;
+  padding: 8px;
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-family: "PingFang SC", var(--font-family-body);
+  font-size: var(--font-size-text-md);
+  font-weight: var(--font-weight-regular);
+  line-height: normal;
+  text-align: left;
+  cursor: pointer;
+}
+
+.pl-select-option:hover,
+.pl-select-option.is-hover {
+  background: var(--hover-default);
+}
+
+.pl-select-option__text {
+  flex: 1 0 0;
+  min-width: 1px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.pl-select-option__icon {
+  width: 14px;
+  height: 14px;
+}
+
+.pl-select-option__check {
+  --icon-src: url("../assets/icons/check.svg");
+  width: 16px;
+  height: 16px;
+  color: var(--text-brand);
+}
+
+/* 面板超过最大高度时纵向滚动，滚动条用细样式 */
+.pl-select-panel {
+  scrollbar-width: thin;
+}
+
+/* ---------- 展开 / 收起动画（配合 components/select.js） ----------
+ *
+ * 筛选触发器：
+ *   <div class="pl-select [is-open]">
+ *     <button class="pl-select-filter" type="button" aria-expanded="false">…</button>
+ *     <div class="pl-select-panel">…</div>
+ *   </div>
+ *
+ * 表单下拉：给 .pl-select-field 加 .is-open，面板始终作为子节点放在触发器下方。
+ *
+ * 动画：纯淡入淡出（无位移），展开立即开始；箭头旋转 180°（80ms）。
+ * 单独展示的面板（不在 .pl-select / .pl-select-field 内）不受影响，始终可见。
+ */
+
+.pl-select {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  width: 160px;
+}
+
+/* 通用面板动效，覆盖普通下拉与原生 popover 浮层。 */
+.pl-select > .pl-select-panel,
+.pl-select-field > .pl-select-panel,
+.pl-select-panel[popover] {
+  --panel-fade-duration: 120ms;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity var(--panel-fade-duration) ease,
+    visibility var(--panel-fade-duration) linear;
+}
+
+.pl-select-panel[popover] {
+  transition-property: opacity, visibility, display, overlay;
+  transition-duration: var(--panel-fade-duration);
+  transition-timing-function: ease, linear, linear, linear;
+  transition-behavior: allow-discrete;
+}
+
+.pl-select.is-open > .pl-select-panel,
+.pl-select-field.is-open > .pl-select-panel,
+.pl-select-panel[popover]:popover-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+@starting-style {
+  .pl-select-panel[popover]:popover-open { opacity: 0; }
+}
+
+.pl-select.is-open .pl-select-filter {
+  background: var(--background-white);
+}
+
+.pl-select-filter__arrow,
+.pl-select-field__arrow {
+  transition: transform 120ms cubic-bezier(0.2, 0, 0, 1);
+}
+
+.pl-select.is-open .pl-select-filter__arrow,
+.pl-select-field.is-open .pl-select-field__arrow {
+  transform: rotate(180deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pl-select > .pl-select-panel,
+  .pl-select-field > .pl-select-panel,
+  .pl-select-panel[popover],
+  .pl-select-filter__arrow,
+  .pl-select-field__arrow {
+    transition: none !important;
+  }
+}
+
+/* 带下一级的选项使用尾部箭头。 */
+.pl-select-option__arrow {
+  --icon-src: url("../assets/icons/chevron-right.svg");
+  margin-left: auto;
+  color: var(--text-tertiary);
+}
+
+/* 横线型：在两个选项组之间插入一个分隔元素。 */
+.pl-select-panel__divider {
+  display: grid;
+  align-items: center;
+  flex: none;
+  height: calc(var(--select-panel-divider-padding-block, 2px) * 2);
+  margin-inline: 4px;
+}
+.pl-select-panel__divider::before {
+  content: "";
+  border-top: 1px solid var(--border-secondary);
+}

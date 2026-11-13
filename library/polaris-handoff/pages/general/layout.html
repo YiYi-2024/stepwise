@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>Layout 布局</title>
+  <link rel="stylesheet" href="../../polaris.css">
+  <link rel="stylesheet" href="../preview.css">
+  <style>
+    body { min-width: 0; }
+    .preview-page { width: min(100%, 1080px); }
+    .layout-switch { flex-wrap: wrap; }
+    .layout-stage { position: relative; aspect-ratio: 1440 / 900; overflow: hidden; border: 1px solid var(--border-default); border-radius: 12px; }
+    .layout-stage iframe { width: 1440px; height: 900px; border: 0; transform-origin: top left; }
+    .layout-caption { display: flex; align-items: baseline; gap: 16px; color: var(--text-secondary); }
+    .layout-caption a { margin-left: auto; white-space: nowrap; text-decoration: underline; }
+  </style>
+</head>
+<body><main class="preview-page">
+  <h1 class="preview-page__title">Layout 布局</h1>
+  <section class="preview-section" aria-label="桌面布局">
+    <nav class="pl-tabs pl-tabs--level-2 layout-switch" aria-label="布局状态"></nav>
+    <div class="layout-stage"><iframe title="首页布局预览" src="../../DEMO/"></iframe></div>
+    <div class="layout-caption"><p>主导航宽 240px，输入框和提示词在剩余空间内居中，最大宽度 768px。</p><a href="../../DEMO/" target="_blank" rel="noopener">打开原尺寸预览 ↗</a></div>
+  </section>
+</main>
+<script>
+  const states = [
+    ['首页', '../../DEMO/', document.querySelector('.layout-caption p').textContent],
+    ['对话', 'task.html', '消息区独立滚动，输入框固定在底部。两者最大宽度均为 768px，两侧至少留 24px。'],
+    ['任务摘要', 'task.html#summary', '摘要面板宽 320px，右侧留 16px。内容较长时面板内滚动，底部至少留 40px。'],
+    ['三栏编辑', 'task.html#editor', '打开产物后，对话栏固定为 480px，编辑器占满右侧剩余空间。点击其他产物可新增页签。'],
+    ['三栏摘要', 'task.html#editor-summary', '编辑器打开时，任务摘要浮在中间对话栏上方。再次点击摘要按钮即可收起。'],
+    ['编辑器全屏', 'task.html#editor-full', '主导航保留，对话栏收起，编辑器占满其余空间。点击收起按钮可回到三栏。']
+  ];
+  const nav = document.querySelector('.layout-switch');
+  const stage = document.querySelector('.layout-stage');
+  const frame = stage.querySelector('iframe');
+  const caption = document.querySelector('.layout-caption p');
+  const original = document.querySelector('.layout-caption a');
+  new ResizeObserver(() => {
+    frame.style.transform = 'scale(' + stage.clientWidth / 1440 + ')';
+  }).observe(stage);
+  states.forEach(([label, path, description], index) => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.textContent = label;
+    button.className = 'pl-tab pl-tab--level-2';
+    button.setAttribute('aria-pressed', String(index === 0));
+    button.classList.toggle('is-active', index === 0);
+    button.onclick = () => {
+      for (const item of nav.children) {
+        item.classList.toggle('is-active', item === button);
+        item.setAttribute('aria-pressed', String(item === button));
+      }
+      const url = new URL(path, new URL('../../DEMO/', location.href));
+      original.href = url.href;
+      url.searchParams.set('layout', String(index));
+      frame.title = label + '布局预览';
+      frame.src = url.href;
+      caption.textContent = description;
+    };
+    nav.append(button);
+  });
+</script></body></html>

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chat feedback 对话反馈</title>
+  <link rel="stylesheet" href="../../polaris.css">
+  <link rel="stylesheet" href="../preview.css">
+<script defer src="../../components/chat-parts.js"></script>
+</head>
+<body>
+  <main class="preview-page">
+    <h1 class="preview-page__title">Chat feedback 对话反馈</h1>
+    <section class="preview-section">
+      <header class="preview-section__header">
+        <h2 class="preview-section__title">对话反馈按钮组</h2>
+      </header>
+      <div class="preview-panel preview-panel--normal preview-panel--dense">
+        <p id="feedback-message">这是一条示例回复。</p>
+        <template data-chat-part="feedback" data-copy-target="feedback-message"></template>
+      </div>
+    </section>
+    <p role="status" aria-live="polite"></p>
+  </main>
+<script src="../../components/chat-copy.js"></script>
+</body>
+</html>

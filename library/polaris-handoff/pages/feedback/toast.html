@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN"><head>
+  <meta charset="utf-8"><title>Toast 全局提示</title>
+  <link rel="stylesheet" href="../../polaris.css"><link rel="stylesheet" href="../preview.css">
+  <style>
+    .toast-examples { display: grid; justify-items: center; gap: 24px; }
+    .toast-controls { display: flex; flex-wrap: wrap; gap: 8px; }
+    .toast-stack-example { display: grid; justify-items: center; align-items: start; }
+  </style>
+</head><body><main class="preview-page">
+  <h1 class="preview-page__title">Toast 全局提示</h1>
+  <section class="preview-section"><h2 class="preview-section__title">提示类型</h2>
+    <div class="toast-controls" aria-label="触发全局提示"></div><button type="button" class="pl-button" id="retry">模拟连接重试</button><div class="preview-panel toast-examples"></div>
+  </section>
+  <section class="preview-section"><h2 class="preview-section__title">多个提示堆叠</h2>
+    <p>新提示从顶部居中滑入，叠在旧提示上方。悬停展开全部，移开后收起；重复点击「模拟连接重试」会更新同一条提示。</p>
+    <div class="preview-panel toast-stack-example"><div class="pl-toast-stack"></div></div>
+  </section>
+</main><script src="../../components/toast.js"></script><script>
+  const description = '这是一句提示词'.repeat(5);
+  for (const type of ['loading', 'info', 'success', 'error']) {
+    const options = {type, description};
+    const card = PolarisToast.create(options);
+    document.querySelector('.toast-examples').append(card);
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'pl-button pl-button--primary';
+    button.textContent = card.querySelector('.pl-toast__title').textContent;
+    button.onclick = () => PolarisToast.show(options);
+    document.querySelector('.toast-controls').append(button);
+  }
+  const stack = document.querySelector('.toast-stack-example .pl-toast-stack');
+  ['success', 'info', 'loading'].forEach(type => stack.append(PolarisToast.create({type, description})));
+  PolarisToast.mount(stack);
+  let retries = 0;
+  document.querySelector('#retry').onclick = () => PolarisToast.error({
+    id: 'network-error', title: '连接失败',
+    description: '第 ' + (++retries) + ' 次重试失败，请检查网络后再试。'
+  });
+</script></body></html>

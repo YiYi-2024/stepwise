@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>Upload 上传组件</title>
+  <link rel="stylesheet" href="../../polaris.css" />
+  <link rel="stylesheet" href="../preview.css" />
+</head>
+<body>
+  <main class="preview-page">
+    <h1 class="preview-page__title">Upload 上传组件</h1>
+
+    <section class="preview-section">
+      <header class="preview-section__header">
+        <h2 class="preview-section__title">上传组件</h2>
+        <p class="preview-section__description">拖拽或点击上传 Excel 文件，包含默认、Hover、上传中、上传成功和上传失败五种状态。</p>
+      </header>
+      <div class="preview-panel preview-panel--normal">
+      <div class="preview-tiles">
+        <div class="preview-tile">
+          <span class="preview-tile__label">默认</span>
+          <div class="pl-upload"><span class="pl-upload__icon"><span class="pl-icon--mask" style="--icon-src: url(../../assets/icons/upload.svg)"></span></span><div class="pl-upload__info"><span class="pl-upload__title">点击上传，或拖拽 Excel 文件到此处</span><span class="pl-upload__hint">支持 .xlsx, .xls</span></div></div>
+        </div>
+        <div class="preview-tile">
+          <span class="preview-tile__label">Hover</span>
+          <div class="pl-upload is-hover"><span class="pl-upload__icon"><span class="pl-icon--mask" style="--icon-src: url(../../assets/icons/upload.svg)"></span></span><div class="pl-upload__info"><span class="pl-upload__title">点击上传，或拖拽 Excel 文件到此处</span><span class="pl-upload__hint">支持 .xlsx, .xls</span></div></div>
+        </div>
+        <div class="preview-tile">
+          <span class="preview-tile__label">上传中</span>
+          <div class="pl-upload pl-upload--uploading"><img class="pl-upload__file" src="../../assets/file-type/excel.png" alt="" /><div class="pl-upload__info"><span class="pl-upload__name">成员名单.xlsx</span><div class="pl-upload__progress"><span class="pl-upload__bar" style="--progress: 40%"></span><span class="pl-upload__percent">40%</span></div></div></div>
+        </div>
+        <div class="preview-tile">
+          <span class="preview-tile__label">上传成功</span>
+          <div class="pl-upload pl-upload--success"><button class="pl-icon-button pl-upload__remove" type="button" aria-label="删除"><span class="pl-icon pl-icon--mask" style="--icon-src: url(../../assets/icons/delete.svg)"></span><span class="pl-tooltip pl-icon-button__tooltip" role="tooltip">删除文件</span></button><img class="pl-upload__file" src="../../assets/file-type/excel.png" alt="" /><div class="pl-upload__info"><span class="pl-upload__name">成员名单.xlsx</span><span class="pl-upload__status pl-upload__status--success"><span class="pl-icon--mask" style="--icon-src: url(../../assets/icons/success.svg)"></span>上传成功</span></div></div>
+        </div>
+        <div class="preview-tile">
+          <span class="preview-tile__label">上传失败</span>
+          <div class="pl-upload pl-upload--error"><button class="pl-icon-button pl-upload__remove" type="button" aria-label="删除"><span class="pl-icon pl-icon--mask" style="--icon-src: url(../../assets/icons/delete.svg)"></span><span class="pl-tooltip pl-icon-button__tooltip" role="tooltip">删除文件</span></button><img class="pl-upload__file" src="../../assets/file-type/excel.png" alt="" /><div class="pl-upload__info"><span class="pl-upload__name">成员名单.xlsx</span><span class="pl-upload__status pl-upload__status--error"><span class="pl-icon--mask" style="--icon-src: url(../../assets/icons/error.svg)"></span>上传失败</span></div><button class="pl-button pl-button--secondary pl-button--small" type="button"><span class="pl-button__icon pl-icon--mask" style="--icon-src: url(../../assets/icons/retry.svg)"></span>点击重试</button></div>
+        </div>
+      </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

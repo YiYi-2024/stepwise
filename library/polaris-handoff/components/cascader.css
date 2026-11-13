@@ -1,0 +1,10 @@
+/* 级联选择
+ *
+ * 父级与子级均复用 pl-select-panel 和 pl-select-option。
+ * 给带下一级的选项添加 .pl-cascader__trigger，并用 aria-controls
+ * 指向 .pl-cascader__panel。子面板紧贴触发选项右侧并与其顶部对齐。
+ */
+
+.pl-cascader__trigger[aria-expanded="true"] {
+  background: var(--hover-default);
+}

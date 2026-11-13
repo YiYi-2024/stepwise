@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>Input 输入框</title>
+  <link rel="stylesheet" href="../../polaris.css" />
+  <link rel="stylesheet" href="../preview.css" />
+</head>
+<body>
+  <main class="preview-page">
+    <h1 class="preview-page__title">Input 输入框</h1>
+
+    <section class="preview-section">
+      <header class="preview-section__header">
+        <h2 class="preview-section__title">类型一：单行输入框</h2>
+        <p class="preview-section__description">用于输入单行文字，可选择普通、后缀或前缀，标题和必填星号可省略。</p>
+      </header>
+      <div class="preview-panel preview-panel--normal">
+        <div class="preview-block">
+    <div class="preview-matrix" style="--preview-cols: 3; grid-template-columns: 84px repeat(3, 200px); align-items: start">
+      <span></span>
+      <span class="preview-matrix__head">普通</span>
+      <span class="preview-matrix__head">后缀</span>
+      <span class="preview-matrix__head">前缀</span>
+      <span class="preview-matrix__label">默认</span>
+        <div class="pl-input"><label class="pl-input__label">项目名称<span class="pl-input__required">*</span></label><div class="pl-input__control"><input class="pl-input__field" type="text" placeholder="请输入文字" /></div></div>
+        <div class="pl-input"><label class="pl-input__label">项目名称<span class="pl-input__required">*</span></label><div class="pl-input__control"><input class="pl-input__field" type="text" placeholder="请输入文字" /><span class="pl-input__affix pl-input__affix--suffix">@stepfun.com</span></div></div>
+        <div class="pl-input"><label class="pl-input__label">项目名称<span class="pl-input__required">*</span></label><div class="pl-input__control"><span class="pl-input__affix">¥</span><input class="pl-input__field" type="text" placeholder="请输入文字" /></div></div>
+      <span class="preview-matrix__label">输入中</span>
+        <div class="pl-input is-focus"><label class="pl-input__label">项目名称<span class="pl-input__required">*</span></label><div class="pl-input__control"><input class="pl-input__field" type="text" value="输入中" /></div></div>
+        <div class="pl-input is-focus"><label class="pl-input__label">项目名称<span class="pl-input__required">*</span></label><div class="pl-input__control"><input class="pl-input__field" type="text" value="输入中" /><span class="pl-input__affix pl-input__affix--suffix">@stepfun.com</span></div></div>
+        <div class="pl-input is-focus"><label class="pl-input__label">项目名称<span class="pl-input__required">*</span></label><div class="pl-input__control"><span class="pl-input__affix">¥</span><input class="pl-input__field" type="text" value="输入中" /></div></div>
+      <span class="preview-matrix__label">已输入</span>
+        <div class="pl-input"><label class="pl-input__label">项目名称<span class="pl-input__required">*</span></label><div class="pl-input__control"><input class="pl-input__field" type="text" value="已输入文字" /></div></div>
+        <div class="pl-input"><label class="pl-input__label">项目名称<span class="pl-input__required">*</span></label><div class="pl-input__control"><input class="pl-input__field" type="text" value="已输入文字" /><span class="pl-input__affix pl-input__affix--suffix">@stepfun.com</span></div></div>
+        <div class="pl-input"><label class="pl-input__label">项目名称<span class="pl-input__required">*</span></label><div class="pl-input__control"><span class="pl-input__affix">¥</span><input class="pl-input__field" type="text" value="已输入文字" /></div></div>
+      <span class="preview-matrix__label">已输入禁用</span>
+        <div class="pl-input is-disabled"><label class="pl-input__label">项目名称<span class="pl-input__required">*</span></label><div class="pl-input__control"><input class="pl-input__field" type="text" disabled value="已输入文字" /></div></div>
+        <div class="pl-input is-disabled"><label class="pl-input__label">项目名称<span class="pl-input__required">*</span></label><div class="pl-input__control"><input class="pl-input__field" type="text" disabled value="已输入文字" /><span class="pl-input__affix pl-input__affix--suffix">@stepfun.com</span></div></div>
+        <div class="pl-input is-disabled"><label class="pl-input__label">项目名称<span class="pl-input__required">*</span></label><div class="pl-input__control"><span class="pl-input__affix">¥</span><input class="pl-input__field" type="text" disabled value="已输入文字" /></div></div>
+    </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="preview-section">
+      <header class="preview-section__header">
+        <h2 class="preview-section__title">类型二：多行输入框</h2>
+        <p class="preview-section__description">用于输入多行文字，字数限制显示在右下角。</p>
+      </header>
+      <div class="preview-panel preview-panel--normal">
+        <div class="preview-block">
+    <div class="preview-matrix" style="--preview-cols: 1; grid-template-columns: 84px repeat(1, 420px); align-items: start">
+      <span></span>
+      <span class="preview-matrix__head">多行</span>
+      <span class="preview-matrix__label">默认</span>
+        <div class="pl-input pl-input--multiline"><label class="pl-input__label">项目名称<span class="pl-input__required">*</span></label><div class="pl-input__control"><textarea class="pl-input__field" placeholder="请输入文字"></textarea><span class="pl-input__count">0/<b>300</b></span></div></div>
+      <span class="preview-matrix__label">输入中</span>
+        <div class="pl-input pl-input--multiline is-focus"><label class="pl-input__label">项目名称<span class="pl-input__required">*</span></label><div class="pl-input__control"><textarea class="pl-input__field">请输入文字</textarea><span class="pl-input__count">0/<b>300</b></span></div></div>
+      <span class="preview-matrix__label">已输入</span>
+        <div class="pl-input pl-input--multiline"><label class="pl-input__label">项目名称<span class="pl-input__required">*</span></label><div class="pl-input__control"><textarea class="pl-input__field">已输入文字</textarea><span class="pl-input__count">0/<b>300</b></span></div></div>
+      <span class="preview-matrix__label">已输入禁用</span>
+        <div class="pl-input pl-input--multiline is-disabled"><label class="pl-input__label">项目名称<span class="pl-input__required">*</span></label><div class="pl-input__control"><textarea class="pl-input__field" disabled>已输入文字</textarea><span class="pl-input__count">0/<b>300</b></span></div></div>
+    </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

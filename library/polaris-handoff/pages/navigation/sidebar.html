@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sidebar 侧边导航</title>
+  <link rel="stylesheet" href="../../polaris.css" />
+  <link rel="stylesheet" href="../preview.css" />
+</head>
+<body>
+  <main class="preview-page">
+    <h1 class="preview-page__title">Sidebar 侧边导航</h1>
+
+    <section class="preview-section">
+      <header class="preview-section__header">
+        <h2 class="preview-section__title">原子组件：侧边导航项</h2>
+        <p class="preview-section__description">由 icon、文字、箭头组成，宽度跟随容器，高度 36px。icon 和箭头可省略，icon 可替换。</p>
+      </header>
+      <div class="preview-panel preview-panel--normal">
+        <div class="preview-tiles">
+          <div class="preview-tile">
+            <span class="preview-tile__label">侧边导航项</span>
+            <a class="pl-sidebar-item" href="#"><span class="pl-sidebar-item__icon pl-icon--mask" style="--icon-src: url(../../assets/icons/new-task.svg)"></span><span class="pl-sidebar-item__label">新建任务</span><span class="pl-sidebar-item__arrow pl-icon--mask" style="--icon-src: url(../../assets/icons/chevron-right.svg)"></span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="preview-section">
+      <header class="preview-section__header">
+        <h2 class="preview-section__title">状态穷举</h2>
+        <p class="preview-section__description">按有无 icon、有无箭头穷举。每行左为默认，右为 Hover。</p>
+      </header>
+      <div class="preview-panel preview-panel--normal">
+      <div class="preview-tiles">
+        <div class="preview-tile">
+          <span class="preview-tile__label">图标 + 箭头</span>
+          <a class="pl-sidebar-item" href="#"><span class="pl-sidebar-item__icon pl-icon--mask" style="--icon-src: url(../../assets/icons/new-task.svg)"></span><span class="pl-sidebar-item__label">新建任务</span><span class="pl-sidebar-item__arrow pl-icon--mask" style="--icon-src: url(../../assets/icons/chevron-right.svg)"></span></a>
+          <a class="pl-sidebar-item is-hover" href="#"><span class="pl-sidebar-item__icon pl-icon--mask" style="--icon-src: url(../../assets/icons/new-task.svg)"></span><span class="pl-sidebar-item__label">新建任务</span><span class="pl-sidebar-item__arrow pl-icon--mask" style="--icon-src: url(../../assets/icons/chevron-right.svg)"></span></a>
+        </div>
+        <div class="preview-tile">
+          <span class="preview-tile__label">仅图标</span>
+          <a class="pl-sidebar-item" href="#"><span class="pl-sidebar-item__icon pl-icon--mask" style="--icon-src: url(../../assets/icons/new-task.svg)"></span><span class="pl-sidebar-item__label">新建任务</span></a>
+          <a class="pl-sidebar-item is-hover" href="#"><span class="pl-sidebar-item__icon pl-icon--mask" style="--icon-src: url(../../assets/icons/new-task.svg)"></span><span class="pl-sidebar-item__label">新建任务</span></a>
+        </div>
+        <div class="preview-tile">
+          <span class="preview-tile__label">仅箭头</span>
+          <a class="pl-sidebar-item" href="#"><span class="pl-sidebar-item__label">新建任务</span><span class="pl-sidebar-item__arrow pl-icon--mask" style="--icon-src: url(../../assets/icons/chevron-right.svg)"></span></a>
+          <a class="pl-sidebar-item is-hover" href="#"><span class="pl-sidebar-item__label">新建任务</span><span class="pl-sidebar-item__arrow pl-icon--mask" style="--icon-src: url(../../assets/icons/chevron-right.svg)"></span></a>
+        </div>
+        <div class="preview-tile">
+          <span class="preview-tile__label">仅文字</span>
+          <a class="pl-sidebar-item" href="#"><span class="pl-sidebar-item__label">新建任务</span></a>
+          <a class="pl-sidebar-item is-hover" href="#"><span class="pl-sidebar-item__label">新建任务</span></a>
+        </div>
+      </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chat bubble 对话气泡</title>
+<link rel="stylesheet" href="../../polaris.css?v=chat-bubble-width-624"><link rel="stylesheet" href="../preview.css">
+<script defer src="../../components/chat-parts.js"></script>
+</head><body><main class="preview-page" style="width:min(900px,100%)">
+<h1 class="preview-page__title">Chat bubble 对话气泡</h1>
+<section class="preview-section"><header class="preview-section__header"><h2 class="preview-section__title">默认与悬停</h2><p class="preview-section__description">气泡正文宽度随内容自适应，最大宽度为 624px，超出后自动换行。</p></header><div class="preview-panel" style="display:grid;gap:20px"><template data-chat-part="bubble"></template>
+<article class="pl-chat-bubble is-hover">
+  
+  <div class="pl-chat-bubble__body"><p class="pl-chat-bubble__text">这是一句query</p></div>
+  <div class="pl-chat-bubble__actions">
+    <time datetime="2026-10-19T11:05">2026-10-19 11:05</time>
+    <button class="pl-icon-button pl-icon-button--small pl-icon-button--copy" type="button" aria-label="复制消息"><span aria-hidden="true" class="pl-icon-button__icon pl-icon--mask" style="--icon-src:url(../../assets/icons/copy.svg)"></span></button>
+  </div>
+</article>
+<article class="pl-chat-bubble">
+  
+  <div class="pl-chat-bubble__body"><span class="pl-skill-reference pl-skill-reference--readonly"><span class="pl-skill-reference__icon" aria-hidden="true"></span><span class="pl-skill-reference__label">技能名称</span></span><p class="pl-chat-bubble__text">这是一句query</p></div>
+  <div class="pl-chat-bubble__actions">
+    <time datetime="2026-10-19T11:05">2026-10-19 11:05</time>
+    <button class="pl-icon-button pl-icon-button--small pl-icon-button--copy" type="button" aria-label="复制消息"><span aria-hidden="true" class="pl-icon-button__icon pl-icon--mask" style="--icon-src:url(../../assets/icons/copy.svg)"></span></button>
+  </div>
+</article>
+<article class="pl-chat-bubble is-hover">
+  
+  <div class="pl-chat-bubble__body"><span class="pl-skill-reference pl-skill-reference--readonly"><span class="pl-skill-reference__icon" aria-hidden="true"></span><span class="pl-skill-reference__label">技能名称</span></span><p class="pl-chat-bubble__text">这是一句query</p></div>
+  <div class="pl-chat-bubble__actions">
+    <time datetime="2026-10-19T11:05">2026-10-19 11:05</time>
+    <button class="pl-icon-button pl-icon-button--small pl-icon-button--copy" type="button" aria-label="复制消息"><span aria-hidden="true" class="pl-icon-button__icon pl-icon--mask" style="--icon-src:url(../../assets/icons/copy.svg)"></span></button>
+  </div>
+</article></div></section><section class="preview-section"><h2 class="preview-section__title">带附件</h2><div class="preview-panel" style="display:grid;gap:20px"><article class="pl-chat-bubble">
+  <div class="pl-chat-bubble__attachments">
+<div class="pl-chat-file">
+  <img class="pl-chat-file__icon" src="../../assets/file-type/pdf.png" alt="">
+  <div class="pl-chat-file__info">
+    <p class="pl-chat-file__name">文件名称.后缀</p>
+    <p class="pl-chat-file__meta">PDF<span class="pl-chat-file__dot"></span>800KB</p>
+  </div>
+</div>
+<div class="pl-chat-file">
+  <img class="pl-chat-file__icon" src="../../assets/file-type/pdf.png" alt="">
+  <div class="pl-chat-file__info">
+    <p class="pl-chat-file__name">文件名称.后缀</p>
+    <p class="pl-chat-file__meta">PDF<span class="pl-chat-file__dot"></span>800KB</p>
+  </div>
+</div>
+<div class="pl-chat-file">
+  <img class="pl-chat-file__icon" src="../../assets/file-type/pdf.png" alt="">
+  <div class="pl-chat-file__info">
+    <p class="pl-chat-file__name">文件名称.后缀</p>
+    <p class="pl-chat-file__meta">PDF<span class="pl-chat-file__dot"></span>800KB</p>
+  </div>
+</div>
+<div class="pl-chat-image"><span class="pl-chat-image__crop"><img class="pl-chat-image__sample" src="../../assets/illustrations/chat-thumbnail.svg" alt="已上传图片"></span></div>
+<div class="pl-chat-file">
+  <img class="pl-chat-file__icon" src="../../assets/file-type/pdf.png" alt="">
+  <div class="pl-chat-file__info">
+    <p class="pl-chat-file__name">文件名称.后缀</p>
+    <p class="pl-chat-file__meta">PDF<span class="pl-chat-file__dot"></span>800KB</p>
+  </div>
+</div>
+<div class="pl-chat-file">
+  <img class="pl-chat-file__icon" src="../../assets/file-type/pdf.png" alt="">
+  <div class="pl-chat-file__info">
+    <p class="pl-chat-file__name">文件名称.后缀</p>
+    <p class="pl-chat-file__meta">PDF<span class="pl-chat-file__dot"></span>800KB</p>
+  </div>
+</div>
+</div>
+  <div class="pl-chat-bubble__body"><span class="pl-skill-reference pl-skill-reference--readonly"><span class="pl-skill-reference__icon" aria-hidden="true"></span><span class="pl-skill-reference__label">技能名称</span></span><p class="pl-chat-bubble__text">这是一句query</p></div>
+  <div class="pl-chat-bubble__actions">
+    <time datetime="2026-10-19T11:05">2026-10-19 11:05</time>
+    <button class="pl-icon-button pl-icon-button--small pl-icon-button--copy" type="button" aria-label="复制消息"><span aria-hidden="true" class="pl-icon-button__icon pl-icon--mask" style="--icon-src:url(../../assets/icons/copy.svg)"></span></button>
+  </div>
+</article></div></section>
+<p role="status" aria-live="polite"></p></main>
+<script src="../../components/chat-copy.js"></script></body></html>

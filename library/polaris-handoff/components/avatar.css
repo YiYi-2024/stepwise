@@ -1,0 +1,16 @@
+/* Avatar 头像
+ *
+ *   <img class="pl-avatar" src="assets/avatar/Avatar.png" alt="头像" />
+ *
+ * Figma 中只有一种规格：28×28 圆形。图片为 PNG（assets/avatar/Avatar.png，112px，4 倍图）。
+ */
+
+.pl-avatar {
+  display: block;
+  flex: none;
+  box-sizing: border-box;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+}

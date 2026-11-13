@@ -1,0 +1,429 @@
+/* 预览页排版，仅用于 pages/，不属于设计系统 */
+
+body {
+  min-width: 840px;
+  padding: 20px;
+  background: var(--background-white);
+  color: var(--text-primary);
+  font-family: "PingFang SC", system-ui, -apple-system, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.preview-page {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 800px;
+  margin: 0 auto;
+}
+
+.preview-page__lead {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.preview-page__title {
+  color: var(--text-primary);
+  font-size: 24px;
+  font-weight: var(--font-weight-medium);
+  line-height: 1.4;
+}
+
+.preview-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.preview-section__header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.preview-section__title {
+  color: var(--text-primary);
+  font-size: 16px;
+  font-weight: var(--font-weight-medium);
+  line-height: 1.4;
+}
+
+.preview-section__description {
+  color: var(--text-tertiary);
+  font-size: var(--font-size-text-sm);
+  line-height: var(--line-height-text-sm);
+}
+
+.preview-panel {
+  min-height: 135px;
+  padding: 24px 20px;
+  overflow-x: auto;
+  border: 1px solid var(--border-primary);
+  border-radius: 24px;
+}
+
+.preview-panel--normal {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  min-height: auto;
+  padding: 30px;
+  border-style: solid;
+  border-radius: 16px;
+}
+
+.preview-panel--dense {
+  gap: 24px;
+}
+
+.preview-panel--compact {
+  padding: 28px 30px;
+}
+
+.preview-panel--danger {
+  min-height: 143px;
+}
+
+.preview-panel--icon {
+  min-height: 232px;
+  padding-top: 34px;
+}
+
+.preview-block {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.preview-tiles {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.preview-tile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+}
+
+.preview-tile__label {
+  flex: none;
+  width: 96px;
+  color: var(--text-tertiary);
+  font-size: var(--font-size-text-sm);
+  line-height: var(--line-height-text-sm);
+}
+
+.preview-tile .pl-navbar-tab {
+  flex: none;
+  width: 200px;
+}
+
+.preview-spec {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.preview-spec__title {
+  color: var(--text-primary);
+  font-size: var(--font-size-text-sm);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-text-sm);
+}
+
+.preview-spec__note {
+  color: var(--text-tertiary);
+  font-size: var(--font-size-text-sm);
+  line-height: var(--line-height-text-sm);
+}
+
+.preview-group + .preview-group {
+  margin-top: 40px;
+}
+
+.preview-group__label {
+  margin-bottom: 16px;
+  color: var(--text-tertiary);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.preview-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+
+/* 变体 × 状态矩阵：第一列为行标题，第一行为列标题 */
+.preview-matrix {
+  display: grid;
+  grid-template-columns: var(--preview-label-width, 48px) repeat(
+      var(--preview-cols, 3),
+      minmax(var(--preview-column-width, 124px), max-content)
+    );
+  align-items: center;
+  align-self: flex-start;
+  gap: 15px 10px;
+}
+
+.preview-matrix__head,
+.preview-matrix__label {
+  color: var(--text-tertiary);
+  font-size: var(--font-size-text-sm);
+  line-height: var(--line-height-text-sm);
+}
+
+.preview-matrix__head {
+  justify-self: center;
+}
+
+.preview-matrix > button {
+  justify-self: start;
+}
+
+.preview-panel--icon .preview-matrix > button {
+  justify-self: center;
+}
+
+.preview-matrix__spaced-row {
+  margin-top: 42px;
+}
+
+.preview-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+
+.preview-icons {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 32px 16px;
+}
+
+.preview-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.preview-icon__name {
+  color: var(--text-primary);
+  font-size: var(--font-size-text-sm);
+  line-height: var(--line-height-text-sm);
+}
+
+.preview-icon__file {
+  color: var(--text-tertiary);
+  font-size: 12px;
+}
+
+.preview-tile .pl-sidebar-item {
+  flex: none;
+  width: 211px;
+}
+
+.preview-tile .pl-input,
+.preview-tile .pl-search {
+  flex: none;
+  width: 285px;
+}
+
+.preview-tile .pl-upload {
+  flex: none;
+  width: 484px;
+}
+
+.preview-fields {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 40px 24px;
+  align-items: start;
+}
+
+/* 对话框预览：把全屏遮罩限制在预览框内 */
+.preview-modal {
+  position: relative;
+  height: var(--preview-modal-height, 300px);
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.preview-modal .pl-modal {
+  position: absolute;
+}
+
+/* 空状态预览 */
+.preview-empty-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 56px 64px;
+  align-items: flex-start;
+}
+
+.preview-empty-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 32px 16px;
+}
+
+.preview-empty-gallery figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  color: var(--text-tertiary);
+  font-size: var(--font-size-text-sm);
+}
+
+.preview-empty-gallery img {
+  width: 100px;
+  height: 72px;
+  object-fit: contain;
+}
+
+/* 树状组件预览 */
+.preview-tree-matrix {
+  display: grid;
+  grid-template-columns: 100px repeat(3, 200px);
+  gap: 16px 12px;
+  align-items: center;
+}
+
+.preview-tree-matrix__head,
+.preview-tree-matrix__label {
+  color: var(--text-tertiary);
+  font-size: var(--font-size-text-sm);
+  line-height: var(--line-height-text-sm);
+}
+
+.preview-tree-combo {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+}
+
+/* 下拉选择预览：触发器在上，面板在下，右对齐（与 Figma 一致） */
+.preview-select-open {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  width: 160px;
+}
+
+.preview-matrix--select-filter .preview-matrix__head {
+  justify-self: start;
+}
+
+/* 设计 Token 预览 */
+.preview-token-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-text-sm);
+  line-height: var(--line-height-text-sm);
+}
+
+.preview-token-table th,
+.preview-token-table td {
+  padding: 6px 10px;
+  border-bottom: 1px solid var(--border-secondary);
+  text-align: left;
+  vertical-align: middle;
+}
+
+.preview-token-table th {
+  color: var(--text-tertiary);
+  font-weight: var(--font-weight-regular);
+}
+
+.preview-token-table code {
+  color: var(--text-primary);
+  font-family: "SF Mono", ui-monospace, Menlo, Consolas, monospace;
+  font-size: 12px;
+}
+
+.preview-swatch {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.preview-swatch__chip {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--border-primary);
+  border-radius: 6px;
+  background: var(--preview-swatch);
+}
+
+.preview-swatch__chip--alpha {
+  background-image:
+    linear-gradient(45deg, #e7e7e7 25%, transparent 25%),
+    linear-gradient(-45deg, #e7e7e7 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #e7e7e7 75%),
+    linear-gradient(-45deg, transparent 75%, #e7e7e7 75%);
+  background-size: 10px 10px;
+  background-position: 0 0, 0 5px, 5px -5px, -5px 0;
+  background-color: transparent;
+  position: relative;
+}
+
+.preview-swatch__chip--alpha::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: var(--preview-swatch);
+}
+
+.preview-type-sample {
+  color: var(--text-primary);
+  font-family: "PingFang SC", var(--font-family-body);
+}
+
+
+
+.preview-token-group-cell {
+  width: 88px;
+  color: var(--text-tertiary);
+  font-weight: var(--font-weight-medium);
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+/* 对话输入预览：短示例按状态并排，附件列表独占一行。 */
+.preview-panel--chat-states,
+.preview-panel--chat-uploads {
+  display: grid;
+  padding: 28px 30px;
+}
+.preview-panel--chat-states {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
+  column-gap: 16px;
+}
+.preview-chat-state {
+  display: grid;
+  min-width: 0;
+  row-gap: 15px;
+}
+.preview-panel--chat-states .preview-chat-state { justify-items: center; }
+.preview-panel--chat-uploads { row-gap: 32px; }
+
+.preview-panel--flyout {
+  overflow: visible;
+}

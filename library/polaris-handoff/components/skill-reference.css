@@ -1,0 +1,48 @@
+/* 技能引用 / 回写
+ * 输入框与对话气泡共用同一结构；只读场景添加 .pl-skill-reference--readonly。
+ */
+.pl-skill-reference {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  gap: 4px;
+  min-width: 0;
+  padding-inline: 4px;
+  border-radius: 6px;
+  color: var(--text-brand);
+  font: var(--font-weight-regular) var(--font-size-text-md)/var(--line-height-text-md) "PingFang SC", sans-serif;
+  white-space: nowrap;
+}
+
+.pl-skill-reference__icon {
+  width: 14px;
+  height: 14px;
+  flex: none;
+  background-color: currentColor;
+  -webkit-mask: url("../assets/icons/skill.svg") center / contain no-repeat;
+  mask: url("../assets/icons/skill.svg") center / contain no-repeat;
+}
+
+.pl-skill-reference__label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pl-skill-reference:not(.pl-skill-reference--readonly):is(:hover, :focus-visible, .is-hover, .is-close-hover) {
+  background: rgba(243, 107, 36, 0.12);
+}
+
+.pl-skill-reference:not(.pl-skill-reference--readonly):is(:hover, :focus-visible, .is-hover, .is-close-hover) .pl-skill-reference__icon {
+  -webkit-mask-image: url("../assets/icons/close.svg");
+  mask-image: url("../assets/icons/close.svg");
+  opacity: 0.5;
+}
+
+.pl-skill-reference:not(.pl-skill-reference--readonly) .pl-skill-reference__icon:hover,
+.pl-skill-reference:not(.pl-skill-reference--readonly).is-close-hover .pl-skill-reference__icon {
+  opacity: 1;
+}
+
+.pl-skill-reference:focus-visible {
+  outline: none;
+}

@@ -1,0 +1,47 @@
+/* Semantic 语义色：引用 primitive，组件只使用这一层 */
+
+:root {
+  --info-primary: var(--color-blue-500);
+  /* Text */
+  --text-accent: var(--color-neutral-900);
+  --text-primary: var(--color-neutral-800);
+  --text-secondary: var(--color-neutral-700);
+  --text-tertiary: var(--color-neutral-600);
+  --text-subtle: var(--color-neutral-500);
+  --text-brand: var(--color-brand-500);
+  --text-white: var(--color-base-white);
+
+  /* Background */
+  --background-primary: var(--color-base-white);
+  --background-white: var(--color-base-white);
+  --background-grey: var(--color-neutral-100);
+
+  --background-thumbnail: var(--color-brand-50);
+  --background-submit-disabled: var(--color-neutral-480);
+  --background-brand: var(--color-brand-500);
+  --background-brand-subtle: var(--color-brand-alpha-120);
+
+  /* Hover */
+  --hover-subtle: var(--color-neutral-100);
+  --hover-default: var(--color-neutral-300);
+  --hover-strong-on-bg: var(--color-neutral-400);
+
+  /* Border */
+  --border-on-bg: var(--color-neutral-400);
+  --border-default: var(--color-neutral-350);
+  --border-primary: var(--color-neutral-400);
+  --border-secondary: var(--color-neutral-200);
+  --border-brand: var(--color-brand-100);
+
+  /* Error */
+  --error-primary: var(--color-red-500);
+  --error-secondary: var(--color-red-100);
+  --error-tertiary: var(--color-red-50);
+
+  /* Success */
+  --success-primary: var(--color-green-500);
+  --success-secondary: var(--color-green-100);
+
+  /* Mask */
+  --mask-primary: var(--color-alpha-500);
+}

@@ -1,0 +1,20 @@
+/* Icon 图标：默认 16px，颜色由 SVG 本身（--text-primary 对应的 #383838）决定 */
+
+.pl-icon {
+  display: block;
+  flex: none;
+  width: 16px;
+  height: 16px;
+}
+.pl-icon--sm { width: 14px; height: 14px; }
+.pl-icon--lg { width: 20px; height: 20px; }
+
+/* 通用图标着色：颜色跟随 currentColor（由所在组件用 token 设置），--icon-src 传入 assets/icons 下的 SVG
+ *   <span class="pl-icon pl-icon--mask" style="--icon-src: url(assets/icons/write.svg)"></span>
+ * 注意：mask 需要通过 http 打开页面（本地服务），直接用 file:// 打开会被浏览器拦截。
+ */
+.pl-icon--mask {
+  background-color: currentColor;
+  -webkit-mask: var(--icon-src) center / contain no-repeat;
+  mask: var(--icon-src) center / contain no-repeat;
+}

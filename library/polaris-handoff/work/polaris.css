@@ -1,0 +1,54 @@
+/* 北极星设计系统：唯一样式入口 */
+
+/* Tokens */
+@import url("tokens/primitive.css");
+@import url("tokens/semantic.css");
+@import url("tokens/foundation.css?v=panel-padding");
+
+/* Base */
+@import url("base.css");
+
+/* 通用 */
+@import url("components/icon.css");
+@import url("components/button.css?v=icon-on-bg");
+@import url("components/layout.css");
+
+/* 导航 */
+@import url("components/breadcrumb.css?v=1");
+@import url("components/navbar-tab.css?v=uniform-width-200");
+@import url("components/navbar.css?v=uniform-width-200");
+@import url("components/mainbar.css?v=mainbar-17");
+@import url("components/sidebar.css");
+@import url("components/tabs.css");
+@import url("components/upload.css");
+
+/* 对话组件 */
+@import url("components/skill-reference.css?v=3");
+@import url("components/chat-input.css");
+@import url("components/chat-bubble.css?v=bubble-3");
+@import url("components/chat-feedback.css");
+@import url("components/clarification-card.css");
+@import url("components/chat-search.css");
+@import url("components/file-output.css");
+@import url("components/markdown.css");
+@import url("components/sourcing.css");
+@import url("components/task-summary.css");
+@import url("components/thinking.css");
+
+/* 数据录入 */
+@import url("components/checkbox.css");
+@import url("components/input.css");
+@import url("components/radio.css");
+@import url("components/search.css");
+@import url("components/select.css?v=panel-padding");
+@import url("components/cascader.css");
+
+/* 数据展示 */
+@import url("components/avatar.css");
+@import url("components/empty-state.css");
+@import url("components/tree.css");
+
+/* 反馈 */
+@import url("components/modal.css");
+@import url("components/tooltip.css");
+@import url("components/toast.css");

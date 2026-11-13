@@ -1,0 +1,56 @@
+body { display:flex; min-height:100vh; background:var(--background-white); color:var(--text-primary); }
+body > .pl-mainbar { flex:none; position:sticky; top:0; height:100dvh; }
+main { flex:1; min-width:0; padding:clamp(32px,calc(50vh - 304px),180px) 24px 40px; }
+.workspace { max-width:768px; margin:auto; }
+.greeting { height:110px; position:relative; padding:44px 16px 0; }
+.greeting h1 { width:fit-content; position:relative; z-index:1; margin:0; font-size:24px; font-weight:500; line-height:46px; }
+.greeting-keyword { color:var(--text-brand); font-weight:600; }
+.art { position:absolute; right:0; top:0; width:154px; height:110px; overflow:hidden; }
+.digits { position:absolute; right:0; display:flex; height:120px; overflow:hidden; mask-image:linear-gradient(transparent,#000 35%,#000 70%,transparent); }
+.digits i { font:14px/18px monospace; width:15px; writing-mode:vertical-rl; text-orientation:upright; color:var(--text-brand); opacity:.2; animation:flow var(--speed) linear infinite paused; }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .mascot { animation: mascot-bob 1.5s ease-in-out infinite paused; }
+  .art:hover .mascot, .art:hover .digits i { animation-play-state: running; }
+}
+@keyframes mascot-bob { 50% { transform: translateY(-3px); } }
+@keyframes flow { to { transform:translateY(-160px); } }
+.mascot { position:absolute; top:40px; width:114px; height:70px; overflow:hidden; }
+.mascot img { position:absolute; }
+.mascot img:first-child { width:123px; max-width:none; height:92px; object-fit:cover; left:-1px; top:-3px; transform:scaleX(-1); }
+.mascot img:nth-child(2) { width:11px; left:38px; top:57px; }
+.mascot img:last-child { width:12px; left:72px; top:66px; }
+.prompts { margin-top:64px; padding:0 6px; }
+.prompts .pl-tabs { padding-left:12px; gap:0; flex-wrap:wrap; color:var(--text-secondary); font-size:14px; }
+.prompts .pl-tab { padding:0 16px; height:24px; }
+.prompts .pl-tab:hover { background: transparent; color: var(--text-primary); }
+.prompts .pl-tab.is-active { background:transparent; }
+.prompts .is-active::after { transform: translateX(var(--indicator-offset, 0px)); content:""; position:absolute; bottom:0; width:16px; height:3px; border-radius:3px; background:var(--text-brand); }
+.suggestions { margin-top:16px; display:grid; gap:8px; }
+.suggestions button { width:100%; min-height:36px; padding:0 12px; gap:6px; text-align:left; }
+.suggestions b { font-weight:500; }
+.suggestions span { color:var(--text-secondary); }
+.suggestions small,.suggestions .arrow { opacity:.35; }
+.suggestions .arrow { width:14px; margin-left:auto; }
+@media(max-width:800px){body>.pl-mainbar{display:none}}
+@media(max-width:550px){.art{display:none}.greeting h1{font-size:19px}.prompts .pl-tab{padding:0 6px}}
+@media(prefers-reduced-motion:reduce){.digits i{animation:none}}
+
+@media (prefers-reduced-motion: no-preference) {
+  .prompts .is-active::after { animation: prompt-indicator 180ms ease-out; }
+}
+@keyframes prompt-indicator {
+  from { transform: translateX(var(--indicator-from, 0px)); }
+  to { transform: translateX(0); }
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .suggestions button {
+    transition: background-color 160ms ease-out;
+  }
+  .suggestions .arrow {
+    transition: opacity 160ms ease-out;
+  }
+  .suggestions button:hover .arrow {
+    opacity: .65;
+  }
+}

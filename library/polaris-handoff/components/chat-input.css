@@ -1,0 +1,216 @@
+/* 对话输入附件与发送控件。HTML 示例见 pages/chat/chat-input.html。
+ * .pl-chat-file__icon 可替换为任意文件类型图标；图片使用裁切容器。
+ * .is-loading 表示上传中，.is-hover 用于展示悬停态。 */
+.pl-chat-image, .pl-chat-file {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  flex: none;
+  height: 56px;
+  border-radius: 8px;
+  background: var(--background-grey);
+}
+.pl-chat-image { width: 56px; justify-content: center; }
+.pl-chat-image__crop {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: inherit;
+  background: var(--background-thumbnail);
+}
+.pl-chat-image__crop img { width: 100%; height: 100%; object-fit: cover; }
+.pl-chat-image__crop .pl-chat-image__sample {
+  position: absolute;
+  left: -25%;
+  top: 17.86%;
+  width: 138.75%;
+  height: 97.02%;
+  max-width: none;
+}
+.pl-chat-file { width: 200px; padding: 8px 12px; gap: 8px; }
+.pl-chat-file:not(.is-loading):is(:hover, :focus-within, .is-hover) { background: var(--hover-default); }
+.pl-chat-file__icon, .pl-chat-loading { width: 32px; height: 32px; flex: none; }
+.pl-chat-loading { display: grid; place-items: center; }
+.pl-chat-file__info { min-width: 0; font-family: "PingFang SC", sans-serif; line-height: normal; }
+.pl-chat-file__name {
+  color: var(--text-primary);
+  font-size: var(--font-size-text-md);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.pl-chat-file__meta { display: flex; align-items: center; gap: 4px; font-size: var(--font-size-text-xs); color: var(--text-tertiary); }
+.pl-chat-file__dot { width: 2px; height: 2px; border-radius: 50%; background: currentColor; }
+.pl-chat-attachment__remove { position: absolute; z-index: 1; top: -6px; right: -8px; opacity: 0; pointer-events: none; }
+:is(.pl-chat-image,.pl-chat-file):is(:hover,:focus-within,.is-hover) .pl-chat-attachment__remove { opacity: 1; pointer-events: auto; }
+.pl-chat-uploads { position: relative; width: 734px; max-width: 100%; }
+.pl-chat-uploads__track {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-block: 6px;
+  margin-block: -6px;
+  scrollbar-width: none;
+}
+.pl-chat-uploads__track > :last-child { margin-inline-end: 8px; }
+.pl-chat-uploads__edge {
+  position: absolute;
+  inset-block: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  width: min(160px, 35%);
+  pointer-events: none;
+  background: linear-gradient(to right, var(--background-white), transparent 90%);
+}
+.pl-chat-uploads__edge--end { left: auto; right: 0; justify-content: flex-end; background: linear-gradient(to left, var(--background-white) 10.313%, transparent); }
+.pl-chat-uploads__edge[hidden] { display: none; }
+.pl-chat-uploads__edge > .pl-page-button { pointer-events: auto; }
+.pl-chat-send { display: inline-flex; align-items: center; gap: 8px; }
+.pl-chat-send__mode { display: inline-flex; align-items: center; gap: 4px; height: 28px; padding: 4px 8px; border-radius: 8px; font: var(--font-size-text-md) "PingFang SC", sans-serif; color: var(--text-secondary); }
+.pl-chat-send__mode:enabled:hover { background-color: var(--hover-default); }
+.pl-chat-send__mode:disabled { color: var(--text-subtle); cursor: default; }
+.pl-chat-send__mode img {
+  transform: rotate(90deg) scaleY(-1);
+  transition: transform 180ms cubic-bezier(0.2, 0, 0, 1);
+}
+.pl-chat-send__mode[aria-expanded="true"] img { transform: rotate(-90deg) scaleY(-1); }
+.pl-chat-send__button { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: var(--background-brand); }
+.pl-chat-send__button:disabled { background: var(--background-submit-disabled); cursor: default; }
+.pl-chat-send__button--pause { background: var(--text-primary); }
+.pl-chat-send__button--pause::before { content: ""; width: 10px; height: 10px; border-radius: 2px; background: var(--background-white); }
+
+/* 包裹原生按钮，使禁用态也能响应鼠标提示。 */
+.pl-chat-send__action { position: relative; display: inline-flex; }
+.pl-chat-send__action > button:disabled { pointer-events: none; }
+.pl-chat-send__action:is(:hover, :focus-within) > .pl-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+/* 对话框：内容区可包含 .pl-chat-uploads，工具栏复用 .pl-chat-send。 */
+.pl-composer { width: 768px; max-width: 100%; border-radius: 20px; background: var(--background-grey); }
+.pl-composer__body {
+  border: 1px solid var(--border-secondary);
+  border-radius: inherit;
+  background: var(--background-white);
+  box-shadow: var(--shadow-dropdown);
+}
+.pl-composer.is-focused .pl-composer__body,
+.pl-composer__body:focus-within { border-color: var(--border-brand); }
+.pl-composer .pl-composer__body:has(.pl-composer__add:is(:focus, [aria-expanded="true"])) {
+  border-color: var(--border-secondary);
+}
+.pl-composer__content { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 12px 4px; padding: 15px; }
+.pl-composer__content > .pl-chat-uploads { flex: 0 0 100%; min-width: 0; }
+.pl-composer__content > .pl-skill-reference { margin-top: 0; }
+.pl-composer__query {
+  display: block;
+  flex: 1 1 240px;
+  min-width: 0;
+  height: 56px;
+  min-height: 56px;
+  max-height: 108px;
+  resize: none;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: var(--text-primary);
+  font: var(--font-size-text-md) "PingFang SC", sans-serif;
+  scrollbar-width: thin;
+}
+.pl-composer__query::placeholder { color: var(--text-subtle); }
+.pl-composer__toolbar { display: flex; align-items: center; justify-content: space-between; padding: 0 11px 11px 9px; }
+.pl-composer__add, .pl-composer__project { display: inline-flex; align-items: center; justify-content: center; height: 28px; border-radius: 8px; }
+.pl-composer__add { width: 28px; }
+.pl-composer__add > img {
+  transform: rotate(0deg);
+  transform-origin: center;
+  transition: transform 180ms cubic-bezier(0.2, 0, 0, 1);
+}
+.pl-composer__add[aria-expanded="true"] > img { transform: rotate(45deg); }
+.pl-composer__add:disabled { opacity: .35; cursor: default; }
+.pl-composer__footer { padding: 8px 10px; }
+.pl-composer__project { gap: 4px; padding: 0 8px; font-size: var(--font-size-text-md); }
+.pl-composer__project > img:last-child {
+  transition: transform 180ms cubic-bezier(0.2, 0, 0, 1);
+}
+.pl-composer__project[aria-expanded="true"] > img:last-child { transform: rotate(180deg); }
+
+.pl-project-selector { display: inline-flex; position: relative; border-radius: 8px; }
+.pl-project-selector:is(:hover, :focus-within, .is-hover) { background: var(--hover-strong-on-bg); }
+.pl-composer__project > img:first-child { margin-right: 2px; }
+.pl-project-selector__clear {
+  display: none;
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 28px;
+  padding-left: 8px;
+  align-items: center;
+  color: var(--text-tertiary);
+}
+.pl-project-selector.is-selected:is(:hover, :focus-within, .is-hover) .pl-project-selector__clear { display: flex; }
+.pl-project-selector.is-selected:is(:hover, :focus-within, .is-hover) .pl-composer__project > img:first-child { visibility: hidden; }
+.pl-project-selector__clear:is(:hover, :focus-visible, .is-hover) { color: var(--text-primary); }
+
+.pl-select-panel.pl-project-menu {
+  width: 200px;
+  max-width: calc(100vw - 16px);
+  overflow: hidden;
+}
+.pl-project-menu__projects {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 4px;
+  min-height: 0;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+.pl-project-menu__projects[hidden],
+.pl-project-menu > .pl-select-panel__divider[hidden] { display: none; }
+
+/* 发送模式菜单通过 popover 显示在预览面板上方，避免被滚动容器裁切。 */
+.pl-select-panel.pl-mode-menu { width: 240px; max-width: calc(100vw - 16px); }
+.pl-select-option.pl-mode-menu__option {
+  display: grid;
+  height: auto;
+  gap: 2px;
+  padding: 8px;
+  text-align: start;
+  line-height: var(--line-height-text-md);
+}
+.pl-select-option:focus-visible { background: var(--hover-default); }
+.pl-mode-menu__title { display: flex; align-items: center; gap: 6px; font-weight: var(--font-weight-medium); }
+.pl-mode-menu__description { padding-right: 20px; font-size: var(--font-size-text-sm); color: var(--text-secondary); }
+.pl-mode-menu__check { margin-left: auto; color: var(--text-brand); visibility: hidden; }
+.pl-mode-menu__option[aria-checked="true"] .pl-mode-menu__check { visibility: visible; }
+
+.pl-composer__add:enabled:is(:hover, [aria-expanded="true"]) { background: var(--hover-default); }
+.pl-select-panel.pl-add-menu { width: 180px; }
+.pl-select-panel.pl-skills-menu { width: 200px; }
+.pl-skills-menu .pl-select-option { text-align: start; }
+.pl-add-menu [aria-expanded="true"] { background: var(--hover-default); }
+.pl-tooltip.pl-skills-menu__tip {
+  position: fixed;
+  inset: auto;
+  margin: 0;
+  border: 0;
+  width: max-content;
+  max-width: 240px;
+  height: auto;
+  max-height: none;
+  border-radius: 8px;
+  font-size: var(--font-size-text-xs);
+  overflow: visible;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pl-composer__add > img,
+  .pl-composer__project > img:last-child,
+  .pl-chat-send__mode img { transition: none; }
+}

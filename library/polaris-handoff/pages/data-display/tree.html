@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tree 树状组件</title>
+  <link rel="stylesheet" href="../../polaris.css" />
+  <link rel="stylesheet" href="../preview.css" />
+</head>
+<body>
+  <main class="preview-page">
+    <h1 class="preview-page__title">Tree 树状组件</h1>
+
+    <section class="preview-section">
+      <header class="preview-section__header">
+        <h2 class="preview-section__title">类型一：树节点</h2>
+        <p class="preview-section__description">原子组件，一个节点对应一个 pl-tree-item。分一/二/三级（缩进 8 / 24 / 40px）；父节点有展开、收起；子内容节点带连接线，分中间和末端；均有 Default 和 Hover。</p>
+      </header>
+      <div class="preview-panel preview-panel--normal">
+<div class="preview-tree-matrix">
+<span></span><span class="preview-tree-matrix__head">一级</span><span class="preview-tree-matrix__head">二级</span><span class="preview-tree-matrix__head">三级</span>
+<span class="preview-tree-matrix__label">展开 · Default</span><div><div class="pl-tree-item pl-tree-item--level-1"><span class="pl-tree-item__arrow" style="--icon-src: url(../../assets/icons/chevron-down.svg)"></span><span class="pl-tree-item__label">一级Tab</span></div></div><div><div class="pl-tree-item pl-tree-item--level-2"><span class="pl-tree-item__arrow" style="--icon-src: url(../../assets/icons/chevron-down.svg)"></span><span class="pl-tree-item__label">二级Tab</span></div></div><div><div class="pl-tree-item pl-tree-item--level-3"><span class="pl-tree-item__arrow" style="--icon-src: url(../../assets/icons/chevron-down.svg)"></span><span class="pl-tree-item__label">三级Tab</span></div></div>
+<span class="preview-tree-matrix__label">展开 · Hover</span><div><div class="pl-tree-item pl-tree-item--level-1 is-hover"><span class="pl-tree-item__arrow" style="--icon-src: url(../../assets/icons/chevron-down.svg)"></span><span class="pl-tree-item__label">一级Tab</span></div></div><div><div class="pl-tree-item pl-tree-item--level-2 is-hover"><span class="pl-tree-item__arrow" style="--icon-src: url(../../assets/icons/chevron-down.svg)"></span><span class="pl-tree-item__label">二级Tab</span></div></div><div><div class="pl-tree-item pl-tree-item--level-3 is-hover"><span class="pl-tree-item__arrow" style="--icon-src: url(../../assets/icons/chevron-down.svg)"></span><span class="pl-tree-item__label">三级Tab</span></div></div>
+<span class="preview-tree-matrix__label">收起 · Default</span><div><div class="pl-tree-item pl-tree-item--level-1"><span class="pl-tree-item__arrow" style="--icon-src: url(../../assets/icons/chevron-right.svg)"></span><span class="pl-tree-item__label">一级Tab</span></div></div><div><div class="pl-tree-item pl-tree-item--level-2"><span class="pl-tree-item__arrow" style="--icon-src: url(../../assets/icons/chevron-right.svg)"></span><span class="pl-tree-item__label">二级Tab</span></div></div><div><div class="pl-tree-item pl-tree-item--level-3"><span class="pl-tree-item__arrow" style="--icon-src: url(../../assets/icons/chevron-right.svg)"></span><span class="pl-tree-item__label">三级Tab</span></div></div>
+<span class="preview-tree-matrix__label">收起 · Hover</span><div><div class="pl-tree-item pl-tree-item--level-1 is-hover"><span class="pl-tree-item__arrow" style="--icon-src: url(../../assets/icons/chevron-right.svg)"></span><span class="pl-tree-item__label">一级Tab</span></div></div><div><div class="pl-tree-item pl-tree-item--level-2 is-hover"><span class="pl-tree-item__arrow" style="--icon-src: url(../../assets/icons/chevron-right.svg)"></span><span class="pl-tree-item__label">二级Tab</span></div></div><div><div class="pl-tree-item pl-tree-item--level-3 is-hover"><span class="pl-tree-item__arrow" style="--icon-src: url(../../assets/icons/chevron-right.svg)"></span><span class="pl-tree-item__label">三级Tab</span></div></div>
+<span class="preview-tree-matrix__label">子内容 · 中间 · Default</span><div><div class="pl-tree-item pl-tree-item--level-1 pl-tree-item--child"><span class="pl-tree-item__branch" style="--icon-src: url(../../assets/icons/tree-branch.svg)"></span><span class="pl-tree-item__label">子内容</span></div></div><div><div class="pl-tree-item pl-tree-item--level-2 pl-tree-item--child"><span class="pl-tree-item__branch" style="--icon-src: url(../../assets/icons/tree-branch.svg)"></span><span class="pl-tree-item__label">子内容</span></div></div><div><div class="pl-tree-item pl-tree-item--level-3 pl-tree-item--child"><span class="pl-tree-item__branch" style="--icon-src: url(../../assets/icons/tree-branch.svg)"></span><span class="pl-tree-item__label">子内容</span></div></div>
+<span class="preview-tree-matrix__label">子内容 · 中间 · Hover</span><div><div class="pl-tree-item pl-tree-item--level-1 pl-tree-item--child is-hover"><span class="pl-tree-item__branch" style="--icon-src: url(../../assets/icons/tree-branch.svg)"></span><span class="pl-tree-item__label">子内容</span></div></div><div><div class="pl-tree-item pl-tree-item--level-2 pl-tree-item--child is-hover"><span class="pl-tree-item__branch" style="--icon-src: url(../../assets/icons/tree-branch.svg)"></span><span class="pl-tree-item__label">子内容</span></div></div><div><div class="pl-tree-item pl-tree-item--level-3 pl-tree-item--child is-hover"><span class="pl-tree-item__branch" style="--icon-src: url(../../assets/icons/tree-branch.svg)"></span><span class="pl-tree-item__label">子内容</span></div></div>
+<span class="preview-tree-matrix__label">子内容 · 末端 · Default</span><div><div class="pl-tree-item pl-tree-item--level-1 pl-tree-item--child pl-tree-item--last"><span class="pl-tree-item__branch" style="--icon-src: url(../../assets/icons/tree-branch-end.svg)"></span><span class="pl-tree-item__label">子内容</span></div></div><div><div class="pl-tree-item pl-tree-item--level-2 pl-tree-item--child pl-tree-item--last"><span class="pl-tree-item__branch" style="--icon-src: url(../../assets/icons/tree-branch-end.svg)"></span><span class="pl-tree-item__label">子内容</span></div></div><div><div class="pl-tree-item pl-tree-item--level-3 pl-tree-item--child pl-tree-item--last"><span class="pl-tree-item__branch" style="--icon-src: url(../../assets/icons/tree-branch-end.svg)"></span><span class="pl-tree-item__label">子内容</span></div></div>
+<span class="preview-tree-matrix__label">子内容 · 末端 · Hover</span><div><div class="pl-tree-item pl-tree-item--level-1 pl-tree-item--child pl-tree-item--last is-hover"><span class="pl-tree-item__branch" style="--icon-src: url(../../assets/icons/tree-branch-end.svg)"></span><span class="pl-tree-item__label">子内容</span></div></div><div><div class="pl-tree-item pl-tree-item--level-2 pl-tree-item--child pl-tree-item--last is-hover"><span class="pl-tree-item__branch" style="--icon-src: url(../../assets/icons/tree-branch-end.svg)"></span><span class="pl-tree-item__label">子内容</span></div></div><div><div class="pl-tree-item pl-tree-item--level-3 pl-tree-item--child pl-tree-item--last is-hover"><span class="pl-tree-item__branch" style="--icon-src: url(../../assets/icons/tree-branch-end.svg)"></span><span class="pl-tree-item__label">子内容</span></div></div>
+</div>
+      </div>
+    </section>
+
+    <section class="preview-section">
+      <header class="preview-section__header">
+        <h2 class="preview-section__title">类型二：树状组合</h2>
+        <p class="preview-section__description">宽度 200px。点击父节点展开/收起：箭头旋转 90°，子内容高度平滑过渡并淡入。支持键盘（Tab 聚焦，Enter / 空格切换）。</p>
+      </header>
+      <div class="preview-panel preview-panel--normal">
+        <div class="preview-tree-combo">
+          <div class="pl-tree-node is-expanded">
+            <div class="pl-tree-item pl-tree-item--level-1" role="button" tabindex="0" aria-expanded="true"><span class="pl-tree-item__arrow" style="--icon-src: url(../../assets/icons/chevron-right.svg)"></span><span class="pl-tree-item__label">一级Tab</span></div>
+            <div class="pl-tree-node__children"><div class="pl-tree-node__inner">
+          <div class="pl-tree-item pl-tree-item--level-1 pl-tree-item--child pl-tree-item--last"><span class="pl-tree-item__branch" style="--icon-src: url(../../assets/icons/tree-branch-end.svg)"></span><span class="pl-tree-item__label">子内容</span></div>
+          <div class="pl-tree-node is-expanded">
+            <div class="pl-tree-item pl-tree-item--level-2" role="button" tabindex="0" aria-expanded="true"><span class="pl-tree-item__arrow" style="--icon-src: url(../../assets/icons/chevron-right.svg)"></span><span class="pl-tree-item__label">二级Tab</span></div>
+            <div class="pl-tree-node__children"><div class="pl-tree-node__inner">
+          <div class="pl-tree-item pl-tree-item--level-2 pl-tree-item--child"><span class="pl-tree-item__branch" style="--icon-src: url(../../assets/icons/tree-branch.svg)"></span><span class="pl-tree-item__label">子内容</span></div>
+          <div class="pl-tree-item pl-tree-item--level-2 pl-tree-item--child"><span class="pl-tree-item__branch" style="--icon-src: url(../../assets/icons/tree-branch.svg)"></span><span class="pl-tree-item__label">子内容</span></div>
+          <div class="pl-tree-item pl-tree-item--level-2 pl-tree-item--child pl-tree-item--last"><span class="pl-tree-item__branch" style="--icon-src: url(../../assets/icons/tree-branch-end.svg)"></span><span class="pl-tree-item__label">子内容</span></div>
+            </div></div>
+          </div>
+            </div></div>
+          </div>
+          <div class="pl-tree-node">
+            <div class="pl-tree-item pl-tree-item--level-1" role="button" tabindex="0" aria-expanded="false"><span class="pl-tree-item__arrow" style="--icon-src: url(../../assets/icons/chevron-right.svg)"></span><span class="pl-tree-item__label">一级Tab</span></div>
+            <div class="pl-tree-node__children"><div class="pl-tree-node__inner">
+          <div class="pl-tree-item pl-tree-item--level-1 pl-tree-item--child"><span class="pl-tree-item__branch" style="--icon-src: url(../../assets/icons/tree-branch.svg)"></span><span class="pl-tree-item__label">子内容</span></div>
+          <div class="pl-tree-item pl-tree-item--level-1 pl-tree-item--child pl-tree-item--last"><span class="pl-tree-item__branch" style="--icon-src: url(../../assets/icons/tree-branch-end.svg)"></span><span class="pl-tree-item__label">子内容</span></div>
+            </div></div>
+          </div>
+          <div class="pl-tree-node">
+            <div class="pl-tree-item pl-tree-item--level-1" role="button" tabindex="0" aria-expanded="false"><span class="pl-tree-item__arrow" style="--icon-src: url(../../assets/icons/chevron-right.svg)"></span><span class="pl-tree-item__label">一级Tab</span></div>
+            <div class="pl-tree-node__children"><div class="pl-tree-node__inner">
+          <div class="pl-tree-item pl-tree-item--level-1 pl-tree-item--child"><span class="pl-tree-item__branch" style="--icon-src: url(../../assets/icons/tree-branch.svg)"></span><span class="pl-tree-item__label">子内容</span></div>
+          <div class="pl-tree-item pl-tree-item--level-1 pl-tree-item--child pl-tree-item--last"><span class="pl-tree-item__branch" style="--icon-src: url(../../assets/icons/tree-branch-end.svg)"></span><span class="pl-tree-item__label">子内容</span></div>
+            </div></div>
+          </div>
+          <div class="pl-tree-node">
+            <div class="pl-tree-item pl-tree-item--level-1" role="button" tabindex="0" aria-expanded="false"><span class="pl-tree-item__arrow" style="--icon-src: url(../../assets/icons/chevron-right.svg)"></span><span class="pl-tree-item__label">一级Tab</span></div>
+            <div class="pl-tree-node__children"><div class="pl-tree-node__inner">
+          <div class="pl-tree-item pl-tree-item--level-1 pl-tree-item--child"><span class="pl-tree-item__branch" style="--icon-src: url(../../assets/icons/tree-branch.svg)"></span><span class="pl-tree-item__label">子内容</span></div>
+          <div class="pl-tree-item pl-tree-item--level-1 pl-tree-item--child pl-tree-item--last"><span class="pl-tree-item__branch" style="--icon-src: url(../../assets/icons/tree-branch-end.svg)"></span><span class="pl-tree-item__label">子内容</span></div>
+            </div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="../../components/tree.js"></script>
+</body>
+</html>

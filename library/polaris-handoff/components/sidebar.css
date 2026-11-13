@@ -1,0 +1,56 @@
+/* Sidebar 侧边导航
+ *
+ * 导航项 .pl-sidebar-item（宽度跟随容器，Figma 示例为 211px）：
+ *   <a class="pl-sidebar-item [is-hover]">
+ *     <span class="pl-sidebar-item__icon pl-icon--mask" style="--icon-src: url(…)">   图标可省略，也可替换为 Icon 库中任意 16px 图标
+ *     <span class="pl-sidebar-item__label">新建任务</span>
+ *     <span class="pl-sidebar-item__arrow pl-icon--mask" style="--icon-src: url(…chevron-right.svg)">   箭头可省略
+ *   </a>
+ * 状态：:hover / .is-hover（底色 --hover-default）
+ */
+
+.pl-sidebar-item {
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  width: 100%;
+  height: 36px;
+  padding: 0 8px;
+  gap: 8px;
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-family: "PingFang SC", var(--font-family-body);
+  font-size: var(--font-size-text-md);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-text-md);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.pl-sidebar-item:hover,
+.pl-sidebar-item.is-hover {
+  background: var(--hover-default);
+}
+
+.pl-sidebar-item__icon {
+  display: block;
+  flex: none;
+  width: 16px;
+  height: 16px;
+}
+
+.pl-sidebar-item__label {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.pl-sidebar-item__arrow {
+  display: block;
+  flex: none;
+  width: 14px;
+  height: 14px;
+  color: var(--text-tertiary);
+}

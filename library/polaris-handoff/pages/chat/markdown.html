@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>Markdown 输出</title>
+  <link rel="stylesheet" href="../../polaris.css?v=markdown-output" />
+  <link rel="stylesheet" href="../preview.css" />
+<script defer src="../../components/chat-parts.js"></script>
+</head>
+<body>
+  <main class="preview-page">
+    <h1 class="preview-page__title">Markdown 输出</h1>
+    <section class="preview-section"><div class="preview-panel">
+      <article class="pl-markdown">
+        <template data-chat-part="elapsed"></template>
+        <h1>H1标题</h1><h2>H2标题</h2><h3>H3标题</h3>
+        <p>好的，用户让我制作一个互动模块来说明伯努利原理。首先，我需要理解伯努利原理的基本概念，也就是流体速度增加时压力会降低。接下来，我得考虑如何通过互动的方式让用户直观地理解这个原理。并且在桌面新建一个文件夹对应生成的互动模块...</p>
+        <blockquote>输出结果输出结果输出结果输出结果输出结果输出结果输出结果输出结果输出结果输出结果输出结果输出结果输出结果输出结果输出结果输出结果</blockquote>
+        <ul><li>由于 1688 网站有着严格的反爬虫机制，并且大量内容通过 JavaScript 动态加载，因此我使用了 Playwright 模拟浏览器行为。</li><li>我已经编写并运行了用于爬取 1688 首页的 Python 脚本。</li><li>脚本成功抓取首页标题和前 30 个有效链接。</li></ul>
+        <ol><li>准备页面数据和抓取脚本。</li><li>运行脚本并检查结果。</li><li>整理标题和有效链接。</li></ol>
+        <section class="pl-markdown__block">
+          <div class="pl-markdown__block-header"><span>表格</span><button class="pl-markdown__copy" type="button" data-copy="table"><span class="pl-icon pl-icon--sm pl-icon--mask" aria-hidden="true" style="--icon-src:url(../../assets/icons/copy.svg)"></span><span>复制</span></button></div>
+          <table><thead><tr><th>表头</th><th>表头</th></tr></thead><tbody><tr><td>内容</td><td>内容</td></tr><tr><td>内容</td><td>内容</td></tr></tbody></table>
+        </section>
+        <section class="pl-markdown__block pl-markdown__block--code">
+          <div class="pl-markdown__block-header"><span>代码块</span><button class="pl-markdown__copy" type="button" data-copy="code"><span class="pl-icon pl-icon--sm pl-icon--mask" aria-hidden="true" style="--icon-src:url(../../assets/icons/copy.svg)"></span><span>复制</span></button></div>
+          <pre><code>import { useState, useEffect } from 'react';
+
+function useDebounce&lt;T&gt;(value: T, delay: number): T {
+  const [debounced, setDebounced] = useState(value);
+
+  useEffect(() =&gt; {
+    const id = setTimeout(() =&gt; setDebounced(value), delay);
+    return () =&gt; clearTimeout(id);
+  }, [value, delay]);
+
+  return debounced;
+}</code></pre>
+        </section>
+      </article>
+    </div></section>
+  </main>
+  <script>
+    document.querySelectorAll('.pl-markdown__copy').forEach(button => {
+      button.addEventListener('click', async () => {
+        const block = button.closest('.pl-markdown__block');
+        const content = button.dataset.copy === 'table'
+          ? Array.from(block.querySelectorAll('tr'), row => Array.from(row.cells, cell => cell.textContent).join('\t')).join('\n')
+          : block.querySelector('code').textContent;
+        try {
+          await navigator.clipboard.writeText(content);
+          button.lastElementChild.textContent = '已复制';
+          setTimeout(() => { button.lastElementChild.textContent = '复制'; }, 3000);
+        } catch {
+          button.lastElementChild.textContent = '复制失败';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

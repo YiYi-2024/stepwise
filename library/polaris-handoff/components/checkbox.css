@@ -1,0 +1,48 @@
+/* Checkbox 多选框
+ *
+ *   <label class="pl-checkbox [pl-checkbox--brand]">
+ *     <input class="pl-checkbox__control" type="checkbox" [checked]>
+ *     <span class="pl-checkbox__label">文案</span>   文案可省略
+ *   </label>
+ *
+ * 选中色：默认黑色（--text-primary），--brand 为橙色（--text-brand）
+ */
+
+.pl-checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.pl-checkbox__control {
+  flex: none;
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  box-sizing: border-box;
+  appearance: none;
+  border: 1px solid var(--border-primary);
+  border-radius: 4px;
+  background: var(--background-white) center / 12px 12px no-repeat;
+  cursor: pointer;
+}
+
+.pl-checkbox__control:checked {
+  border-color: transparent;
+  background-color: var(--text-primary);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2212%22 height=%2212%22 viewBox=%220 0 12 12%22 fill=%22none%22%3E%3Cpath d=%22M9.9996 3L4.50015 8.4996L2.0004 5.99978%22 stroke=%22white%22 stroke-width=%221.4%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E%3C/svg%3E");
+}
+
+.pl-checkbox--brand .pl-checkbox__control:checked {
+  background-color: var(--text-brand);
+}
+
+.pl-checkbox__label {
+  color: var(--text-accent);
+  font-family: "PingFang SC", var(--font-family-body);
+  font-size: var(--font-size-text-md);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-text-md);
+  white-space: nowrap;
+}

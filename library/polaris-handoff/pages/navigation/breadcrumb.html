@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>Breadcrumb 面包屑</title>
+  <link rel="stylesheet" href="../../polaris.css" />
+  <link rel="stylesheet" href="../preview.css" />
+</head>
+<body>
+  <main class="preview-page">
+    <div class="preview-page__lead">
+      <h1 class="preview-page__title">Breadcrumb 面包屑</h1>
+
+      <section class="preview-section">
+        <header class="preview-section__header">
+          <h2 class="preview-section__title">基础面包屑</h2>
+          <p class="preview-section__description">显示当前页面在层级结构中的位置，并支持返回上级页面。</p>
+        </header>
+
+        <div class="preview-panel preview-panel--normal">
+          <div class="preview-block">
+            <div class="preview-spec">
+              <strong class="preview-spec__title">两级</strong>
+            </div>
+            <nav class="pl-breadcrumb" aria-label="两级面包屑">
+              <ol class="pl-breadcrumb__list">
+                <li class="pl-breadcrumb__item">
+                  <a class="pl-breadcrumb__link" href="#">上一级页面</a>
+                </li>
+                <li class="pl-breadcrumb__separator" aria-hidden="true">/</li>
+                <li class="pl-breadcrumb__item" aria-current="page">当前页面</li>
+              </ol>
+            </nav>
+          </div>
+
+          <div class="preview-block">
+            <div class="preview-spec">
+              <strong class="preview-spec__title">三级</strong>
+            </div>
+            <nav class="pl-breadcrumb" aria-label="三级面包屑">
+              <ol class="pl-breadcrumb__list">
+                <li class="pl-breadcrumb__item">
+                  <a class="pl-breadcrumb__link" href="#">上一级页面</a>
+                </li>
+                <li class="pl-breadcrumb__separator" aria-hidden="true">/</li>
+                <li class="pl-breadcrumb__item">
+                  <a class="pl-breadcrumb__link" href="#">上一级页面</a>
+                </li>
+                <li class="pl-breadcrumb__separator" aria-hidden="true">/</li>
+                <li class="pl-breadcrumb__item" aria-current="page">当前页面</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

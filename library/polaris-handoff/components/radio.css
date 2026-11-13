@@ -1,0 +1,47 @@
+/* Radio 单选框
+ *
+ *   <label class="pl-radio [pl-radio--brand]">
+ *     <input class="pl-radio__control" type="radio" name="…" [checked]>
+ *     <span class="pl-radio__label">文案</span>   文案可省略
+ *   </label>
+ *
+ * 选中色：默认黑色（--text-primary），--brand 为橙色（--text-brand）
+ */
+
+.pl-radio {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.pl-radio__control {
+  flex: none;
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  box-sizing: border-box;
+  appearance: none;
+  border: 1px solid var(--border-primary);
+  border-radius: 50%;
+  background: var(--background-white);
+  cursor: pointer;
+}
+
+.pl-radio__control:checked {
+  border-color: transparent;
+  background: radial-gradient(circle at center, var(--background-white) 0 3px, var(--text-primary) 3.5px);
+}
+
+.pl-radio--brand .pl-radio__control:checked {
+  background: radial-gradient(circle at center, var(--background-white) 0 3px, var(--text-brand) 3.5px);
+}
+
+.pl-radio__label {
+  color: var(--text-accent);
+  font-family: "PingFang SC", var(--font-family-body);
+  font-size: var(--font-size-text-md);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-text-md);
+  white-space: nowrap;
+}

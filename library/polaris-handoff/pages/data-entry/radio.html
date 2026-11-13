@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>Radio 单选框</title>
+  <link rel="stylesheet" href="../../polaris.css" />
+  <link rel="stylesheet" href="../preview.css" />
+</head>
+<body>
+  <main class="preview-page">
+    <h1 class="preview-page__title">Radio 单选框</h1>
+
+    <section class="preview-section">
+      <header class="preview-section__header">
+        <h2 class="preview-section__title">类型一：仅选框</h2>
+        <p class="preview-section__description">单选框可单独使用，不带文案。选中色可选黑色或橙色。</p>
+      </header>
+      <div class="preview-panel preview-panel--normal">
+      <div class="preview-tiles">
+        <div class="preview-tile">
+          <span class="preview-tile__label">未选</span>
+          <label class="pl-radio"><input class="pl-radio__control" type="radio" name="a" /></label>
+        </div>
+        <div class="preview-tile">
+          <span class="preview-tile__label">已选 · 黑色</span>
+          <label class="pl-radio"><input class="pl-radio__control" type="radio" name="a" checked /></label>
+        </div>
+        <div class="preview-tile">
+          <span class="preview-tile__label">已选 · 橙色</span>
+          <label class="pl-radio pl-radio--brand"><input class="pl-radio__control" type="radio" name="a" checked /></label>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <section class="preview-section">
+      <header class="preview-section__header">
+        <h2 class="preview-section__title">类型二：带文案</h2>
+        <p class="preview-section__description">单选框右侧带 14px 文案，间距 6px。</p>
+      </header>
+      <div class="preview-panel preview-panel--normal">
+      <div class="preview-tiles">
+        <div class="preview-tile">
+          <span class="preview-tile__label">未选</span>
+          <label class="pl-radio"><input class="pl-radio__control" type="radio" name="b" /><span class="pl-radio__label">文案</span></label>
+        </div>
+        <div class="preview-tile">
+          <span class="preview-tile__label">已选 · 黑色</span>
+          <label class="pl-radio"><input class="pl-radio__control" type="radio" name="b" checked /><span class="pl-radio__label">文案</span></label>
+        </div>
+        <div class="preview-tile">
+          <span class="preview-tile__label">已选 · 橙色</span>
+          <label class="pl-radio pl-radio--brand"><input class="pl-radio__control" type="radio" name="b" checked /><span class="pl-radio__label">文案</span></label>
+        </div>
+      </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
